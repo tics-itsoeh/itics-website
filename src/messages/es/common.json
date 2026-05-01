@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "formation": "Formación",
+    "projects": "Proyectos",
+    "mentors": "Mentores",
+    "contact": "Contacto",
+    "join": "Unirse"
+  },
+  "footer": {
+    "tagline": "Formación oficial en Ingeniería TIC orientada a problemas reales.",
+    "github": "Ver organización en GitHub"
+  },
+  "cta": {
+    "joinAcademy": "Solicitar información",
+    "exploreFormation": "Explorar formación",
+    "exploreProjects": "Ver proyectos y portafolio",
+    "exploreMentors": "Ver mentores",
+    "viewContact": "Ver contacto oficial",
+    "viewGuides": "Ver áreas de énfasis",
+    "viewRepo": "Ver evidencia",
+    "useTemplate": "Ver área",
+    "openGuide": "Abrir detalle"
+  },
+  "badge": {
+    "inDevelopment": "En desarrollo",
+    "available": "Disponible",
+    "comingSoon": "Próximamente"
+  }
+}

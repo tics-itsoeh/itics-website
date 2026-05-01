@@ -1,0 +1,11 @@
+---
+import type { UiLanguage } from '../../i18n/config';
+import { languages } from '../../i18n/config';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((language) => ({ params: { lang: language } }));
+}
+
+const { lang } = Astro.params as { lang: UiLanguage };
+return Astro.redirect(`/${lang}/formacion`, 302);
+---

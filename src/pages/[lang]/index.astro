@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import type { UiLanguage } from '../../i18n/config';
+import { languages } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
+import MentorCard from '../../components/MentorCard.astro';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: UiLanguage };
+const tc = useTranslations(lang, 'common');
+const th = useTranslations(lang, 'home');
+const tm = useTranslations(lang, 'mentors');
+const tco = useTranslations(lang, 'contact');
+const whatsappPhone = tco('values.phone').replace(/[^0-9]/g, '');
+const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.737312900873!2d-99.22126109580296!3d20.20515199712743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1777439045268!5m2!1ses-419!2smx';
+---
+
+<Layout lang={lang} title={tc('nav.home')}>
+  <!-- Hero -->
+  <Hero lang={lang} />
+
+  <main class="bg-white text-apple-text overflow-x-hidden">
+
+    <!-- Philosophy -->
+    <section class="max-w-[1000px] mx-auto px-8 py-32 border-t border-black/5">
+      <div class="max-w-[680px]">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-6 leading-tight">
+          {th('philosophy.title')}
+        </h2>
+        <p class="text-[1.2rem] text-apple-muted font-medium leading-relaxed">
+          {th('philosophy.body')}
+        </p>
+      </div>
+    </section>
+
+    <!-- Formacion Preview -->
+    <section class="max-w-[1200px] mx-auto px-8 pb-32">
+      <div class="bg-[#F5F5F7] rounded-[2.5rem] p-10 md:p-16 border border-black/5">
+        <div class="max-w-[580px] mb-16">
+          <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">
+            {th('formation.title')}
+          </h2>
+          <p class="text-[1.15rem] text-apple-muted font-medium leading-relaxed">
+            {th('formation.subtitle')}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { key: 'formation.realAccess' },
+            { key: 'formation.building' },
+            { key: 'formation.collaboration' },
+          ].map(({ key }) => (
+            <div class="bg-white rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-bold text-apple-text mb-2">{th(`${key}.title`)}</h3>
+              <p class="text-[0.95rem] text-apple-muted font-medium leading-relaxed">{th(`${key}.body`)}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-10">
+          <a
+            href={`/${lang}/formacion`}
+            class="inline-flex items-center gap-2 font-semibold text-apple-blue hover:underline hover:underline-offset-4"
+          >
+            {tc('cta.exploreFormation')} <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="max-w-[1200px] mx-auto px-8 pb-32">
+      <div class="rounded-[2rem] border border-black/5 bg-white p-8 md:p-10 shadow-sm">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-8">{th('outcomes.title')}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { key: 'outcomes.items.apps' },
+            { key: 'outcomes.items.networks' },
+            { key: 'outcomes.items.data' },
+            { key: 'outcomes.items.solutions' },
+          ].map(({ key }) => (
+            <div class="rounded-2xl border border-black/5 bg-[#F5F5F7] px-5 py-4 text-[0.98rem] font-semibold text-apple-text">
+              {th(key)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="max-w-[1200px] mx-auto px-8 pb-32">
+      <div class="mb-14">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('projects.title')}</h2>
+        <p class="text-[1.15rem] text-apple-muted font-medium leading-relaxed max-w-[720px]">
+          {th('projects.subtitle')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { key: 'projects.featured',   icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 8v4M12 16h.01' },
+          { key: 'projects.guides',     icon: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z' },
+          { key: 'projects.systems',    icon: 'M18 20V10M12 20V4M6 20v-6' },
+          { key: 'projects.infra',      icon: 'M2 3h20M2 9h20M2 15h20M2 21h20' },
+        ].map(({ key, icon }) => (
+          <div class="bg-[#F5F5F7] rounded-2xl p-8 border border-black/5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300 group">
+            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" class="text-apple-muted mb-5 group-hover:text-apple-blue transition-colors">
+              <path d={icon} />
+            </svg>
+            <h3 class="text-[1.05rem] font-bold text-apple-text mb-2">{th(`${key}.name`)}</h3>
+            <p class="text-[0.9rem] text-apple-muted font-medium leading-relaxed">{th(`${key}.description`)}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 flex gap-6">
+        <a href={`/${lang}/proyectos`} class="inline-flex items-center gap-2 font-semibold text-apple-blue hover:underline hover:underline-offset-4">
+          {tc('cta.exploreProjects')} <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Mentors -->
+    <section class="max-w-[1200px] mx-auto px-8 pb-32 border-t border-black/5 pt-20">
+      <div class="mb-14">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('mentors.title')}</h2>
+        <p class="text-[1.15rem] text-apple-muted font-medium">{th('mentors.subtitle')}</p>
+      </div>
+
+      <MentorCard
+        name="José Manuel Cortés Cerón"
+        role={tm('jose.role')}
+        tags={['Software', 'IoT', 'AI']}
+        githubHandle="deepdevjose"
+        githubUrl="https://github.com/deepdevjose"
+        image="/mentors/josepo.png"
+        profileUrl={`/${lang}/mentores/jose-manuel`}
+        profileLabel={tm('jose.profile')}
+      />
+
+      <div class="mt-10">
+        <a href={`/${lang}/mentores`} class="inline-flex items-center gap-2 font-semibold text-apple-blue hover:underline hover:underline-offset-4">
+          {tc('cta.exploreMentors')} <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="max-w-[1200px] mx-auto px-8 pb-32 border-t border-black/5 pt-20">
+      <div class="bg-[#F5F5F7] rounded-[2.5rem] p-10 md:p-16 border border-black/5">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div>
+            <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('contact.title')}</h2>
+            <p class="text-[1.05rem] text-apple-muted font-medium leading-relaxed max-w-[760px] mb-8">{th('contact.subtitle')}</p>
+
+            <div class="rounded-2xl border border-black/5 bg-white p-6">
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-1">{tco('labels.institution')}</p>
+                  <p class="text-[1rem] font-semibold text-apple-text leading-relaxed">{tco('values.institutionLine1')}</p>
+                  <p class="text-[1rem] font-semibold text-apple-text leading-relaxed">{tco('values.institutionLine2')}</p>
+                </div>
+                <div>
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-1">{tco('labels.location')}</p>
+                  <p class="text-[0.98rem] text-apple-muted font-medium leading-relaxed">{tco('values.location')}</p>
+                </div>
+                <div>
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-1">{tco('labels.phone')}</p>
+                  <a href={`tel:${whatsappPhone}`} class="text-[1rem] font-semibold text-apple-text hover:text-apple-blue transition-colors">{tco('values.phone')}</a>
+                </div>
+                <div>
+                  <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-1">{tco('labels.email')}</p>
+                  <a href={`mailto:${tco('values.email')}`} class="text-[1rem] font-semibold text-apple-text hover:text-apple-blue transition-colors">{tco('values.email')}</a>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href={`https://wa.me/52${whatsappPhone}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 bg-apple-blue text-white rounded-full text-[0.95rem] font-semibold hover:bg-apple-blue-hover transition-colors">
+                  {tco('actions.whatsapp')}
+                </a>
+                <a href={`mailto:${tco('values.email')}`} class="inline-flex items-center justify-center px-5 py-3 bg-white border border-black/10 text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-black/[0.03] transition-colors">
+                  {tco('actions.email')}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-black/5 bg-white overflow-hidden min-h-[360px]">
+            <iframe
+              src={mapEmbedSrc}
+              class="w-full h-full min-h-[360px]"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación del campus en Google Maps"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="max-w-[800px] mx-auto px-8 text-center pb-32 border-t border-black/5 pt-20">
+      <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-8">
+        {tc('footer.tagline')}
+      </h2>
+      <a
+        href={`/${lang}/formacion`}
+        class="inline-flex items-center justify-center px-10 py-4 bg-apple-blue text-white text-[1.05rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-all hover:scale-[1.02] shadow-[0_8px_20px_rgba(0,102,204,0.25)]"
+      >
+        {th('finalCta.button')}
+      </a>
+    </section>
+
+  </main>
+</Layout>

@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Projects and portfolio.",
+    "subtitle": "Learning evidence from academic visits, competitions, labs, and projects that reflect the program's evolution."
+  },
+  "featured": {
+    "label": "Featured portfolio",
+    "name": "TIICs trajectory",
+    "description": "The program documents key activities such as academic week, program day, robotics competitions, and research presentations to showcase educational outcomes."
+  },
+  "active": {
+    "title": "Learning evidence",
+    "subtitle": "Activities and projects that demonstrate technical application, collaboration, and connection with professional environments.",
+    "iotSystem": {
+      "name": "Activity gallery",
+      "description": "Institutional visits, meetings with companies, competitions, and academic events as part of the training process."
+    }
+  },
+  "guides": {
+    "title": "Focus areas",
+    "subtitle": "Specializations oriented to current technology needs with solid engineering fundamentals.",
+    "github": {
+      "name": "Data analytics",
+      "desc": "Cloud solutions for large-scale information management with an applied Big Data approach.",
+      "level": "Specialization"
+    },
+    "python": {
+      "name": "Human-computer interaction",
+      "desc": "Prototype design and control through vision, voice, and gestures using hardware and software.",
+      "level": "Specialization"
+    },
+    "softwareDev": {
+      "name": "Wireless technologies",
+      "desc": "Remote device integration with Wi-Fi, Bluetooth, RFID, and other communication technologies.",
+      "level": "Specialization"
+    },
+    "networking": {
+      "name": "IT auditing and legislation",
+      "desc": "Application of legal frameworks in IT to protect assets and strengthen institutional compliance.",
+      "level": "Specialization"
+    }
+  },
+  "templates": {
+    "title": "Additional specialization lines",
+    "subtitle": "Complementary fields to broaden technical judgement across architecture, business, and operations.",
+    "githubWorkflow": {
+      "name": "Emerging technologies",
+      "desc": "Implementation of advanced scenarios with cloud computing and production-ready environments.",
+      "stack": "Cloud + Production"
+    },
+    "pythonStarter": {
+      "name": "Distributed databases",
+      "desc": "Distributed architecture design and query optimization for scalable systems.",
+      "stack": "SQL + Distributed"
+    },
+    "engineeringDocs": {
+      "name": "E-business",
+      "desc": "Information systems and business model development based on digital channels.",
+      "stack": "Product + Digital"
+    },
+    "networkingLab": {
+      "name": "Intelligent systems",
+      "desc": "Integration of software, networking, and automation to solve real operational problems.",
+      "stack": "AI + IoT"
+    }
+  },
+  "areas": {
+    "title": "Explore by ICT field",
+    "projectsCount": "{count, plural, one {# project} other {# projects}}"
+  },
+  "labels": {
+    "project": "Project",
+    "viewDetails": "View details",
+    "guide": "Area",
+    "level": "Focus",
+    "template": "Specialization"
+  },
+  "cta": {
+    "title": "Connect your education with real projects.",
+    "body": "Review evidence, activities, and technical lines to shape your academic path with clarity."
+  }
+}

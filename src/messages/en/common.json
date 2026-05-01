@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Home",
+    "formation": "Training",
+    "projects": "Projects",
+    "mentors": "Faculty",
+    "contact": "Contact",
+    "join": "Join"
+  },
+  "footer": {
+    "tagline": "Official IT engineering training focused on real problems.",
+    "github": "View organization on GitHub"
+  },
+  "cta": {
+    "joinAcademy": "Request information",
+    "exploreFormation": "Explore training",
+    "exploreProjects": "View projects and portfolio",
+    "exploreMentors": "View mentors",
+    "viewContact": "View official contact",
+    "viewGuides": "View focus areas",
+    "viewRepo": "View evidence",
+    "useTemplate": "View area",
+    "openGuide": "Open details"
+  },
+  "badge": {
+    "inDevelopment": "In development",
+    "available": "Available",
+    "comingSoon": "Coming soon"
+  }
+}

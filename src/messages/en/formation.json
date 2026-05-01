@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "ICT program structure.",
+    "subtitle": "The program develops technical capability, strategic vision, and ethical practice for real organizational environments."
+  },
+  "howItWorks": {
+    "step1": {
+      "label": "01",
+      "title": "Objective",
+      "body": "Integrate and manage information and communications technologies to improve productivity and institutional outcomes."
+    },
+    "step2": {
+      "label": "02",
+      "title": "Graduate profile",
+      "body": "Network design and implementation, systems integration, and information-solution development for decision-making."
+    },
+    "step3": {
+      "label": "03",
+      "title": "Updated curriculum",
+      "body": "Specializations are periodically revised to remain technically relevant to evolving industry needs."
+    },
+    "step4": {
+      "label": "04",
+      "title": "Professional residency",
+      "body": "Connection with companies and organizations where learning is applied in real operational scenarios."
+    }
+  },
+  "system": {
+    "title": "Applied academic structure.",
+    "repoName": "tiics-program"
+  },
+  "features": {
+    "title": "Core competencies.",
+    "repos": {
+      "title": "Networks and communications",
+      "body": "Design, implementation, and management of computing and connectivity infrastructure"
+    },
+    "challenges": {
+      "title": "Software and architecture",
+      "body": "Hardware, software, and technology-service integration for scalable solutions"
+    },
+    "codeReviews": {
+      "title": "Current technologies",
+      "body": "Use of emerging tools with technical and methodological judgement"
+    },
+    "systems": {
+      "title": "Consulting and auditing",
+      "body": "Technical assessment and guidance to improve IT processes"
+    }
+  },
+  "collaboration": {
+    "title": "Complementary academic experience.",
+    "body": "The program includes academic, sports, and cultural activities plus industry visits to strengthen leadership, teamwork, and professional vision."
+  },
+  "cta": {
+    "title": "Review projects, evidence, and lines of work.",
+    "button": "View projects and portfolio"
+  }
+}

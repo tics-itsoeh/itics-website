@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "项目与成果。",
+    "subtitle": "通过学术参访、竞赛、实验室与项目形成学习证据，呈现专业发展轨迹。"
+  },
+  "featured": {
+    "label": "重点成果",
+    "name": "TIICs 成长轨迹",
+    "description": "专业持续记录学术周、专业日、机器人竞赛与研究展示等活动，用于呈现培养成效。"
+  },
+  "active": {
+    "title": "学习证据",
+    "subtitle": "通过活动与项目展示技术应用、协作能力与职业场景连接。",
+    "iotSystem": {
+      "name": "活动展示",
+      "description": "包括机构参访、企业交流、竞赛与学术活动等培养过程证据。"
+    }
+  },
+  "guides": {
+    "title": "重点方向",
+    "subtitle": "面向当前技术需求的专业方向，建立扎实的工程基础。",
+    "github": {
+      "name": "数据分析",
+      "desc": "面向大规模数据场景的云端解决方案与应用型大数据方法。",
+      "level": "方向"
+    },
+    "python": {
+      "name": "人机交互",
+      "desc": "基于视觉、语音与手势的人机控制原型设计与实现。",
+      "level": "方向"
+    },
+    "softwareDev": {
+      "name": "无线技术",
+      "desc": "利用 Wi-Fi、Bluetooth、RFID 等技术实现远程设备互联。",
+      "level": "方向"
+    },
+    "networking": {
+      "name": "信息审计与法规",
+      "desc": "在 IT 场景中应用法规框架，保障资产安全与合规治理。",
+      "level": "方向"
+    }
+  },
+  "templates": {
+    "title": "补充专业方向",
+    "subtitle": "扩展在架构、业务与技术运营层面的工程判断力。",
+    "githubWorkflow": {
+      "name": "新兴技术",
+      "desc": "基于云计算与生产环境的方法构建前沿技术场景。",
+      "stack": "Cloud + 生产"
+    },
+    "pythonStarter": {
+      "name": "分布式数据库",
+      "desc": "面向可扩展系统的分布式数据库架构与查询优化。",
+      "stack": "SQL + 分布式"
+    },
+    "engineeringDocs": {
+      "name": "电子商务",
+      "desc": "基于数字渠道的信息系统与商业模式设计。",
+      "stack": "产品 + 数字化"
+    },
+    "networkingLab": {
+      "name": "智能系统",
+      "desc": "融合软件、网络与自动化能力解决真实运营问题。",
+      "stack": "AI + IoT"
+    }
+  },
+  "areas": {
+    "title": "按 ICT 领域探索",
+    "projectsCount": "{count, plural, one {# 项目} other {# 项目}}"
+  },
+  "labels": {
+    "project": "项目",
+    "viewDetails": "查看详情",
+    "guide": "方向",
+    "level": "重点",
+    "template": "专长"
+  },
+  "cta": {
+    "title": "让学习与真实项目建立连接。",
+    "body": "通过成果证据、活动与技术方向规划更清晰的学术路径。"
+  }
+}

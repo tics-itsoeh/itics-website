@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "kickerLine1": "Ingeniería en Tecnologías de la",
+    "kickerLine2": "Información y Comunicaciones",
+    "title": "Construye tecnología que resuelve problemas reales.",
+    "subtitle": "Desarrolla habilidades en software, datos y redes, integrando IA e IoT en proyectos desde el primer semestre.",
+    "ctaPrimary": "Explorar formación"
+  },
+  "philosophy": {
+    "title": "Más que clases: formación para resolver problemas reales.",
+    "body": "Aprende con proyectos, colaboración y práctica técnica desde etapas tempranas."
+  },
+  "formation": {
+    "title": "Formación con enfoque profesional.",
+    "subtitle": "Objetivo formativo claro, perfil de egreso alineado con la industria y vinculación constante con contextos reales.",
+    "realAccess": {
+      "title": "Acceso a práctica real",
+      "body": "Trabaja en laboratorio y proyectos desde el inicio."
+    },
+    "building": {
+      "title": "Construcción de tecnología",
+      "body": "Desarrolla soluciones aplicadas en distintos contextos."
+    },
+    "collaboration": {
+      "title": "Colaboración técnica",
+      "body": "Aprende trabajando en equipo como en la industria."
+    }
+  },
+  "projects": {
+    "title": "Proyectos y portafolio.",
+    "subtitle": "Proyectos, concursos y experiencias que demuestran tu progreso técnico real.",
+    "featured": {
+      "name": "Portafolio institucional",
+      "description": "Proyectos reales desarrollados durante la carrera."
+    },
+    "guides": {
+      "name": "Áreas de énfasis",
+      "description": "Software, datos, redes y tecnologías emergentes."
+    },
+    "systems": {
+      "name": "Laboratorios y práctica",
+      "description": "Espacios técnicos y dinámicas colaborativas para experimentar, iterar y validar soluciones en escenarios concretos."
+    },
+    "infra": {
+      "name": "Actualización continua",
+      "description": "Especialidades revisadas periódicamente para mantener la formación conectada con herramientas y necesidades actuales."
+    }
+  },
+  "mentors": {
+    "title": "Mentores.",
+    "subtitle": "Profesionales que te acompañan en tu formación y desarrollo técnico."
+  },
+  "contact": {
+    "title": "Contacto oficial.",
+    "subtitle": "Canales institucionales para resolver dudas sobre la formación, admisión, plan de estudios y actividades académicas."
+  },
+  "outcomes": {
+    "title": "¿Qué podrás hacer?",
+    "items": {
+      "apps": "Desarrollar aplicaciones.",
+      "networks": "Diseñar y administrar redes.",
+      "data": "Gestionar datos para decisiones técnicas.",
+      "solutions": "Crear soluciones tecnológicas para problemas reales."
+    }
+  },
+  "finalCta": {
+    "button": "Conocer la formación completa"
+  }
+}

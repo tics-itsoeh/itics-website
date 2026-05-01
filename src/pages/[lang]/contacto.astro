@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import type { UiLanguage } from '../../i18n/config';
+import { languages } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: UiLanguage };
+const t = useTranslations(lang, 'contact');
+const tc = useTranslations(lang, 'common');
+const whatsappPhone = t('values.phone').replace(/[^0-9]/g, '');
+const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.737312900873!2d-99.22126109580296!3d20.20515199712743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2smx!4v1777439045268!5m2!1ses-419!2smx';
+---
+
+<Layout lang={lang} title={tc('nav.contact')}>
+  <main class="bg-white min-h-screen pt-32 pb-24 text-apple-text overflow-x-hidden">
+    <section class="max-w-[980px] mx-auto px-8 mb-20 text-center">
+      <h1 class="text-[clamp(3rem,6vw,5rem)] font-black tracking-tight leading-[1] mb-6">{t('hero.title')}</h1>
+      <p class="text-[1.15rem] md:text-[1.35rem] text-apple-muted font-medium leading-relaxed max-w-[820px] mx-auto">
+        {t('hero.subtitle')}
+      </p>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-8 mb-24">
+      <div class="rounded-[2.5rem] border border-black/5 bg-[#F5F5F7] p-8 md:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <article class="rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+            <div class="space-y-5">
+              <div>
+                <p class="text-[0.74rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-2">{t('labels.institution')}</p>
+                <p class="text-[1.08rem] font-semibold text-apple-text leading-relaxed">{t('values.institutionLine1')}</p>
+                <p class="text-[1.08rem] font-semibold text-apple-text leading-relaxed">{t('values.institutionLine2')}</p>
+              </div>
+              <div>
+                <p class="text-[0.74rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-2">{t('labels.location')}</p>
+                <p class="text-[1rem] text-apple-muted font-medium leading-relaxed">{t('values.location')}</p>
+              </div>
+              <div>
+                <p class="text-[0.74rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-2">{t('labels.phone')}</p>
+                <a href={`tel:${whatsappPhone}`} class="text-[1rem] font-semibold text-apple-text hover:text-apple-blue transition-colors">{t('values.phone')}</a>
+              </div>
+              <div>
+                <p class="text-[0.74rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-2">{t('labels.email')}</p>
+                <a href={`mailto:${t('values.email')}`} class="text-[1rem] font-semibold text-apple-text hover:text-apple-blue transition-colors">{t('values.email')}</a>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href={`https://wa.me/52${whatsappPhone}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 bg-apple-blue text-white rounded-full text-[0.95rem] font-semibold hover:bg-apple-blue-hover transition-colors">
+                {t('actions.whatsapp')}
+              </a>
+              <a href={`mailto:${t('values.email')}`} class="inline-flex items-center justify-center px-5 py-3 bg-white border border-black/10 text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-black/[0.03] transition-colors">
+                {t('actions.email')}
+              </a>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-black/5 bg-white overflow-hidden shadow-sm min-h-[360px]">
+            <iframe
+              src={mapEmbedSrc}
+              class="w-full h-full min-h-[360px]"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación del campus en Google Maps"
+            ></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[800px] mx-auto px-8 text-center">
+      <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-tight mb-8">{t('cta.title')}</h2>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={`/${lang}/formacion`} class="inline-flex items-center justify-center px-8 py-4 bg-apple-blue text-white text-[1rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-colors">
+          {tc('cta.exploreFormation')}
+        </a>
+        <a href={`/${lang}/proyectos`} class="inline-flex items-center justify-center px-8 py-4 bg-white border border-black/10 text-apple-text text-[1rem] font-semibold rounded-full hover:bg-black/[0.03] transition-colors">
+          {tc('cta.exploreProjects')}
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

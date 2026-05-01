@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "官方联系方式。",
+    "subtitle": "用于咨询 ICT 工程专业招生、培养与学术生活的官方渠道。"
+  },
+  "labels": {
+    "institution": "机构",
+    "location": "位置",
+    "phone": "电话 / WhatsApp",
+    "email": "邮箱"
+  },
+  "values": {
+    "institutionLine1": "墨西哥国家技术学院",
+    "institutionLine2": "伊达尔戈州西部校区",
+    "location": "墨西哥-帕丘卡公路 87.5 公里",
+    "phone": "773-109-9748",
+    "email": "itics@itsoeh.edu.mx"
+  },
+  "actions": {
+    "whatsapp": "发送 WhatsApp",
+    "email": "发送邮件"
+  },
+  "cta": {
+    "title": "查看完整培养路径。"
+  }
+}

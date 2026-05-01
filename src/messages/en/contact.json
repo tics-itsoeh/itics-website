@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Official contact.",
+    "subtitle": "Direct information to answer questions about admissions, training, and academic life in ICT Engineering."
+  },
+  "labels": {
+    "institution": "Institution",
+    "location": "Location",
+    "phone": "Phone / WhatsApp",
+    "email": "Email"
+  },
+  "values": {
+    "institutionLine1": "Tecnológico Nacional de México",
+    "institutionLine2": "Western Hidalgo Campus",
+    "location": "Mexico - Pachuca Highway Km. 87.5",
+    "phone": "773-109-9748",
+    "email": "itics@itsoeh.edu.mx"
+  },
+  "actions": {
+    "whatsapp": "Send WhatsApp",
+    "email": "Send email"
+  },
+  "cta": {
+    "title": "Discover the full training path."
+  }
+}

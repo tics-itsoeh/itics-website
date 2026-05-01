@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Contacto oficial.",
+    "subtitle": "Información directa para resolver dudas sobre admisión, formación y vida académica en Ingeniería TIC."
+  },
+  "labels": {
+    "institution": "Institución",
+    "location": "Ubicación",
+    "phone": "Teléfono / WhatsApp",
+    "email": "Correo"
+  },
+  "values": {
+    "institutionLine1": "Tecnológico Nacional de México",
+    "institutionLine2": "Campus Occidente del Estado de Hidalgo",
+    "location": "Carretera México - Pachuca Km. 87.5",
+    "phone": "773-109-9748",
+    "email": "itics@itsoeh.edu.mx"
+  },
+  "actions": {
+    "whatsapp": "Enviar WhatsApp",
+    "email": "Enviar correo"
+  },
+  "cta": {
+    "title": "Conoce la formación completa."
+  }
+}

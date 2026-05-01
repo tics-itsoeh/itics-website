@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "Plan de formación TIICs.",
+    "subtitle": "La carrera forma profesionistas con capacidad técnica, visión estratégica y compromiso ético para entornos organizacionales reales."
+  },
+  "howItWorks": {
+    "step1": {
+      "label": "01",
+      "title": "Objetivo",
+      "body": "Integrar y administrar tecnologías de información y comunicaciones para elevar productividad y resultados institucionales."
+    },
+    "step2": {
+      "label": "02",
+      "title": "Perfil de egreso",
+      "body": "Diseño e implementación de redes, integración de sistemas y construcción de soluciones de información para la toma de decisiones."
+    },
+    "step3": {
+      "label": "03",
+      "title": "Retícula actualizada",
+      "body": "Especialidades revisadas periódicamente para mantener pertinencia técnica frente a nuevas demandas del sector."
+    },
+    "step4": {
+      "label": "04",
+      "title": "Residencia profesional",
+      "body": "Vinculación con empresas y organizaciones donde el aprendizaje se aplica en escenarios operativos reales."
+    }
+  },
+  "system": {
+    "title": "Estructura académica con enfoque aplicado.",
+    "repoName": "tiics-program"
+  },
+  "features": {
+    "title": "Competencias clave.",
+    "repos": {
+      "title": "Redes y comunicaciones",
+      "body": "Diseño, implementación y administración de infraestructura de cómputo y conectividad"
+    },
+    "challenges": {
+      "title": "Software y arquitectura",
+      "body": "Integración de hardware, software y servicios tecnológicos para soluciones escalables"
+    },
+    "codeReviews": {
+      "title": "Tecnologías actuales",
+      "body": "Uso de herramientas emergentes con criterio técnico y metodológico"
+    },
+    "systems": {
+      "title": "Consultoría y auditoría",
+      "body": "Evaluación técnica y acompañamiento para mejorar procesos de TI"
+    }
+  },
+  "collaboration": {
+    "title": "Experiencia formativa complementaria.",
+    "body": "La carrera integra actividades académicas, deportivas, culturales y visitas empresariales para fortalecer liderazgo, trabajo en equipo y visión profesional."
+  },
+  "cta": {
+    "title": "Revisa proyectos, evidencias y líneas de trabajo.",
+    "button": "Ver proyectos y portafolio"
+  }
+}

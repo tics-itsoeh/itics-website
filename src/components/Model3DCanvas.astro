@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<div class="flex-1 h-[56vh] sm:h-[64vh] lg:h-[calc(100vh-5.25rem)] relative min-w-0 w-full lg:w-auto mt-6 lg:mt-[5.25rem]" id="hero-model3d">
+  <div class="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+    <Image
+      src="/model/logo.png"
+      alt=""
+      aria-hidden="true"
+      width={676}
+      height={610}
+      loading="eager"
+      fetchpriority="high"
+      class="h-[72%] w-auto max-w-[92%] object-contain opacity-20 select-none"
+    />
+  </div>
+  <canvas id="model3d-canvas" class="relative z-10 w-full h-full block cursor-grab active:cursor-grabbing opacity-0 transition-opacity duration-1000"></canvas>
+</div>
+
+<script>
+  import { initModel3d } from '../scripts/model3d';
+  
+  const container = document.getElementById('hero-model3d');
+  if (container) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        initModel3d('hero-model3d', 'model3d-canvas');
+        observer.disconnect();
+        
+        // Cargar con un pequeño fade-in
+        const canvas = document.getElementById('model3d-canvas');
+        if (canvas) {
+          setTimeout(() => canvas.classList.remove('opacity-0'), 100);
+        }
+      }
+    }, { rootMargin: '200px' });
+    
+    observer.observe(container);
+  }
+</script>

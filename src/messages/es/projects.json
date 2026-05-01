@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Proyectos y portafolio.",
+    "subtitle": "Proyectos, concursos y experiencias que demuestran progreso técnico real."
+  },
+  "featured": {
+    "label": "Portafolio destacado",
+    "name": "Trayectoria TIICs",
+    "description": "Actividades clave, concursos y proyectos que muestran avances concretos durante la formación."
+  },
+  "active": {
+    "title": "Evidencias de formación",
+    "subtitle": "Actividades y proyectos que muestran aplicación técnica, trabajo colaborativo y vínculo con el entorno profesional.",
+    "iotSystem": {
+      "name": "Galería de actividades",
+      "description": "Visitas institucionales, reuniones con empresas, concursos y eventos académicos como parte del proceso formativo."
+    }
+  },
+  "guides": {
+    "title": "Áreas de énfasis",
+    "subtitle": "Especialidades enfocadas en resolver necesidades tecnológicas actuales con fundamentos sólidos de ingeniería.",
+    "github": {
+      "name": "Analítica de datos",
+      "desc": "Soluciones en cloud con grandes volúmenes de información y enfoque en Big Data aplicada.",
+      "level": "Especialidad"
+    },
+    "python": {
+      "name": "Interacción humano-computadora",
+      "desc": "Diseño de prototipos y control por visión, voz y gestos mediante hardware y software.",
+      "level": "Especialidad"
+    },
+    "softwareDev": {
+      "name": "Tecnologías inalámbricas",
+      "desc": "Integración de dispositivos remotos con Wi-Fi, Bluetooth, RFID y otras tecnologías de comunicación.",
+      "level": "Especialidad"
+    },
+    "networking": {
+      "name": "Auditoría y legislación informática",
+      "desc": "Aplicación del marco jurídico en TI para proteger activos y fortalecer cumplimiento institucional.",
+      "level": "Especialidad"
+    }
+  },
+  "templates": {
+    "title": "Más líneas de especialidad",
+    "subtitle": "Campos complementarios para ampliar criterio técnico en arquitectura, negocio y operación tecnológica.",
+    "githubWorkflow": {
+      "name": "Tecnologías emergentes",
+      "desc": "Implementación de escenarios avanzados con cloud computing y ambientes de producción.",
+      "stack": "Cloud + Producción"
+    },
+    "pythonStarter": {
+      "name": "Bases de datos distribuidas",
+      "desc": "Diseño de arquitecturas distribuidas y optimización de consultas para sistemas escalables.",
+      "stack": "SQL + Distribuido"
+    },
+    "engineeringDocs": {
+      "name": "Negocios electrónicos",
+      "desc": "Desarrollo de sistemas y modelos de negocio sustentados en medios digitales.",
+      "stack": "Producto + Digital"
+    },
+    "networkingLab": {
+      "name": "Sistemas inteligentes",
+      "desc": "Integración de software, redes y automatización para resolver problemas de operación real.",
+      "stack": "IA + IoT"
+    }
+  },
+  "areas": {
+    "title": "Explora por campo TIC",
+    "projectsCount": "{count, plural, one {# proyecto} other {# proyectos}}"
+  },
+  "labels": {
+    "project": "Proyecto",
+    "viewDetails": "Ver detalles",
+    "guide": "Área",
+    "level": "Enfoque",
+    "template": "Especialidad"
+  },
+  "cta": {
+    "title": "Conecta tu formación con proyectos reales.",
+    "body": "Revisa evidencias, actividades y líneas técnicas para construir tu ruta académica con claridad."
+  }
+}

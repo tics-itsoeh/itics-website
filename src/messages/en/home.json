@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "kickerLine1": "Information and Communications",
+    "kickerLine2": "Technology Engineering",
+    "title": "Build technology that solves real problems.",
+    "subtitle": "Learn software development, networking, AI, and IoT by working on projects from your first semester.",
+    "ctaPrimary": "Explore training"
+  },
+  "philosophy": {
+    "title": "More than classes: training to solve real problems.",
+    "body": "The program combines critical thinking, technical practice, and collaboration so students build engineering judgement from early stages."
+  },
+  "formation": {
+    "title": "A professionally oriented program.",
+    "subtitle": "Clear academic objective, industry-aligned graduate profile, and continuous connection with real contexts.",
+    "realAccess": {
+      "title": "Program objective",
+      "body": "Train professionals capable of integrating and managing IT and communications to deliver strategic value in organizations."
+    },
+    "building": {
+      "title": "Graduate profile",
+      "body": "Network design, hardware/software integration, and information systems development under international standards."
+    },
+    "collaboration": {
+      "title": "Professional linkage",
+      "body": "Internships, academic visits, and formative events that connect learning with current industry practice."
+    }
+  },
+  "projects": {
+    "title": "Projects and portfolio.",
+    "subtitle": "Learning evidence from labs, applied research, competitions, and academic activities that demonstrate real technical progress.",
+    "featured": {
+      "name": "Institutional portfolio",
+      "description": "Activities, projects, and learning experiences documented to show how engineering practice evolves across the program."
+    },
+    "guides": {
+      "name": "Focus areas",
+      "description": "Academic tracks in data, interaction, emerging technologies, networks, and intelligent systems."
+    },
+    "systems": {
+      "name": "Labs and practice",
+      "description": "Technical spaces and collaborative dynamics to experiment, iterate, and validate solutions in concrete scenarios."
+    },
+    "infra": {
+      "name": "Continuous updates",
+      "description": "Specializations reviewed periodically to keep training aligned with current tools and needs."
+    }
+  },
+  "mentors": {
+    "title": "Faculty.",
+    "subtitle": "Professors with technical experience who guide professional growth in key ICT areas."
+  },
+  "contact": {
+    "title": "Official contact.",
+    "subtitle": "Institutional channels to resolve questions about the program, admissions, curriculum, and academic activities."
+  },
+  "outcomes": {
+    "title": "What will you be able to do?",
+    "items": {
+      "apps": "Develop applications.",
+      "networks": "Design and manage networks.",
+      "data": "Manage data for technical decisions.",
+      "solutions": "Build technological solutions for real problems."
+    }
+  },
+  "finalCta": {
+    "button": "See the full training path"
+  }
+}

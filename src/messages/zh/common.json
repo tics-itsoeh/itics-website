@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "首页",
+    "formation": "培养",
+    "projects": "项目",
+    "mentors": "导师",
+    "contact": "联系",
+    "join": "加入"
+  },
+  "footer": {
+    "tagline": "面向真实问题的官方信息与通信技术工程培养。",
+    "github": "在 GitHub 上查看组织"
+  },
+  "cta": {
+    "joinAcademy": "申请信息",
+    "exploreFormation": "了解培养",
+    "exploreProjects": "查看项目与成果",
+    "exploreMentors": "查看师资",
+    "viewContact": "查看官方联系方式",
+    "viewGuides": "查看重点方向",
+    "viewRepo": "查看成果",
+    "useTemplate": "查看方向",
+    "openGuide": "查看详情"
+  },
+  "badge": {
+    "inDevelopment": "开发中",
+    "available": "可用",
+    "comingSoon": "敬请期待"
+  }
+}

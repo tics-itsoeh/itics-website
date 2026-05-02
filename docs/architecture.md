@@ -7,131 +7,28 @@ El sitio de **ITICs ITSOEH** está diseñado bajo los principios de **JAMstack**
 2. **Single Source of Truth (SSOT)**: Configuración global, enlaces institucionales y datos de contacto se consumen desde `src/data/siteConfig.ts` para evitar la redundancia y errores de sincronización.
 3. **i18n Basado en Datos**: Las páginas no contienen texto duro. Extraen diccionarios de traducciones (`src/messages/[lang]/`) permitiendo escalar a múltiples idiomas sin duplicar componentes Astro.
 
----
+## 🗂️ Responsabilidad de Carpetas Principales
 
-## 🗺️ Diagrama de Arquitectura General
+### `src/pages/`
+Aquí se define el enrutamiento. Las páginas `.astro` no deben contener estilos largos ni textos. Su única responsabilidad es:
+1. Extraer el idioma de la URL.
+2. Consumir los datos del JSON correspondiente.
+3. Llamar a los componentes de UI pasándole los datos extraídos.
 
-```mermaid
-flowchart TD
-    User([👨‍💻 Usuario / Aspirante])
-    Browser[Navegador Web]
+### `src/components/`
+Componentes "tontos" (Dumb Components) de UI pura. 
+Deben estar altamente aislados. Si se requiere un botón, se importa la clase de Tailwind o el componente `<Button>`. Nunca mezclan lógica de negocio o fetch de APIs externas.
 
-    subgraph CDN[Edge / Hosting CDN]
-        SSG[HTML/CSS Estático Generado]
-        Assets[Imágenes / Modelos 3D / PDFs]
-    end
+### `src/layouts/`
+Contiene los "App Shells". El archivo `Layout.astro` es responsable de:
+1. Configuración del `<head>` (SEO, Metadatos).
+2. Carga de dependencias globales como Lenis (smooth scroll).
+3. Inserción de la navegación principal (Navbar) y el pie de página (Footer) alrededor de la etiqueta `<slot />`.
 
-    subgraph Frontend[Astro Frontend]
-        Pages(Páginas .astro)
-        Components((Componentes UI))
-        Layouts[Layout Base]
-    end
+### `src/data/`
+Centraliza la información estática pero volátil (como fechas de admisión y teléfonos) para que no dependan del idioma, evitando inconsistencias entre la versión en español y en inglés.
 
-    subgraph DataLayer[Capa de Datos]
-        i18n[(JSON Diccionarios)]
-        Config[(siteConfig.ts)]
-    end
+### `src/messages/`
+La base de datos estática. Se agrupa en carpetas por idioma (`/es`, `/en`, `/zh`). Cada archivo JSON representa una página (`home.json`, `projects.json`).
 
-    User --> Browser
-    Browser --> CDN
-    CDN -- Sirve páginas --> Frontend
-    Frontend --> Layouts
-    Layouts --> Pages
-    Pages --> Components
-    Components --> DataLayer
-    Pages --> DataLayer
-```
-
----
-
-## 🌐 Sitemap del Sitio
-
-```mermaid
-mindmap
-  root((ITICs ITSOEH))
-    Inicio
-      Hero 3D
-      Secciones CTA
-    Formación
-      Retícula PDF
-      Competencias
-      Academias Cisco/Huawei
-    Aspirantes
-      Perfil de Ingreso
-      Proceso Admisión
-      Fechas Clave
-    Proyectos
-      Proyectos Destacados
-      Repositorios GitHub
-    Comunidad
-      Egresados
-      Clubes Estudiantiles
-      Profesores
-    Contacto
-      Redes Sociales
-      WhatsApp / Correo
-      Mapa Interactivo
-```
-
----
-
-## 🧩 Diagrama de Componentes Principales
-
-```mermaid
-flowchart LR
-    Layout[Layout.astro\nSEO & Wrapper] --> Nav[Navbar.astro]
-    Layout --> Footer[Footer.astro]
-    Layout --> PageContent((Contenido de la Página))
-
-    PageContent --> Hero[Hero.astro]
-    PageContent --> Models[Model3DCanvas.astro]
-    
-    Footer --> Config[siteConfig.ts\n(Links y Teléfonos)]
-    Nav --> NavData[navigation.ts\n(Rutas)]
-    
-    subgraph Patrones de UI en Páginas
-        PageContent -.-> FeatureCard[Tarjetas de Información]
-        PageContent -.-> CTASection[Llamados a la Acción]
-        PageContent -.-> LogoStrip[Cintas de Logos]
-    end
-```
-
----
-
-## 💾 Modelo de Datos Conceptual
-Aunque no hay una base de datos tradicional, el sitio maneja "Entidades" a nivel de archivos de configuración (`.json` y `.ts`).
-
-```mermaid
-erDiagram
-    SITE_CONFIG ||--o{ SOCIAL_LINK : contains
-    SITE_CONFIG ||--|| CONTACT_INFO : contains
-    SITE_CONFIG ||--|| ADMISSION_DATA : contains
-
-    PAGE ||--o{ SECTION : renders
-    SECTION ||--o{ COMPONENT : uses
-
-    I18N_DICTIONARY ||--o{ PROJECT : stores
-    I18N_DICTIONARY ||--o{ CLUB : stores
-    I18N_DICTIONARY ||--o{ MENTOR : stores
-
-    PROJECT {
-        string title
-        string description
-        string imageUrl
-        string tags
-        string demoUrl
-        string githubUrl
-    }
-
-    CLUB {
-        string name
-        string target
-        string url
-    }
-
-    ADMISSION_DATA {
-        string year
-        string cycle
-        string pdfUrl
-    }
-```
+> Para ver cómo estas piezas interactúan visualmente, consulta [Diagramas del Sistema](diagrams.md).

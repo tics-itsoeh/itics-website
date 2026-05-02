@@ -64,7 +64,7 @@ El build final se generará en la carpeta `dist/`.
 
 ```text
 /
-├── docs/                 # Documentación técnica detallada (Arquitectura, SEO, Guías)
+├── docs/                 # Documentación técnica detallada
 ├── public/               # Assets estáticos (imágenes, logos, modelos 3D, sw.js)
 └── src/
     ├── components/       # Componentes reusables de UI (Navbar, Hero, Cards)
@@ -99,21 +99,25 @@ El build final se generará en la carpeta `dist/`.
 ---
 
 ## 📚 Documentación Técnica Completa
-Para profundizar en cómo funciona este proyecto, revisa los manuales en la carpeta `/docs`:
+Para profundizar en cómo funciona este proyecto, revisa los manuales específicos en la carpeta `/docs`:
 
-- [Arquitectura, Diagramas y Modelo de Datos](/docs/architecture.md)
-- [Flujos de Usuario y Edición](/docs/workflows.md)
-- [Guía de Contenido y Editorial](/docs/content-guide.md)
-- [Guía de Mantenimiento y Nuevas Secciones](/docs/maintenance.md)
-- [Guía Visual y de Accesibilidad (WCAG)](/docs/visual-and-a11y.md)
-- [Guía de SEO y Despliegue](/docs/seo-and-deployment.md)
+1. [Arquitectura General (`architecture.md`)](/docs/architecture.md)
+2. [Diagramas de Flujo y Modelo de Datos (`diagrams.md`)](/docs/diagrams.md)
+3. [Guía de Contenido y Editorial (`content-guide.md`)](/docs/content-guide.md)
+4. [Guía de Mantenimiento (`maintenance.md`)](/docs/maintenance.md)
+5. [Guías Visuales "Apple-like" (`visual-guidelines.md`)](/docs/visual-guidelines.md)
+6. [Guía de Accesibilidad - WCAG (`accessibility.md`)](/docs/accessibility.md)
+7. [Guía de SEO y Schema.org (`seo.md`)](/docs/seo.md)
+8. [Guía de Despliegue (`deployment.md`)](/docs/deployment.md)
+9. [Guía de Contribución (`contributing.md`)](/docs/contributing.md)
+10. [Historial de Versiones (`changelog.md`)](/docs/changelog.md)
 
 ---
 
 ## 🔮 Backlog Recomendado (Mejoras Futuras)
 Si el equipo técnico desea evolucionar esta plataforma en ciclos posteriores:
 
-1. **CMS Ligero**: Integrar [KeystoneJS], [Strapi] o [Sanity] si el volumen de contenido crece y los coordinadores no pueden editar JSON directamente.
+1. **CMS Ligero**: Integrar KeystoneJS, Strapi o Sanity si el volumen de contenido crece y los coordinadores no pueden editar JSON directamente.
 2. **Blog / Noticias**: Implementar Colecciones de Astro (`src/content/`) para un blog de la carrera con archivos `.mdx`.
 3. **Generación Dinámica (SSR)**: Si se implementa un buscador de proyectos, pasar partes del sitio a SSR.
 4. **Páginas Dinámicas por Proyecto/Docente**: Crear rutas dinámicas (`/proyectos/[slug].astro`) para detallar las aportaciones técnicas de cada trabajo escolar en lugar de solo enlazar a Github.

@@ -1,43 +1,50 @@
 # Guía Visual y de Estilos
 
-El sitio web oficial de ITICs ITSOEH está diseñado buscando un aura "Premium" y corporativa, emulando las interfaces modernas minimalistas (comúnmente llamadas estilo "Apple-like" o *Glassmorphism*). 
+El sitio web oficial de ITICs ITSOEH está diseñado buscando un aura "Premium" y corporativa, emulando las interfaces modernas minimalistas (comúnmente llamadas estilo "Apple-like" o *Glassmorphism*).
 
-Para mantener la estética institucional sin perder la elegancia visual, respeta estrictamente los siguientes principios.
+Para mantener la estética institucional sin perder la elegancia visual y garantizar la compatibilidad perfecta con el **Modo Oscuro**, respeta estrictamente los siguientes principios.
 
-## 🎨 1. Sistema de Colores
-Todos los colores base están centralizados como tokens CSS en `src/styles/global.css` (con sus alias de Tailwind en `tailwind.config.mjs`). NUNCA uses colores hexadecimales duros (`#fff`, `#000`) directamente en las clases HTML.
+## 🎨 1. Sistema de Colores y Modo Oscuro (Dark Mode)
+El sitio utiliza un sistema avanzado de **variables semánticas**. Todos los colores base están centralizados en `src/styles/global.css` y cambian automáticamente cuando el usuario activa el modo oscuro o cambia la preferencia de su sistema operativo.
 
-- **Fondo Base (`--apple-bg`)**: Blanco roto/gris perla (`#fbfbfd`). El blanco puro (`#ffffff`) puede cansar la vista en monitores brillantes, por lo que el fondo principal siempre tiene este ligerísimo tono grisáceo.
-- **Texto Principal (`--apple-text`)**: Negro suave o *Charcoal* (`#1d1d1f`). Evita usar texto en negro absoluto; el `#1d1d1f` suaviza la lectura.
-- **Texto Secundario (`--apple-muted`)**: Gris institucional (`#6e6e73`). Ideal para fechas, etiquetas, links pasivos o subtítulos.
-- **Acento Primario (`--apple-blue`)**: Azul institucional moderno (`#0066cc`). Usado en CTAs principales, links con efecto hover, y delineados de botones (rings). En *hover*, se oscurece ligeramente a `--apple-blue-hover` (`#0077ed`).
+**NUNCA uses colores hexadecimales fijos (`#ffffff`, `#000000`, `bg-white`, `bg-black`) directamente en las clases de Tailwind.** 
+
+Usa exclusivamente las siguientes clases semánticas:
+- **`bg-apple-bg`**: Fondo principal de la aplicación. En modo claro es un gris perla (`#fbfbfd`) y en oscuro es negro puro (`#000000`).
+- **`bg-apple-surface`**: Fondo para tarjetas primarias. Es blanco en modo claro y casi negro en modo oscuro.
+- **`bg-apple-surface-alt`**: Fondo alternativo para tarjetas secundarias o secciones destacadas (gris claro -> gris oscuro).
+- **`text-apple-text`**: Para todo el texto principal (negro suave -> blanco humo).
+- **`text-apple-muted`**: Texto secundario (Gris institucional). Ideal para subtítulos y fechas.
+- **`border-apple-border`**: Bordes ultra finos sutiles.
+- **`bg-apple-blue` / `text-apple-blue`**: Color de acento primario (Botones y enlaces). Se adapta en modo oscuro para garantizar legibilidad.
+
+*Nota: La transición de temas es gestionada de manera fluida y sin parpadeos (Anti-FOUC) por un script inyectado en `Layout.astro`.*
 
 ## 🖋️ 2. Jerarquía Tipográfica
 El proyecto descansa fuertemente sobre una tipografía excepcionalmente legible.
 
 - Usamos la fuente **Inter** importada nativamente vía Google Fonts CDN (pesos `400, 500, 600, 700, 800, 900`).
-- **Decisión Arquitectónica**: Se descartó alojar la fuente "Variable" localmente porque alteraba el grosor percibido de los títulos pesados (pesos 800/900). Mantén siempre el link de Google Fonts (`<link href="...">` en `Layout.astro`) para garantizar la solidez visual y el Anti-aliasing perfecto.
 - **Títulos Grandes (H1, H2)**: Letra grande, en negrita máxima (`font-bold` o `font-black`), y con el espacio entre letras contraído (*tracking-tight*) para lograr un look más condensado y moderno.
-- **Párrafos Base**: Texto de tamaño regular (`text-base` o `text-lg`), pero con un interlineado generoso (`leading-relaxed`) en color secundario `--apple-muted`.
+- **Párrafos Base**: Texto de tamaño regular (`text-base` o `text-[1.05rem]`), pero con un interlineado generoso (`leading-relaxed`) en color secundario `text-apple-muted`.
 
 ## 📦 3. Componentes y UI
 
 ### Tarjetas (Cards)
-El sitio abusa del diseño de tarjetas para organizar la información y hacerla amigable.
-- **Fondos**: Tienen fondos blancos semi-transparentes (`bg-white/80`) para permitir que fondos dinámicos o gradientes resalten.
-- **Bordes**: Tienen delineados sumamente sutiles y transparentes (`border border-black/5`) que apenas separan la tarjeta del fondo general.
-- **Esquinas**: Las esquinas son marcadamente redondas. Usa siempre `rounded-2xl` o `rounded-3xl` en elementos estructurales grandes.
+El sitio utiliza el diseño de tarjetas para organizar la información y hacerla amigable.
+- **Fondos**: Usa `bg-apple-surface` o `bg-apple-surface-alt`. No uses opacidades forzadas a menos que sea un componente flotante.
+- **Bordes**: Aplica `border border-apple-border` para apenas separar la tarjeta del fondo general sin ruido visual.
+- **Esquinas**: Las esquinas son marcadamente redondas. Usa siempre `rounded-2xl` o `rounded-[2rem]` en elementos estructurales grandes.
+- **Interactividad**: Las tarjetas interactivas (como los laboratorios) deben usar la clase `group`, `hover:-translate-y-1` y `transition-all duration-300` para un efecto sutil al pasar el cursor.
 
 ### Botones (CTAs)
 - **Forma**: Los botones principales y etiquetas son en forma de píldora ("Pill-shaped", clase `rounded-full`).
-- **Sombras**: El minimalismo huye de las sombras de caja oscuras y agresivas (`shadow-lg`). En su lugar, confiamos en el contraste de colores o en sombras hiper difuminadas.
-- **Efectos Hover**: Siempre deben incluir una transición suave en opacidad o color (`transition-colors duration-300`).
+- **Sombras**: El minimalismo huye de las sombras de caja agresivas. Para botones principales, usa sombras coloreadas difuminadas (ej. `shadow-[0_8px_20px_rgba(0,102,204,0.25)]`).
 
 ### Desenfocado Cristalino (Glassmorphism)
-- Usado para componentes que "flotan" sobre el contenido principal, especialmente en el Navbar superior.
-- Utiliza la clase de Tailwind `backdrop-blur-md` o `backdrop-blur-xl` en conjunto con fondos muy transparentes (ej. `bg-apple-nav` que es rgba al 82%) para que el contenido pase por detrás como si fuera un cristal opaco.
+- Usado para componentes que "flotan" sobre el contenido principal (Navbar inferior, modales, alertas).
+- Utiliza la clase de Tailwind `backdrop-blur-md` o `backdrop-blur-xl` en conjunto con fondos transparentes (`bg-apple-nav`) para que el contenido pase por detrás como si fuera un cristal.
 
-## 🏛️ 4. Uso de Logos Institucionales y "Logo Strip"
-- Los logos gubernamentales de la SEP, el Estado de Hidalgo, TecNM y el ITSOEH son visualmente ruidosos (usando banderas, escudos complejos y múltiples tipografías). Si se colocan flotando en el área superior (Header), destruirán por completo el minimalismo Apple-like.
-- **Por normativa legal deben existir en el sitio**, por eso **viven unificados en el Footer**. Allí cumplen con la institucionalidad requerida sin comprometer la limpieza de la navegación principal.
-- Si debes añadir un logo de academia externa (ej. AWS Academy, Oracle), colócalo en formato SVG de un solo color (preferentemente gris oscuro) en la sección correspondiente de Formación. Nunca los insertes a todo color, ya que compiten por atención con los botones de acción principal.
+## 🏛️ 4. Uso de Logos Institucionales
+- Los logos gubernamentales (SEP, TecNM, ITSOEH) son visualmente ruidosos si se colocan flotando en la navegación principal superior, rompiendo la experiencia minimalista.
+- **Por normativa legal deben existir en el sitio**, por eso **viven unificados en el Footer**. Allí cumplen con la institucionalidad sin comprometer la limpieza de la navegación de conversión.
+- Todos los logos están convertidos al formato moderno `WebP` para tiempos de carga ultrarrápidos y se muestran en el pie de página.

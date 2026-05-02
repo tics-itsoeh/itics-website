@@ -28,7 +28,7 @@ Tipos permitidos:
 
 Antes de proponer cualquier cambio visual o añadir nuevos componentes, es **obligatorio** consultar el manual de diseño:
 
-1. **Lee detenidamente la [Guía Visual y de Estilos](visual-guidelines.md)**.
+1. **Lee detenidamente la [Guía Visual y de Estilos](/docs/visual-guidelines.md)**.
 2. Está estrictamente prohibido usar colores hexadecimales fijos (`#fff`, `#000`) o clases rígidas (`bg-white`, `bg-black`) en Tailwind.
 3. Debes usar nuestras variables semánticas (ej. `bg-apple-surface-alt`, `text-apple-muted`) para garantizar que tu código funcione automáticamente y sin parpadeos en el **Modo Oscuro**.
 
@@ -56,4 +56,4 @@ Antes de proponer cualquier cambio visual o añadir nuevos componentes, es **obl
 ## ✋ Código de Conducta
 - Sé respetuoso con el trabajo anterior.
 - No añadas librerías de NPM masivas a menos que sea estrictamente necesario.
-- Sigue las reglas de [Estilo Visual Apple-like](visual-guidelines.md) antes de proponer colores nuevos o sombras agresivas.
+- Sigue las reglas de [Estilo Visual Apple-like](/docs/visual-guidelines.md) antes de proponer colores nuevos o sombras agresivas.

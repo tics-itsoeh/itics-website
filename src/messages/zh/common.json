@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "首页",
-    "formation": "培养",
+    "formation": "专业",
     "projects": "项目",
-    "mentors": "导师",
+    "mentors": "社区",
     "contact": "联系",
-    "join": "加入"
+    "join": "申请者"
   },
   "footer": {
     "tagline": "面向真实问题的官方信息与通信技术工程培养。",
@@ -15,12 +15,13 @@
     "joinAcademy": "申请信息",
     "exploreFormation": "了解培养",
     "exploreProjects": "查看项目与成果",
-    "exploreMentors": "查看师资",
+    "exploreMentors": "查看社区",
     "viewContact": "查看官方联系方式",
     "viewGuides": "查看重点方向",
     "viewRepo": "查看成果",
     "useTemplate": "查看方向",
-    "openGuide": "查看详情"
+    "openGuide": "查看详情",
+    "admission2026": "2026 招生"
   },
   "badge": {
     "inDevelopment": "开发中",

@@ -2,68 +2,138 @@
   "hero": {
     "kickerLine1": "Ingeniería en Tecnologías de la",
     "kickerLine2": "Información y Comunicaciones",
-    "title": "Construye tecnología que resuelve problemas reales.",
-    "subtitle": "Desarrolla habilidades en software, datos y redes, integrando IA e IoT en proyectos desde el primer semestre.",
-    "ctaPrimary": "Explorar formación"
+    "title": "Conecta. Programa. Innova.",
+    "subtitle": "Estudia Ingeniería en Tecnologías de la Información y Comunicaciones (ITICs) en el ITSOEH. Transforma tus ideas en soluciones reales dominando software, redes, datos, inteligencia artificial e Internet de las Cosas.",
+    "ctaPrimary": "Quiero estudiar ITICs",
+    "ctaSecondary": "Ver plan de estudios"
   },
   "philosophy": {
     "title": "Más que clases: formación para resolver problemas reales.",
     "body": "Aprende con proyectos, colaboración y práctica técnica desde etapas tempranas."
   },
   "formation": {
-    "title": "Formación con enfoque profesional.",
-    "subtitle": "Objetivo formativo claro, perfil de egreso alineado con la industria y vinculación constante con contextos reales.",
+    "title": "Más que clases: formación técnica con práctica real.",
+    "subtitle": "En ITICs aprendes construyendo proyectos, trabajando en equipo y aplicando tecnología en escenarios reales desde etapas tempranas.",
     "realAccess": {
-      "title": "Acceso a práctica real",
-      "body": "Trabaja en laboratorio y proyectos desde el inicio."
+      "title": "Práctica desde el inicio",
+      "body": "Trabaja con programación, redes, bases de datos, electrónica, IoT y herramientas digitales en proyectos académicos y colaborativos."
     },
     "building": {
-      "title": "Construcción de tecnología",
-      "body": "Desarrolla soluciones aplicadas en distintos contextos."
+      "title": "Certificaciones oficiales",
+      "body": "Fortalece tu perfil con academias oficiales de Huawei y Cisco, orientadas a competencias tecnológicas reconocidas por la industria."
     },
     "collaboration": {
-      "title": "Colaboración técnica",
-      "body": "Aprende trabajando en equipo como en la industria."
-    }
+      "title": "Comunidad técnica",
+      "body": "Participa en clubes de robótica, IoT, desarrollo y emprendimiento para aprender más allá del aula."
+    },
+    "cta": "Ver comunidad ITICs"
+  },
+  "academies": {
+    "title": "Formación conectada con estándares de la industria.",
+    "subtitle": "En Ingenieria en TICs, las academias oficiales de Huawei y Cisco refuerzan la formación técnica con rutas de aprendizaje y oportunidades de certificación reconocidas por la industria.",
+    "cards": {
+      "huawei": {
+        "title": "Huawei ICT Academy",
+        "description": "Formación en tecnologías de información, conectividad, infraestructura digital y transformación tecnológica."
+      },
+      "cisco": {
+        "title": "Cisco Networking Academy",
+        "description": "Formación en redes, conectividad, switching, routing, seguridad e infraestructura."
+      },
+      "certifications": {
+        "title": "Certificaciones",
+        "description": "Evidencia profesional que complementa tu carrera y fortalece tu perfil para prácticas, residencias y empleo."
+      }
+    },
+    "cta": "Ver certificaciones"
   },
   "projects": {
-    "title": "Proyectos y portafolio.",
-    "subtitle": "Proyectos, concursos y experiencias que demuestran tu progreso técnico real.",
+    "title": "Proyectos que se convierten en portafolio.",
+    "subtitle": "En ITICs ITSOEH, los estudiantes desarrollan soluciones que pueden documentarse, publicarse y mostrarse como evidencia técnica y profesional.",
     "featured": {
-      "name": "Portafolio institucional",
-      "description": "Proyectos reales desarrollados durante la carrera."
+      "name": "Museos digitales Byron Gálvez",
+      "description": "Experiencias web interactivas desarrolladas para difusión cultural y preservación digital."
     },
     "guides": {
-      "name": "Áreas de énfasis",
-      "description": "Software, datos, redes y tecnologías emergentes."
+      "name": "Tic-Tac-Toe con ESP32",
+      "description": "Proyecto físico-digital con microcontroladores, comunicación entre dispositivos y lógica interactiva."
     },
     "systems": {
-      "name": "Laboratorios y práctica",
-      "description": "Espacios técnicos y dinámicas colaborativas para experimentar, iterar y validar soluciones en escenarios concretos."
+      "name": "VEX Robotics ITICs",
+      "description": "Participación en robótica competitiva, programación, diseño mecánico, control y trabajo en equipo."
     },
     "infra": {
-      "name": "Actualización continua",
-      "description": "Especialidades revisadas periódicamente para mantener la formación conectada con herramientas y necesidades actuales."
-    }
+      "name": "GitHub ITICs",
+      "description": "Repositorio institucional donde se publican proyectos, código y evidencia técnica de la comunidad."
+    },
+    "cta": "Ver proyectos en GitHub"
   },
   "mentors": {
-    "title": "Mentores.",
-    "subtitle": "Profesionales que te acompañan en tu formación y desarrollo técnico."
+    "title": "Comunidad ITICs.",
+    "subtitle": "Clubes, docentes, coordinación y estudiantes que impulsan tu formación dentro y fuera del aula.",
+    "cards": {
+      "clubs": {
+        "title": "Clubes técnicos",
+        "description": "Robótica, IoT, desarrolladores y emprendimiento."
+      },
+      "faculty": {
+        "title": "Docentes y coordinación",
+        "description": "Acompañamiento académico y organización de la carrera."
+      },
+      "students": {
+        "title": "Estudiantes líderes",
+        "description": "Proyectos, talleres, comunidad y colaboración técnica."
+      },
+      "credits": {
+        "title": "Créditos del sitio",
+        "description": "Reconocimiento a quienes diseñan, desarrollan y mantienen la identidad digital de TICs."
+      }
+    },
+    "cta": "Ver comunidad →"
   },
   "contact": {
     "title": "Contacto oficial.",
     "subtitle": "Canales institucionales para resolver dudas sobre la formación, admisión, plan de estudios y actividades académicas."
   },
-  "outcomes": {
-    "title": "¿Qué podrás hacer?",
+  "faq": {
+    "title": "Dudas comunes antes de entrar",
     "items": {
-      "apps": "Desarrollar aplicaciones.",
-      "networks": "Diseñar y administrar redes.",
-      "data": "Gestionar datos para decisiones técnicas.",
-      "solutions": "Crear soluciones tecnológicas para problemas reales."
+      "programming": {
+        "question": "¿Necesito saber programar?",
+        "answer": "No. La carrera inicia desde fundamentos. Lo importante es tener disposición para practicar, resolver problemas y aprender de forma constante."
+      },
+      "math": {
+        "question": "¿Se ven muchas matemáticas?",
+        "answer": "Sí, porque es una ingeniería, pero no necesitas llegar dominándolas. Se trabajan de forma progresiva y se aplican a programación, redes, datos, comunicaciones y toma de decisiones."
+      },
+      "ai": {
+        "question": "¿La IA reemplazará a los ingenieros?",
+        "answer": "La IA no reemplaza al ingeniero que sabe pensar, diseñar, integrar y resolver problemas. La IA se vuelve una herramienta para quienes saben usarla y construir con ella."
+      },
+      "jobs": {
+        "question": "¿Hay campo laboral?",
+        "answer": "Sí. Puedes desarrollarte en software, redes, bases de datos, ciberseguridad, IoT, soporte, infraestructura, datos, cloud, automatización y gestión de proyectos tecnológicos."
+      }
+    },
+    "cta": "Resolver más dudas"
+  },
+  "outcomes": {
+    "title": "¿Qué podrás construir como estudiante de ITICs?",
+    "items": {
+      "apps": "Desarrollar aplicaciones web, móviles y sistemas de información.",
+      "networks": "Diseñar, configurar y administrar redes de cómputo.",
+      "databases": "Crear y gestionar bases de datos seguras y confiables.",
+      "iot": "Integrar dispositivos, sensores y sistemas IoT.",
+      "security": "Aplicar seguridad informática y auditoría de TI.",
+      "uiux": "Diseñar interfaces digitales centradas en el usuario.",
+      "projects": "Administrar proyectos tecnológicos.",
+      "entrepreneurship": "Emprender soluciones digitales con impacto real."
     }
   },
   "finalCta": {
-    "button": "Conocer la formación completa"
+    "title": "Da el primer paso hacia Ingeniería en TICs.",
+    "subtitle": "Consulta el proceso de admisión 2026–2027, conoce el plan de estudios y resuelve tus dudas con la comunidad ITICs.",
+    "primary": "Ver admisión 2026",
+    "secondary": "Contactar TICs"
   }
 }

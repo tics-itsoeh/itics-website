@@ -1,10 +1,130 @@
 {
-  "hero": {
-    "title": "Mentores.",
-    "subtitle": "Profesionales que te acompañan en tu formación y desarrollo técnico."
+  "community": {
+    "hero": {
+      "title": "Comunidad ITICs.",
+      "subtitle": "Conoce a la coordinación, docentes, clubes, estudiantes y colaboradores que impulsan la formación, los proyectos y la vida académica de Ingeniería en TICs.",
+      "primary": "Ver clubes",
+      "secondary": "Conocer equipo"
+    },
+    "coordination": {
+      "title": "Coordinación de la carrera.",
+      "subtitle": "Área responsable de acompañar la operación académica, seguimiento estudiantil, actividades institucionales y vinculación de Ingeniería en TICs.",
+      "name": "Lic. Juan Cornejo Hernández",
+      "role": "Jefe de División de Ingeniería en Tecnologías de la Información y Comunicaciones",
+      "body": "Coordina procesos académicos, actividades de la carrera, seguimiento institucional y vinculación con estudiantes, docentes y áreas administrativas.",
+      "email": "tics@itsoeh.edu.mx",
+      "phone": "Conmutador (738) 735-4000 ext. 270",
+      "cta": "Ver contacto"
+    },
+    "faculty": {
+      "title": "Plantilla docente.",
+      "subtitle": "Profesores que acompañan la formación académica y técnica de los estudiantes en programación, redes, bases de datos, matemáticas, telecomunicaciones, seguridad, investigación y gestión.",
+      "cards": {
+        "software": {
+          "name": "Docencia ITICs",
+          "area": "Programación y desarrollo de software",
+          "line": "Fundamentos de programación, desarrollo web, aplicaciones y metodologías de ingeniería de software."
+        },
+        "networks": {
+          "name": "Docencia ITICs",
+          "area": "Redes, telecomunicaciones y seguridad",
+          "line": "Infraestructura de conectividad, redes de cómputo, tecnologías inalámbricas y seguridad informática."
+        },
+        "data": {
+          "name": "Docencia ITICs",
+          "area": "Bases de datos, investigación y gestión",
+          "line": "Modelado de datos, administración de información, proyectos tecnológicos y fortalecimiento académico."
+        }
+      },
+      "updatingTitle": "Información en actualización",
+      "updatingBody": "Próximamente se integrará la información completa de la plantilla docente."
+    },
+    "clubs": {
+      "title": "Clubes y espacios técnicos.",
+      "subtitle": "Espacios para aprender más allá del aula, practicar con proyectos reales, colaborar entre estudiantes y fortalecer habilidades técnicas.",
+      "cards": {
+        "robotics": {
+          "title": "Club de Robótica",
+          "description": "Diseño, programación, control y participación en competencias de robótica como VEX Robotics.",
+          "cta": "Ver club",
+          "url": "https://deepdevjose.github.io/VEXU-ITICs"
+        },
+        "iot": {
+          "title": "Club de IoT",
+          "description": "Sensores, microcontroladores, conectividad, dashboards, automatización y sistemas inteligentes."
+        },
+        "developers": {
+          "title": "Club de Desarrolladores",
+          "description": "Programación, GitHub, desarrollo web, aplicaciones, herramientas modernas y colaboración técnica."
+        },
+        "entrepreneurs": {
+          "title": "Taller de Emprendedores",
+          "description": "Ideas tecnológicas, prototipos, modelos de negocio y proyectos con impacto."
+        }
+      }
+    },
+    "leadership": {
+      "title": "Liderazgo estudiantil.",
+      "subtitle": "Estudiantes que impulsan proyectos, talleres, recursos digitales y colaboración técnica dentro de la comunidad ITICs.",
+      "jose": {
+        "name": "José Manuel Cortés Cerón",
+        "role": "Colaborador estudiantil · Software, IA e IoT",
+        "description": "Apoya en el desarrollo de proyectos, comunidad técnica, recursos digitales, actividades de formación complementaria e identidad web de ITICs.",
+        "tag1": "Software",
+        "tag2": "IA",
+        "tag3": "IoT",
+        "tag4": "Comunidad",
+        "profile": "Ver perfil"
+      }
+    },
+    "credits": {
+      "title": "Créditos del sitio.",
+      "body": "Este sitio fue desarrollado como una iniciativa para fortalecer la identidad digital de Ingeniería en TICs del ITSOEH, difundir su formación académica, proyectos, comunidad y proceso de admisión.",
+      "cards": {
+        "web": {
+          "title": "Diseño y desarrollo web",
+          "value": "José Manuel Cortés Cerón"
+        },
+        "content": {
+          "title": "Contenido institucional",
+          "value": "Ingeniería en TICs ITSOEH"
+        },
+        "review": {
+          "title": "Revisión académica",
+          "value": "Coordinación de Ingeniería en TICs"
+        },
+        "identity": {
+          "title": "Identidad institucional",
+          "value": "ITSOEH · TecNM · Educación"
+        }
+      }
+    },
+    "cta": {
+      "title": "Forma parte de una comunidad que aprende construyendo.",
+      "subtitle": "Conoce clubes, proyectos, docentes y espacios de colaboración que fortalecen tu formación dentro y fuera del aula.",
+      "primary": "Ver aspirantes",
+      "secondary": "Ver proyectos"
+    }
   },
-  "jose": {
-    "role": "Docente mentor · Software, IA e IoT",
-    "profile": "Ver perfil"
+  "profile": {
+    "back": "Volver a comunidad",
+    "name": "José Manuel Cortés Cerón",
+    "role": "Colaborador estudiantil · Software, IA e IoT",
+    "tag1": "Software",
+    "tag2": "IA",
+    "tag3": "IoT",
+    "tag4": "Comunidad",
+    "bio1": "Estudiante de Ingeniería en Tecnologías de la Información y Comunicaciones con enfoque en desarrollo de software, inteligencia artificial, sistemas IoT y arquitectura de soluciones digitales. Ha colaborado en proyectos académicos y tecnológicos orientados a la construcción de plataformas, automatización, sistemas interactivos y recursos digitales para la comunidad ITICs.",
+    "bio2": "Dentro de la comunidad, apoya en el desarrollo de proyectos, documentación técnica, recursos web, actividades de formación complementaria y fortalecimiento de la identidad digital de la carrera.",
+    "academicTitle": "Contexto académico",
+    "degreeTitle": "Ingeniería en Tecnologías de la Información y Comunicaciones",
+    "degreeInstitution": "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
+    "researchTitle": "Research Collaboration",
+    "researchInstitution": "Xi’an Jiaotong-Liverpool University",
+    "contributionsTitle": "Contribuciones y proyectos relacionados",
+    "communityTitle": "Contribuciones dentro de la comunidad ITICs",
+    "communityDesc": "Participación en recursos digitales, documentación, actividades técnicas y fortalecimiento de la presencia web institucional.",
+    "relatedTitle": "Proyectos relacionados",
+    "relatedDesc": "Iniciativas académicas y técnicas vinculadas a software, experiencias interactivas y colaboración de comunidad."
   }
 }

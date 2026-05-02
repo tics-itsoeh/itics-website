@@ -1,0 +1,185 @@
+{
+  "links": {
+    "requestInfoUrl": "https://wa.me/5217731099748",
+    "registerUrl": "https://fichas.itsoeh.edu.mx/",
+    "admissionPdfUrl": "https://www.itsoeh.edu.mx/front/slider-images/docs/Conv_Admisi%C3%B3n_2026-20271.pdf",
+    "iticsWhatsAppUrl": "https://wa.me/5217731099748",
+    "iticsEmailUrl": "mailto:tics@itsoeh.edu.mx",
+    "iticsPhoneUrl": "tel:+527721397096",
+    "controlSchoolPhoneUrl": "tel:+527387354000",
+    "controlSchoolEmailUrl": "mailto:fichas@itsoeh.edu.mx"
+  },
+  "hero": {
+    "title": "Estudia ITICs en el ITSOEH.",
+    "subtitle": "Forma parte de Ingeniería en Tecnologías de la Información y Comunicaciones y aprende a crear soluciones reales con software, redes, datos, inteligencia artificial e Internet de las Cosas.",
+    "support": "Convocatoria de admisión 2026–2027 · Modalidad escolarizada",
+    "primary": "Solicitar información",
+    "secondary": "Ver proceso de admisión"
+  },
+  "admission": {
+    "title": "Proceso de admisión 2026–2027.",
+    "subtitle": "Consulta las fechas clave para solicitar ficha, presentar evaluación diagnóstica y revisar resultados.",
+    "cards": {
+      "application": {
+        "title": "Solicitud de ficha",
+        "body": "03 de febrero al 10 de junio de 2026"
+      },
+      "diagnostic": {
+        "title": "Evaluación diagnóstica",
+        "body": "22 de junio de 2026"
+      },
+      "results": {
+        "title": "Publicación de resultados",
+        "body": "26 de junio de 2026"
+      },
+      "fee": {
+        "title": "Costo de ficha",
+        "body": "$651.00 MXN"
+      }
+    },
+    "primary": "Registrarme para ficha",
+    "secondary": "Contactar Control Escolar"
+  },
+  "requirements": {
+    "title": "Requisitos para solicitar ficha.",
+    "subtitle": "Ten preparados tus documentos en formato PDF por separado para realizar tu registro.",
+    "cards": {
+      "study": {
+        "title": "Constancia o certificado",
+        "body": "Constancia de estudios de bachillerato, certificado de bachillerato o historial académico firmado y sellado, con promedio mínimo de 7.0."
+      },
+      "birth": {
+        "title": "Acta de nacimiento",
+        "body": "Documento oficial en formato PDF."
+      },
+      "curp": {
+        "title": "CURP",
+        "body": "CURP emitido por RENAPO."
+      },
+      "payment": {
+        "title": "Comprobante de pago",
+        "body": "Comprobante de pago de ficha por $651.00 MXN."
+      },
+      "gmail": {
+        "title": "Correo Gmail",
+        "body": "Debes contar con correo electrónico de dominio Gmail."
+      },
+      "foreign": {
+        "title": "Estudiantes extranjeros",
+        "body": "Deben tramitar su revalidación de estudios correspondiente."
+      }
+    },
+    "button": "Ver convocatoria completa"
+  },
+  "why": {
+    "title": "¿Por qué estudiar ITICs?",
+    "subtitle": "ITICs combina formación técnica, proyectos reales, certificaciones, comunidad y áreas de alto crecimiento profesional.",
+    "cards": {
+      "build": {
+        "title": "Aprendes construyendo",
+        "body": "Desarrolla proyectos en software, redes, bases de datos, IoT, ciberseguridad e inteligencia artificial."
+      },
+      "certs": {
+        "title": "Certificaciones oficiales",
+        "body": "Accede a academias oficiales de Huawei y Cisco para fortalecer tu perfil técnico."
+      },
+      "community": {
+        "title": "Comunidad técnica",
+        "body": "Participa en clubes de robótica, IoT, desarrollo y emprendimiento."
+      },
+      "portfolio": {
+        "title": "Portafolio real",
+        "body": "Documenta y publica proyectos en GitHub como evidencia de tus habilidades."
+      }
+    }
+  },
+  "learning": {
+    "title": "Lo que puedes aprender en la carrera.",
+    "cards": {
+      "programming": {
+        "title": "Programación",
+        "body": "Desarrollo de aplicaciones, lógica, estructuras de datos, web y móvil."
+      },
+      "networks": {
+        "title": "Redes",
+        "body": "Diseño, configuración y administración de redes de cómputo y telecomunicaciones."
+      },
+      "databases": {
+        "title": "Bases de datos",
+        "body": "Diseño y administración de información para sistemas reales."
+      },
+      "ai": {
+        "title": "Inteligencia artificial y datos",
+        "body": "Uso de datos, herramientas emergentes y sistemas inteligentes."
+      },
+      "iot": {
+        "title": "IoT y hardware",
+        "body": "Sensores, microcontroladores, sistemas embebidos y dispositivos conectados."
+      },
+      "security": {
+        "title": "Seguridad informática",
+        "body": "Protección de información, auditoría y administración de seguridad en redes."
+      }
+    }
+  },
+  "faq": {
+    "title": "Dudas comunes antes de entrar.",
+    "items": {
+      "programming": {
+        "question": "¿Necesito saber programar antes de entrar?",
+        "answer": "No. La carrera inicia desde fundamentos. Lo importante es tener disposición para practicar, resolver problemas y aprender de forma constante."
+      },
+      "math": {
+        "question": "¿Se ven muchas matemáticas?",
+        "answer": "Sí, porque es una ingeniería, pero no necesitas llegar dominándolas. Se trabajan de forma progresiva y se aplican a programación, redes, datos, comunicaciones y toma de decisiones."
+      },
+      "mathFear": {
+        "question": "¿Y si no soy bueno en matemáticas?",
+        "answer": "Puedes mejorar. Muchos estudiantes entran con dudas o miedo, pero avanzan con práctica, asesorías, trabajo en equipo y constancia."
+      },
+      "ai": {
+        "question": "¿La inteligencia artificial reemplazará a los ingenieros?",
+        "answer": "La IA no reemplaza al ingeniero que sabe pensar, diseñar, integrar y resolver problemas. Se vuelve una herramienta para quienes saben usarla, construir con ella y aplicarla correctamente."
+      },
+      "jobs": {
+        "question": "¿Hay campo laboral?",
+        "answer": "Sí. Puedes desarrollarte en software, redes, bases de datos, ciberseguridad, IoT, soporte, infraestructura, datos, cloud, automatización y gestión de proyectos tecnológicos."
+      },
+      "laptop": {
+        "question": "¿Necesito laptop?",
+        "answer": "Es recomendable contar con una laptop para practicar programación, bases de datos, redes, diseño web y proyectos. No tiene que ser costosa al inicio, pero sí permitirte trabajar con herramientas de desarrollo."
+      }
+    },
+    "cta": "Resolver más dudas"
+  },
+  "contact": {
+    "title": "¿Tienes dudas sobre la admisión?",
+    "subtitle": "Comunícate con la carrera o con Control Escolar para recibir orientación sobre ficha, requisitos y proceso de ingreso.",
+    "itics": {
+      "title": "Contacto ITICs",
+      "emailLabel": "Correo",
+      "email": "tics@itsoeh.edu.mx",
+      "phoneLabel": "Teléfono",
+      "phone": "772 139 7096",
+      "whatsappLabel": "WhatsApp",
+      "whatsapp": "+52 1 773 109 9748",
+      "whatsappButton": "Enviar WhatsApp",
+      "emailButton": "Enviar correo"
+    },
+    "control": {
+      "title": "Control Escolar",
+      "phoneLabel": "Teléfono",
+      "phone": "738 735 4000 ext. 631, 632, 633 y 634",
+      "emailLabel": "Correo",
+      "email": "fichas@itsoeh.edu.mx",
+      "scheduleLabel": "Horario",
+      "schedule": "Lunes a viernes de 08:30 a 16:30 horas · Sábado de 09:00 a 13:00 horas"
+    }
+  },
+  "finalCta": {
+    "title": "Tu camino en ITICs puede empezar hoy.",
+    "subtitle": "Consulta la convocatoria, prepara tus documentos y acércate a la comunidad ITICs para resolver tus dudas antes de solicitar ficha.",
+    "primary": "Ver admisión 2026",
+    "secondary": "Contactar ITICs"
+  }
+}

@@ -1,59 +1,120 @@
 {
   "hero": {
-    "title": "Plan de formación TIICs.",
-    "subtitle": "La carrera forma profesionistas con capacidad técnica, visión estratégica y compromiso ético para entornos organizacionales reales."
+    "title": "Formación académica en ITICs.",
+    "subtitle": "Conoce el objetivo, perfil de egreso, competencias y áreas que integran la Ingeniería en Tecnologías de la Información y Comunicaciones del ITSOEH."
   },
-  "howItWorks": {
-    "step1": {
+  "overviewCards": {
+    "objective": {
       "label": "01",
       "title": "Objetivo",
-      "body": "Integrar y administrar tecnologías de información y comunicaciones para elevar productividad y resultados institucionales."
+      "body": "Formar profesionistas capaces de desarrollar, integrar y administrar tecnologías de información y comunicaciones para contribuir a la productividad de las organizaciones."
     },
-    "step2": {
+    "profile": {
       "label": "02",
       "title": "Perfil de egreso",
-      "body": "Diseño e implementación de redes, integración de sistemas y construcción de soluciones de información para la toma de decisiones."
+      "body": "Competencias en redes, software, bases de datos, seguridad, sistemas de comunicación, proyectos tecnológicos y tecnologías emergentes."
     },
-    "step3": {
+    "curriculum": {
       "label": "03",
-      "title": "Retícula actualizada",
-      "body": "Especialidades revisadas periódicamente para mantener pertinencia técnica frente a nuevas demandas del sector."
+      "title": "Retícula ITIC-2010-225",
+      "body": "Plan de estudios estructurado por semestres, con formación en programación, redes, telecomunicaciones, bases de datos, gestión e investigación."
     },
-    "step4": {
+    "residency": {
       "label": "04",
       "title": "Residencia profesional",
-      "body": "Vinculación con empresas y organizaciones donde el aprendizaje se aplica en escenarios operativos reales."
+      "body": "Vinculación con empresas e instituciones donde el estudiante aplica sus competencias en escenarios reales."
     }
   },
-  "system": {
-    "title": "Estructura académica con enfoque aplicado.",
-    "repoName": "tiics-program"
+  "identity": {
+    "title": "Identidad académica.",
+    "mission": {
+      "title": "Misión",
+      "body": "Formar profesionistas competentes en el diseño, desarrollo e implementación de soluciones innovadoras en tecnologías de la información y comunicación, bajo estándares y certificaciones internacionales, para satisfacer las necesidades de la sociedad y la industria."
+    },
+    "vision": {
+      "title": "Visión",
+      "body": "Ser una carrera consolidada y reconocida por su calidad educativa, servicios tecnológicos, profesores y laboratorios certificados, orientada al desarrollo de tecnología de vanguardia para resolver problemas del entorno social y productivo de la región."
+    },
+    "generalObjective": {
+      "title": "Objetivo general",
+      "body": "Formar profesionistas capaces de desarrollar, integrar y administrar tecnologías de información y comunicaciones que contribuyan a la productividad de las organizaciones, con liderazgo, pensamiento crítico, ética, visión emprendedora y compromiso con el desarrollo sustentable."
+    }
   },
-  "features": {
+  "areas": {
+    "title": "Áreas de formación.",
+    "software": {
+      "title": "Programación y desarrollo de software",
+      "body": "Fundamentos de programación, programación orientada a objetos, programación web, desarrollo móvil e ingeniería de software."
+    },
+    "networks": {
+      "title": "Redes y telecomunicaciones",
+      "body": "Fundamentos de redes, redes de computadoras, telecomunicaciones, redes emergentes, tecnologías inalámbricas y seguridad de redes."
+    },
+    "databases": {
+      "title": "Bases de datos y sistemas",
+      "body": "Fundamentos de base de datos, taller de base de datos, bases de datos distribuidas y sistemas operativos."
+    },
+    "math": {
+      "title": "Matemáticas y modelado",
+      "body": "Cálculo, álgebra lineal, probabilidad, matemáticas discretas, toma de decisiones y comunicaciones."
+    },
+    "iot": {
+      "title": "Hardware, arquitectura e IoT",
+      "body": "Electricidad, circuitos, arquitectura de computadoras, dispositivos conectados y sistemas embebidos."
+    },
+    "management": {
+      "title": "Gestión, investigación y negocios",
+      "body": "Administración, proyectos, investigación, negocios electrónicos, emprendimiento y desarrollo sustentable."
+    }
+  },
+  "competencies": {
     "title": "Competencias clave.",
-    "repos": {
-      "title": "Redes y comunicaciones",
-      "body": "Diseño, implementación y administración de infraestructura de cómputo y conectividad"
+    "networks": {
+      "title": "Redes y telecomunicaciones",
+      "body": "Diseño, implementación y administración de redes de cómputo, comunicación e infraestructura conectada."
     },
-    "challenges": {
-      "title": "Software y arquitectura",
-      "body": "Integración de hardware, software y servicios tecnológicos para soluciones escalables"
+    "software": {
+      "title": "Software y sistemas de información",
+      "body": "Desarrollo de aplicaciones y sistemas para gestión de procesos, toma de decisiones y operación organizacional."
     },
-    "codeReviews": {
-      "title": "Tecnologías actuales",
-      "body": "Uso de herramientas emergentes con criterio técnico y metodológico"
+    "databases": {
+      "title": "Bases de datos",
+      "body": "Diseño, administración y gestión de bases de datos seguras, disponibles y confiables."
     },
-    "systems": {
-      "title": "Consultoría y auditoría",
-      "body": "Evaluación técnica y acompañamiento para mejorar procesos de TI"
+    "security": {
+      "title": "Seguridad y auditoría de TI",
+      "body": "Implementación de controles, políticas y procesos para proteger información y evaluar sistemas tecnológicos."
+    },
+    "embedded": {
+      "title": "Sistemas embebidos e IoT",
+      "body": "Integración de hardware, software, sensores y dispositivos para aplicaciones de propósito específico."
+    },
+    "management": {
+      "title": "Gestión y emprendimiento",
+      "body": "Administración de proyectos tecnológicos, innovación, consultoría y creación de soluciones digitales."
     }
   },
-  "collaboration": {
+  "curriculum": {
+    "title": "Retícula ITIC-2010-225.",
+    "body": "El plan de estudios se organiza en nueve semestres e integra formación básica, profesional, especialidad, servicio social, actividades complementarias y residencia profesional.",
+    "button": "Abrir retícula en PDF",
+    "summaryButton": "Ver resumen por semestres",
+    "semester1": "1.º semestre: fundamentos de programación, matemáticas y ética.",
+    "semester2": "2.º semestre: programación orientada a objetos, álgebra y estadística.",
+    "semester3": "3.º semestre: estructuras de datos, bases de datos y administración.",
+    "semester4": "4.º semestre: redes, programación II, circuitos e ingeniería de software.",
+    "semester5": "5.º semestre: redes, comunicaciones, bases distribuidas y proyectos.",
+    "semester6": "6.º semestre: web, telecomunicaciones, sistemas operativos y tecnologías inalámbricas.",
+    "semester7": "7.º semestre: móviles, redes emergentes, IHC e investigación.",
+    "semester8": "8.º semestre: seguridad, auditoría, ingeniería del conocimiento y negocios electrónicos.",
+    "semester9": "9.º semestre: residencia profesional y especialidad."
+  },
+  "complementary": {
     "title": "Experiencia formativa complementaria.",
-    "body": "La carrera integra actividades académicas, deportivas, culturales y visitas empresariales para fortalecer liderazgo, trabajo en equipo y visión profesional."
+    "body": "Además de la formación académica, ITICs integra actividades complementarias, proyectos, talleres, visitas, clubes y experiencias colaborativas que fortalecen liderazgo, trabajo en equipo, comunicación y visión profesional. También se fortalece con academias oficiales, certificaciones, clubes técnicos y actividades de comunidad."
   },
   "cta": {
-    "title": "Revisa proyectos, evidencias y líneas de trabajo.",
+    "title": "Conoce cómo esta formación se convierte en proyectos reales.",
     "button": "Ver proyectos y portafolio"
   }
 }

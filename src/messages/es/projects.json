@@ -1,82 +1,141 @@
 {
-  "hero": {
-    "title": "Proyectos y portafolio.",
-    "subtitle": "Proyectos, concursos y experiencias que demuestran progreso técnico real."
-  },
-  "featured": {
-    "label": "Portafolio destacado",
-    "name": "Trayectoria TIICs",
-    "description": "Actividades clave, concursos y proyectos que muestran avances concretos durante la formación."
-  },
-  "active": {
-    "title": "Evidencias de formación",
-    "subtitle": "Actividades y proyectos que muestran aplicación técnica, trabajo colaborativo y vínculo con el entorno profesional.",
-    "iotSystem": {
-      "name": "Galería de actividades",
-      "description": "Visitas institucionales, reuniones con empresas, concursos y eventos académicos como parte del proceso formativo."
+  "v2": {
+    "links": {
+      "githubUrl": "https://github.com/tics-itsoeh",
+      "communityUrl": "/es/mentores"
+    },
+    "hero": {
+      "title": "Proyectos y portafolio ITICs.",
+      "subtitle": "Evidencias, repositorios, concursos y soluciones desarrolladas por estudiantes para demostrar progreso técnico, colaboración y aplicación real de la ingeniería.",
+      "primary": "Ver evidencias",
+      "secondary": "Explorar GitHub"
+    },
+    "categories": {
+      "title": "Categorías",
+      "ia": "IA",
+      "software": "Software",
+      "iot": "IoT",
+      "networks": "Redes",
+      "data": "Datos",
+      "robotics": "Robótica",
+      "web": "Web",
+      "embedded": "Sistemas embebidos"
+    },
+    "featured": {
+      "label": "Portafolio destacado",
+      "title": "Trayectoria ITICs",
+      "description": "Proyectos, concursos, repositorios y actividades que documentan el crecimiento técnico de la comunidad estudiantil.",
+      "tags": {
+        "projects": "Proyectos",
+        "github": "GitHub",
+        "contests": "Concursos",
+        "community": "Comunidad",
+        "portfolio": "Portafolio"
+      },
+      "primary": "Ver evidencia",
+      "secondary": "GitHub"
+    },
+    "evidence": {
+      "title": "Evidencias de formación",
+      "subtitle": "Actividades, proyectos y repositorios que muestran aplicación técnica, trabajo colaborativo y vínculo con escenarios reales.",
+      "cards": {
+        "virtualMuseum": {
+          "title": "Museo virtual Byron Gálvez",
+          "description": "Experiencia web interactiva para difusión cultural y preservación digital.",
+          "tag1": "Web",
+          "tag2": "Cultura digital",
+          "tag3": "Interacción",
+          "tag4": "GitHub",
+          "primaryLabel": "Ver repositorio",
+          "primaryUrl": "https://github.com/tics-itsoeh/Byron-s-virtual-museum",
+          "secondaryLabel": "Ver evidencia",
+          "secondaryUrl": "https://deepdevjose.github.io/Byron-s-virtual-museum/"
+        },
+        "dynamicMuseum": {
+          "title": "Museo dinámico Byron Gálvez",
+          "description": "Proyecto digital con animaciones, visualización e interacción para enriquecer la experiencia artística.",
+          "tag1": "WebGL",
+          "tag2": "Multimedia",
+          "tag3": "UX",
+          "tag4": "Arte digital",
+          "primaryLabel": "Ver repositorio",
+          "primaryUrl": "https://github.com/tics-itsoeh/Byron-s-dynamic-museum",
+          "secondaryLabel": "Ver evidencia",
+          "secondaryUrl": "https://deepdevjose.github.io/Byron-s-dynamic-museum/"
+        },
+        "esp32": {
+          "title": "Tic-Tac-Toe con ESP32",
+          "description": "Proyecto físico-digital con dos microcontroladores ESP32, comunicación entre dispositivos y lógica interactiva.",
+          "tag1": "IoT",
+          "tag2": "ESP32",
+          "tag3": "Sistemas embebidos",
+          "tag4": "Comunicación",
+          "primaryLabel": "Ver repositorio",
+          "primaryUrl": "https://github.com/tics-itsoeh/TIC-TAC-TOE",
+          "secondaryLabel": "Ver evidencia",
+          "secondaryUrl": "https://github.com/tics-itsoeh/TIC-TAC-TOE#readme"
+        },
+        "vex": {
+          "title": "VEX Robotics ITICs",
+          "description": "Participación en robótica competitiva mediante diseño, programación, control, estrategia y trabajo colaborativo.",
+          "tag1": "Robótica",
+          "tag2": "Control",
+          "tag3": "Competencia",
+          "tag4": "Programación",
+          "primaryLabel": "Ver club",
+          "primaryUrl": "https://deepdevjose.github.io/VEXU-ITICs",
+          "secondaryLabel": "Ver evidencia",
+          "secondaryUrl": "https://deepdevjose.github.io/VEXU-ITICs"
+        },
+        "github": {
+          "title": "GitHub ITICs",
+          "description": "Repositorio institucional donde se publican proyectos, código y evidencia técnica de la comunidad.",
+          "tag1": "Repositorio",
+          "tag2": "Código",
+          "tag3": "Evidencia",
+          "tag4": "Comunidad",
+          "primaryLabel": "Ver GitHub",
+          "primaryUrl": "https://github.com/tics-itsoeh",
+          "secondaryLabel": "Ver comunidad",
+          "secondaryUrl": "/es/mentores"
+        }
+      }
+    },
+    "lines": {
+      "title": "Líneas de proyecto",
+      "subtitle": "Áreas donde los estudiantes pueden desarrollar soluciones, documentar evidencias y construir portafolio técnico.",
+      "cards": {
+        "software": {
+          "title": "Software y web",
+          "description": "Aplicaciones, plataformas, interfaces, APIs, documentación y despliegue de soluciones digitales."
+        },
+        "iot": {
+          "title": "IoT y sistemas embebidos",
+          "description": "Sensores, microcontroladores, comunicación entre dispositivos, monitoreo y automatización."
+        },
+        "networks": {
+          "title": "Redes y telecomunicaciones",
+          "description": "Diseño, configuración, seguridad y validación de infraestructura de conectividad."
+        },
+        "data": {
+          "title": "Datos e inteligencia artificial",
+          "description": "Análisis de datos, visualización, modelos inteligentes y herramientas emergentes."
+        },
+        "robotics": {
+          "title": "Robótica",
+          "description": "Control, programación, electrónica, diseño, pruebas y competencias."
+        },
+        "hci": {
+          "title": "Interacción humano-computadora",
+          "description": "Interfaces, experiencia de usuario, accesibilidad, prototipos y sistemas interactivos."
+        }
+      }
+    },
+    "cta": {
+      "title": "Explora el código y las evidencias de la comunidad ITICs.",
+      "body": "Conoce los proyectos publicados, repositorios y actividades que muestran cómo la formación se convierte en soluciones reales.",
+      "primary": "Ver GitHub ITICs",
+      "secondary": "Conocer comunidad"
     }
-  },
-  "guides": {
-    "title": "Áreas de énfasis",
-    "subtitle": "Especialidades enfocadas en resolver necesidades tecnológicas actuales con fundamentos sólidos de ingeniería.",
-    "github": {
-      "name": "Analítica de datos",
-      "desc": "Soluciones en cloud con grandes volúmenes de información y enfoque en Big Data aplicada.",
-      "level": "Especialidad"
-    },
-    "python": {
-      "name": "Interacción humano-computadora",
-      "desc": "Diseño de prototipos y control por visión, voz y gestos mediante hardware y software.",
-      "level": "Especialidad"
-    },
-    "softwareDev": {
-      "name": "Tecnologías inalámbricas",
-      "desc": "Integración de dispositivos remotos con Wi-Fi, Bluetooth, RFID y otras tecnologías de comunicación.",
-      "level": "Especialidad"
-    },
-    "networking": {
-      "name": "Auditoría y legislación informática",
-      "desc": "Aplicación del marco jurídico en TI para proteger activos y fortalecer cumplimiento institucional.",
-      "level": "Especialidad"
-    }
-  },
-  "templates": {
-    "title": "Más líneas de especialidad",
-    "subtitle": "Campos complementarios para ampliar criterio técnico en arquitectura, negocio y operación tecnológica.",
-    "githubWorkflow": {
-      "name": "Tecnologías emergentes",
-      "desc": "Implementación de escenarios avanzados con cloud computing y ambientes de producción.",
-      "stack": "Cloud + Producción"
-    },
-    "pythonStarter": {
-      "name": "Bases de datos distribuidas",
-      "desc": "Diseño de arquitecturas distribuidas y optimización de consultas para sistemas escalables.",
-      "stack": "SQL + Distribuido"
-    },
-    "engineeringDocs": {
-      "name": "Negocios electrónicos",
-      "desc": "Desarrollo de sistemas y modelos de negocio sustentados en medios digitales.",
-      "stack": "Producto + Digital"
-    },
-    "networkingLab": {
-      "name": "Sistemas inteligentes",
-      "desc": "Integración de software, redes y automatización para resolver problemas de operación real.",
-      "stack": "IA + IoT"
-    }
-  },
-  "areas": {
-    "title": "Explora por campo TIC",
-    "projectsCount": "{count, plural, one {# proyecto} other {# proyectos}}"
-  },
-  "labels": {
-    "project": "Proyecto",
-    "viewDetails": "Ver detalles",
-    "guide": "Área",
-    "level": "Enfoque",
-    "template": "Especialidad"
-  },
-  "cta": {
-    "title": "Conecta tu formación con proyectos reales.",
-    "body": "Revisa evidencias, actividades y líneas técnicas para construir tu ruta académica con claridad."
   }
 }

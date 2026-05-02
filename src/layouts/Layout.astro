@@ -28,6 +28,7 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { path: `/${lang}`,           label: tc('nav.home')     },
   { path: `/${lang}/formacion`, label: tc('nav.formation') },
+  { path: `/${lang}/unirse`,    label: tc('nav.join')      },
   { path: `/${lang}/proyectos`,  label: tc('nav.projects') },
   { path: `/${lang}/mentores`,   label: tc('nav.mentors')  },
   { path: `/${lang}/contacto`,   label: tc('nav.contact')  },
@@ -42,63 +43,119 @@ const defaultPath = `/es${currentPath.replace(`/${lang}`, '')}`;
 const currentYear = new Date().getFullYear();
 
 const footerCopy: Record<UiLanguage, {
-  siteLabel: string;
   navigationLabel: string;
   quickLinksLabel: string;
   contactLabel: string;
-  addressLabel: string;
   phoneLabel: string;
-  emailLabel: string;
-  address: string;
+  whatsappLabel: string;
+  programLine: string;
+  campusLine: string;
+  admissionLabel: string;
+  studyPlanLabel: string;
+  githubProjectsLabel: string;
+  roboticsClubLabel: string;
+  certificationsLabel: string;
   phone: string;
+  whatsapp: string;
   email: string;
-  footnote: string;
-  institution: string;
+  instagramLabel: string;
+  facebookLabel: string;
+  tiktokLabel: string;
+  githubLabel: string;
+  instagramUrl: string;
+  facebookUrl: string;
+  tiktokUrl: string;
+  githubUrl: string;
+  phoneUrl: string;
+  whatsappUrl: string;
+  emailUrl: string;
   rights: string;
 }> = {
   es: {
-    siteLabel: 'Sitio oficial',
     navigationLabel: 'Navegación',
     quickLinksLabel: 'Enlaces rápidos',
     contactLabel: 'Contacto',
-    addressLabel: 'Dirección',
     phoneLabel: 'Teléfono',
-    emailLabel: 'Correo',
-    address: 'Carretera México - Pachuca Km. 87.5',
-    phone: '773-109-9748',
-    email: 'itics@itsoeh.edu.mx',
-    footnote: 'Espacio académico enfocado en ingeniería aplicada, problemas reales y colaboración técnica.',
-    institution: 'Instituto Tecnológico Superior de Occidente del Estado de Hidalgo',
+    whatsappLabel: 'WhatsApp',
+    programLine: 'Ingeniería en Tecnologías de la Información y Comunicaciones',
+    campusLine: 'Tecnológico Nacional de México campus Occidente del Estado de Hidalgo',
+    admissionLabel: 'Admisión 2026',
+    studyPlanLabel: 'Plan de estudios',
+    githubProjectsLabel: 'GitHub TICs',
+    roboticsClubLabel: 'Club de Robótica',
+    certificationsLabel: 'Certificaciones',
+    phone: '772 139 7096',
+    whatsapp: '+52 1 773 109 9748',
+    email: 'tics@itsoeh.edu.mx',
+    instagramLabel: 'Instagram',
+    facebookLabel: 'Facebook',
+    tiktokLabel: 'TikTok',
+    githubLabel: 'GitHub',
+    instagramUrl: 'https://www.instagram.com/itics.itsoeh',
+    facebookUrl: 'https://www.facebook.com/ITIC.ITSOEHmx',
+    tiktokUrl: 'https://www.tiktok.com/@ing.tics',
+    githubUrl: 'https://github.com/tics-itsoeh',
+    phoneUrl: 'tel:+527721397096',
+    whatsappUrl: 'https://wa.me/5217731099748',
+    emailUrl: 'mailto:tics@itsoeh.edu.mx',
     rights: 'Todos los derechos reservados.',
   },
   en: {
-    siteLabel: 'Official site',
     navigationLabel: 'Navigation',
     quickLinksLabel: 'Quick links',
     contactLabel: 'Contact',
-    addressLabel: 'Address',
     phoneLabel: 'Phone',
-    emailLabel: 'Email',
-    address: 'Mexico - Pachuca Highway Km. 87.5',
-    phone: '773-109-9748',
-    email: 'itics@itsoeh.edu.mx',
-    footnote: 'Academic space focused on applied engineering, real problems, and technical collaboration.',
-    institution: 'Technological Institute of Western Hidalgo State',
+    whatsappLabel: 'WhatsApp',
+    programLine: 'Information and Communications Technology Engineering',
+    campusLine: 'Tecnológico Nacional de México, Western Hidalgo Campus',
+    admissionLabel: 'Admission 2026',
+    studyPlanLabel: 'Study plan',
+    githubProjectsLabel: 'TICs GitHub',
+    roboticsClubLabel: 'Robotics Club',
+    certificationsLabel: 'Certifications',
+    phone: '772 139 7096',
+    whatsapp: '+52 1 773 109 9748',
+    email: 'tics@itsoeh.edu.mx',
+    instagramLabel: 'Instagram',
+    facebookLabel: 'Facebook',
+    tiktokLabel: 'TikTok',
+    githubLabel: 'GitHub',
+    instagramUrl: 'https://www.instagram.com/itics.itsoeh',
+    facebookUrl: 'https://www.facebook.com/ITIC.ITSOEHmx',
+    tiktokUrl: 'https://www.tiktok.com/@ing.tics',
+    githubUrl: 'https://github.com/tics-itsoeh',
+    phoneUrl: 'tel:+527721397096',
+    whatsappUrl: 'https://wa.me/5217731099748',
+    emailUrl: 'mailto:tics@itsoeh.edu.mx',
     rights: 'All rights reserved.',
   },
   zh: {
-    siteLabel: '官方网站',
     navigationLabel: '导航',
     quickLinksLabel: '快速链接',
     contactLabel: '联系',
-    addressLabel: '地址',
     phoneLabel: '电话',
-    emailLabel: '邮箱',
-    address: '墨西哥-帕丘卡公路 87.5 公里',
-    phone: '773-109-9748',
-    email: 'itics@itsoeh.edu.mx',
-    footnote: '专注于应用工程、真实问题与技术协作的学术空间。',
-    institution: '伊达尔戈州西部高等技术学院',
+    whatsappLabel: 'WhatsApp',
+    programLine: '信息与通信技术工程',
+    campusLine: '墨西哥国家技术学院 伊达尔戈州西部校区',
+    admissionLabel: '2026 招生',
+    studyPlanLabel: '培养方案',
+    githubProjectsLabel: 'TICs GitHub',
+    roboticsClubLabel: '机器人社团',
+    certificationsLabel: '认证体系',
+    phone: '772 139 7096',
+    whatsapp: '+52 1 773 109 9748',
+    email: 'tics@itsoeh.edu.mx',
+    instagramLabel: 'Instagram',
+    facebookLabel: 'Facebook',
+    tiktokLabel: 'TikTok',
+    githubLabel: 'GitHub',
+    instagramUrl: 'https://www.instagram.com/itics.itsoeh',
+    facebookUrl: 'https://www.facebook.com/ITIC.ITSOEHmx',
+    tiktokUrl: 'https://www.tiktok.com/@ing.tics',
+    githubUrl: 'https://github.com/tics-itsoeh',
+    phoneUrl: 'tel:+527721397096',
+    whatsappUrl: 'https://wa.me/5217731099748',
+    emailUrl: 'mailto:tics@itsoeh.edu.mx',
     rights: '保留所有权利。',
   },
 };
@@ -120,15 +177,126 @@ const footerCopy: Record<UiLanguage, {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style is:global>
+      body.is-loading {
+        overflow: hidden;
+      }
+
+      .site-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.94), rgba(245, 245, 247, 0.97) 60%),
+          #f5f5f7;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 420ms ease, visibility 420ms ease;
+      }
+
+      .site-loader--hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .site-loader__inner {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        transform: translateY(-4%);
+      }
+
+      .site-loader__logo {
+        width: clamp(7rem, 14vw, 11rem);
+        height: auto;
+        filter: drop-shadow(0 14px 28px rgba(30, 40, 124, 0.22));
+        transform-origin: center;
+        animation: loader-pulse 1.8s ease-in-out infinite;
+      }
+
+      .site-loader__line {
+        width: clamp(8.5rem, 20vw, 11.5rem);
+        height: 2px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(29, 29, 31, 0.12);
+      }
+
+      .site-loader__line::before {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #1e287c 0%, #0066cc 100%);
+        animation: loader-line 1.3s ease-in-out infinite;
+      }
+
+      @keyframes loader-pulse {
+        0%, 100% {
+          transform: scale(0.95);
+          opacity: 0.85;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes loader-line {
+        0% {
+          transform: translateX(-115%);
+        }
+        100% {
+          transform: translateX(290%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .site-loader__logo,
+        .site-loader__line::before {
+          animation: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-12 py-4 bg-apple-nav backdrop-blur-md border-b border-black/5 transition-all">
-      <a class="flex items-center gap-2.5 no-underline" href={`/${lang}`}>
-        <Image src="/icon.png" alt="Ing. TICs" width={950} height={830} loading="eager" fetchpriority="high" class="w-[3.315rem] h-[3.315rem] object-contain" />
-        <span class="font-sans font-bold text-sm tracking-tight text-apple-text leading-tight">
+    <div id="site-loader" class="site-loader site-loader--hidden" aria-hidden="true">
+      <div class="site-loader__inner">
+        <img
+          src="/logos/logo.svg"
+          alt=""
+          width="999"
+          height="1002"
+          class="site-loader__logo"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <span class="site-loader__line"></span>
+      </div>
+    </div>
+    <noscript>
+      <style>
+        body {
+          overflow: auto !important;
+        }
+        #site-loader {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+    <nav id="site-nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-3.5 sm:py-4 bg-apple-nav backdrop-blur-md border-b border-black/5 transition-all">
+      <a class="flex items-center gap-2 sm:gap-2.5 no-underline min-w-0" href={`/${lang}`}>
+        <Image src="/icon.png" alt="Ing. TICs" width={950} height={830} loading="eager" fetchpriority="high" class="w-[2.75rem] h-[2.75rem] sm:w-[3.315rem] sm:h-[3.315rem] object-contain flex-shrink-0" />
+        <span class="hidden sm:block font-sans font-bold text-[0.72rem] sm:text-sm tracking-tight text-apple-text leading-tight truncate">
           <span class="block">Ingeniería en Tecnologías de la</span>
           <span class="block">Información y Comunicaciones</span>
         </span>
+        <span class="sm:hidden font-sans font-bold text-xs tracking-tight text-apple-text whitespace-nowrap">Ing. ITICs</span>
       </a>
       <div class="hidden md:flex relative p-1 bg-black/[0.03] rounded-full border border-black/[0.05]" id="nav-container">
         <div id="nav-pill" class="absolute top-1 bottom-1 left-0 bg-apple-blue/15 backdrop-blur-md rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none"></div>
@@ -145,105 +313,179 @@ const footerCopy: Record<UiLanguage, {
           );
         })}
       </div>
-      <div class="flex items-center gap-5">
-        <!-- Language switcher -->
-        <div class="relative group">
-          <button class="flex items-center gap-1 font-sans text-xs font-semibold text-apple-muted group-hover:text-apple-text transition-colors uppercase tracking-wider">
-            {lang}
-            <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          
-          <div class="absolute right-0 top-full mt-2 w-32 bg-white rounded-xl shadow-lg shadow-black/5 border border-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50 overflow-hidden">
-            <div class="py-1">
-              {Object.entries(languages).map(([code, name]) => {
-                const isActive = code === lang;
-                const targetPath = currentPath.replace(`/${lang}`, `/${code}`);
-                return (
-                  <a 
-                    href={targetPath} 
-                    class={`block px-4 py-2.5 text-xs font-medium transition-colors ${isActive ? 'bg-apple-blue/5 text-apple-blue' : 'text-apple-muted hover:bg-black/5 hover:text-apple-text'}`}
-                  >
-                    <div class="flex items-center justify-between">
-                      <span>{name}</span>
-                      <span class="uppercase opacity-50 text-[10px] font-bold">{code}</span>
-                    </div>
-                  </a>
-                );
-              })}
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/10 bg-white/80 text-apple-text"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+
+        <div class="hidden md:flex items-center gap-5">
+          <!-- Language switcher -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 font-sans text-xs font-semibold text-apple-muted group-hover:text-apple-text transition-colors uppercase tracking-wider">
+              {lang}
+              <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            
+            <div class="absolute right-0 top-full mt-2 w-32 bg-white rounded-xl shadow-lg shadow-black/5 border border-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50 overflow-hidden">
+              <div class="py-1">
+                {Object.entries(languages).map(([code, name]) => {
+                  const isActive = code === lang;
+                  const targetPath = currentPath.replace(`/${lang}`, `/${code}`);
+                  return (
+                    <a 
+                      href={targetPath} 
+                      class={`block px-4 py-2.5 text-xs font-medium transition-colors ${isActive ? 'bg-apple-blue/5 text-apple-blue' : 'text-apple-muted hover:bg-black/5 hover:text-apple-text'}`}
+                    >
+                      <div class="flex items-center justify-between">
+                        <span>{name}</span>
+                        <span class="uppercase opacity-50 text-[10px] font-bold">{code}</span>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
+          <a href="https://github.com/tics-itsoeh" target="_blank" rel="noopener noreferrer" class="text-apple-muted hover:text-apple-text transition-colors" title={tc('footer.github')} aria-label={tc('footer.github')}>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          {!hideJoinCta && (
+            <a href={`/${lang}/unirse`} class="font-sans text-xs font-medium bg-apple-blue text-white px-4 py-1.5 rounded-full hover:bg-apple-blue-hover transition-colors">{tc('cta.admission2026')}</a>
+          )}
         </div>
-        <a href="https://github.com/tics-itsoeh" target="_blank" rel="noopener noreferrer" class="text-apple-muted hover:text-apple-text transition-colors" title={tc('footer.github')} aria-label={tc('footer.github')}>
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-        {!hideJoinCta && (
-          <a href={`/${lang}/formacion`} class="font-sans text-xs font-medium bg-apple-blue text-white px-4 py-1.5 rounded-full hover:bg-apple-blue-hover transition-colors">{tc('cta.exploreFormation')}</a>
-        )}
       </div>
-    </nav>
-    <slot />
-    <footer class="mt-20 border-t border-black/8 bg-[#f5f5f7]">
-      <div class="max-w-[1100px] mx-auto px-6 lg:px-12 pt-5 pb-8">
-        <p class="text-[0.78rem] leading-relaxed text-apple-muted">
-          {footerCopy[lang].footnote}
-        </p>
 
-        <div class="mt-4 h-px bg-black/8"></div>
-
-        <div class="py-10 grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1.1fr] gap-10">
-          <div>
-            <a class="inline-flex items-center gap-3 no-underline mb-3" href={`/${lang}`}>
-              <Image src="/icon.png" alt="Ing. TICs" width={950} height={830} class="w-11 h-11 object-contain" />
-              <span class="font-sans font-semibold text-[0.96rem] tracking-tight text-apple-text leading-tight">
-                <span class="block">Ingeniería en Tecnologías de la</span>
-                <span class="block">Información y Comunicaciones</span>
-              </span>
-            </a>
-            <p class="text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-2">{footerCopy[lang].siteLabel}</p>
-            <p class="text-[0.86rem] text-apple-muted leading-relaxed max-w-md">{tc('footer.tagline')}</p>
-          </div>
-
-          <div>
-            <h2 class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-3">{footerCopy[lang].navigationLabel}</h2>
-            <div class="flex flex-col gap-2">
-              {navItems.map(item => (
-                <a href={item.path} class="text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit">
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-black/5 bg-[#fbfbfd]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+        <div class="px-4 sm:px-6 py-4 space-y-3">
+          <div class="grid grid-cols-2 gap-2">
+            {navItems.map((item) => {
+              const isActive = currentPath === item.path || (item.path !== `/${lang}` && currentPath.startsWith(item.path));
+              return (
+                <a
+                  href={item.path}
+                  class={`px-3 py-2 rounded-lg text-sm font-semibold border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-white text-apple-text border-black/10 hover:bg-black/[0.03]'}`}
+                >
                   {item.label}
                 </a>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
-          <div>
-            <h2 class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-3">{footerCopy[lang].quickLinksLabel}</h2>
-            <div class="flex flex-col gap-2">
-              <a href={`/${lang}/formacion`} class="text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit">{tc('cta.exploreFormation')}</a>
-              <a href={`/${lang}/proyectos`} class="text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit">{tc('cta.exploreProjects')}</a>
-              <a href={`/${lang}/mentores`} class="text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit">{tc('cta.exploreMentors')}</a>
-              <a href={`/${lang}/contacto`} class="text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit">{tc('cta.viewContact')}</a>
-            </div>
+          <div class="grid grid-cols-3 gap-2 border-t border-black/8 pt-3">
+            {Object.entries(languages).map(([code, name]) => {
+              const isActive = code === lang;
+              const targetPath = currentPath.replace(`/${lang}`, `/${code}`);
+              return (
+                <a href={targetPath} class={`px-3 py-2 rounded-lg text-xs font-semibold text-center uppercase border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-white text-apple-text border-black/10 hover:bg-black/[0.03]'}`}>
+                  {name}
+                </a>
+              );
+            })}
           </div>
 
-          <div>
-            <h2 class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-apple-muted mb-3">{footerCopy[lang].contactLabel}</h2>
-            <div class="flex flex-col gap-2.5 text-[0.84rem] text-apple-muted leading-relaxed">
-              <p><span class="font-semibold text-apple-text/85">{footerCopy[lang].addressLabel}:</span> {footerCopy[lang].address}</p>
-              <p>
-                <span class="font-semibold text-apple-text/85">{footerCopy[lang].phoneLabel}:</span>
-                <a href="tel:7731099748" class="text-apple-text/85 hover:text-apple-text transition-colors no-underline"> {footerCopy[lang].phone}</a>
-              </p>
-              <p>
-                <span class="font-semibold text-apple-text/85">{footerCopy[lang].emailLabel}:</span>
-                <a href={`mailto:${footerCopy[lang].email}`} class="text-apple-text/85 hover:text-apple-text transition-colors no-underline"> {footerCopy[lang].email}</a>
-              </p>
-              <a href="https://github.com/tics-itsoeh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[0.86rem] text-apple-text/85 hover:text-apple-text transition-colors no-underline w-fit pt-1">
-                <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                GitHub
+          <div class="flex flex-col gap-2 border-t border-black/8 pt-3">
+            <a
+              href="https://github.com/tics-itsoeh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-4 py-3 rounded-full border border-black/10 bg-white text-apple-text text-sm font-semibold hover:bg-black/[0.03] transition-colors"
+            >
+              {tc('footer.github')}
+            </a>
+            {!hideJoinCta && (
+              <a
+                href={`/${lang}/unirse`}
+                class="inline-flex items-center justify-center px-4 py-3 rounded-full bg-apple-blue text-white text-sm font-semibold hover:bg-apple-blue-hover transition-colors"
+              >
+                {tc('cta.admission2026')}
               </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="page-scroll-content">
+      <slot />
+      <footer class="mt-20 border-t border-black/8 bg-[#f5f5f7]">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-12 pt-12 pb-8">
+        <div class="flex flex-wrap items-center justify-center lg:justify-between gap-x-10 gap-y-8">
+          <img src="/logos/educacion.png" alt="Educación" width="255" height="105" loading="lazy" decoding="async" class="h-[3rem] sm:h-[3.75rem] w-auto object-contain opacity-95" />
+          <img src="/logos/tecnm.png" alt="TecNM" width="255" height="105" loading="lazy" decoding="async" class="h-[3rem] sm:h-[3.75rem] w-auto object-contain opacity-95" />
+          <img src="/logos/itsoeh.png" alt="ITSOEH" width="255" height="105" loading="lazy" decoding="async" class="h-[3rem] sm:h-[3.75rem] w-auto object-contain opacity-95" />
+          <img src="/logos/tics.png" alt="TICs" width="255" height="105" loading="lazy" decoding="async" class="h-[3rem] sm:h-[3.75rem] w-auto object-contain opacity-95" />
+          <img src="/logos/esparco.png" alt="Esparco" width="255" height="105" loading="lazy" decoding="async" class="h-[3rem] sm:h-[3.75rem] w-auto object-contain opacity-95" />
+        </div>
+
+        <div class="text-center mt-10">
+          <p class="text-[1.08rem] md:text-[1.2rem] font-semibold tracking-tight text-apple-text leading-relaxed">{footerCopy[lang].programLine}</p>
+          <p class="text-[0.92rem] text-apple-muted font-normal mt-2">{footerCopy[lang].campusLine}</p>
+        </div>
+
+        <div class="mt-10 h-px bg-black/8"></div>
+
+        <div class="py-10 grid grid-cols-1 md:grid-cols-3 gap-0">
+          <div class="pb-8 md:pb-0">
+            <h2 class="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-apple-muted mb-4">{footerCopy[lang].navigationLabel}</h2>
+            <div class="flex flex-col gap-2.5">
+              <a href={`/${lang}`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.home')}</a>
+              <a href={`/${lang}/formacion`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.formation')}</a>
+              <a href={`/${lang}/unirse`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.join')}</a>
+              <a href={`/${lang}/proyectos`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.projects')}</a>
+              <a href={`/${lang}/mentores`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.mentors')}</a>
+              <a href={`/${lang}/contacto`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{tc('nav.contact')}</a>
+            </div>
+          </div>
+
+          <div class="border-t border-black/8 md:border-t-0 md:border-l md:border-black/8 pt-8 md:pt-0 md:pl-10 pb-8 md:pb-0">
+            <h2 class="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-apple-muted mb-4">{footerCopy[lang].quickLinksLabel}</h2>
+            <div class="flex flex-col gap-2.5">
+              <a href={`/${lang}/unirse`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].admissionLabel}</a>
+              <a href={`/${lang}/formacion#plan-estudios`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].studyPlanLabel}</a>
+              <a href={footerCopy[lang].githubUrl} target="_blank" rel="noopener noreferrer" class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].githubProjectsLabel}</a>
+              <a href={`/${lang}/mentores`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].roboticsClubLabel}</a>
+              <a href={`/${lang}/formacion`} class="text-[0.88rem] font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].certificationsLabel}</a>
+            </div>
+          </div>
+
+          <div class="border-t border-black/8 md:border-t-0 md:border-l md:border-black/8 pt-8 md:pt-0 md:pl-10">
+            <h2 class="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-apple-muted mb-4">{footerCopy[lang].contactLabel}</h2>
+            <div class="flex flex-col gap-2.5 text-[0.88rem] text-apple-muted leading-relaxed">
+              <a href={footerCopy[lang].emailUrl} class="font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].email}</a>
+              <a href={footerCopy[lang].phoneUrl} class="font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].phone}</a>
+              <a href={footerCopy[lang].whatsappUrl} target="_blank" rel="noopener noreferrer" class="font-normal text-apple-text/80 hover:text-apple-text transition-colors no-underline w-fit">{footerCopy[lang].whatsappLabel}: {footerCopy[lang].whatsapp}</a>
+
+              <div class="mt-3 flex flex-wrap items-center gap-2">
+                <a href={footerCopy[lang].instagramUrl} target="_blank" rel="noopener noreferrer" title={footerCopy[lang].instagramLabel} aria-label={footerCopy[lang].instagramLabel} class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-black/10 bg-white/70 text-[#5b5b60] hover:text-apple-text hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/35">
+                  <svg role="img" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                    <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                  </svg>
+                </a>
+                <a href={footerCopy[lang].facebookUrl} target="_blank" rel="noopener noreferrer" title={footerCopy[lang].facebookLabel} aria-label={footerCopy[lang].facebookLabel} class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-black/10 bg-white/70 text-[#5b5b60] hover:text-apple-text hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/35">
+                  <svg role="img" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                    <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+                  </svg>
+                </a>
+                <a href={footerCopy[lang].tiktokUrl} target="_blank" rel="noopener noreferrer" title={footerCopy[lang].tiktokLabel} aria-label={footerCopy[lang].tiktokLabel} class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-black/10 bg-white/70 text-[#5b5b60] hover:text-apple-text hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/35">
+                  <svg role="img" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                  </svg>
+                </a>
+                <a href={footerCopy[lang].githubUrl} target="_blank" rel="noopener noreferrer" title={footerCopy[lang].githubLabel} aria-label={footerCopy[lang].githubLabel} class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-black/10 bg-white/70 text-[#5b5b60] hover:text-apple-text hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/35">
+                  <svg role="img" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -252,11 +494,88 @@ const footerCopy: Record<UiLanguage, {
 
         <div class="pt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-[0.76rem] text-apple-muted">
           <p>© {currentYear} Ing. TICs. {footerCopy[lang].rights}</p>
-          <p>{footerCopy[lang].institution}</p>
+          <p>{footerCopy[lang].campusLine}</p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </div>
     <script>
+      const loaderSeenKey = 'itics-loader-seen';
+      let lenis: { raf: (time: number) => void; destroy: () => void } | null = null;
+      let lenisRafId: number | null = null;
+
+      function destroySmoothScroll() {
+        if (lenisRafId !== null) {
+          window.cancelAnimationFrame(lenisRafId);
+          lenisRafId = null;
+        }
+        if (lenis) {
+          lenis.destroy();
+          lenis = null;
+        }
+      }
+
+      async function setupSmoothScroll() {
+        if (lenis) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        try {
+          const { default: Lenis } = await import('lenis');
+          const scrollContent = document.getElementById('page-scroll-content') as HTMLElement | null;
+          lenis = new Lenis({
+            wrapper: window,
+            content: scrollContent ?? document.documentElement,
+            duration: 1.1,
+            smoothWheel: true,
+            wheelMultiplier: 0.9,
+            touchMultiplier: 1.05,
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            anchors: true,
+          });
+
+          const raf = (time: number) => {
+            if (!lenis) return;
+            lenis.raf(time);
+            lenisRafId = window.requestAnimationFrame(raf);
+          };
+
+          lenisRafId = window.requestAnimationFrame(raf);
+        } catch (error) {
+          destroySmoothScroll();
+          console.warn('Smooth scroll initialization failed, using native scroll.', error);
+        }
+      }
+
+      function showSiteLoader() {
+        const loader = document.getElementById('site-loader');
+        if (!loader) return;
+        loader.classList.remove('site-loader--hidden');
+        document.body.classList.add('is-loading');
+      }
+
+      function hideSiteLoader() {
+        const loader = document.getElementById('site-loader');
+        if (!loader) return;
+        loader.classList.add('site-loader--hidden');
+        document.body.classList.remove('is-loading');
+      }
+
+      function hasSeenLoader() {
+        try {
+          return window.sessionStorage.getItem(loaderSeenKey) === '1';
+        } catch {
+          return false;
+        }
+      }
+
+      function markLoaderSeen() {
+        try {
+          window.sessionStorage.setItem(loaderSeenKey, '1');
+        } catch {
+          // Ignore storage access errors and continue gracefully.
+        }
+      }
+
       function setupNav() {
         const container = document.getElementById('nav-container');
         const pill = document.getElementById('nav-pill');
@@ -285,8 +604,64 @@ const footerCopy: Record<UiLanguage, {
         });
       }
 
+      function setupMobileMenu() {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+        if (toggle.getAttribute('data-menu-bound') === 'true') return;
+
+        const closeMenu = () => {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        const toggleMenu = () => {
+          const isOpen = !menu.classList.contains('hidden');
+          if (isOpen) closeMenu();
+          else {
+            menu.classList.remove('hidden');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        };
+
+        toggle.addEventListener('click', (event) => {
+          event.stopPropagation();
+          toggleMenu();
+        });
+
+        menu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        toggle.setAttribute('data-menu-bound', 'true');
+      }
+
       setupNav();
+      setupMobileMenu();
+      setupSmoothScroll();
       document.addEventListener('astro:page-load', setupNav);
+      document.addEventListener('astro:page-load', setupMobileMenu);
+      document.addEventListener('astro:page-load', setupSmoothScroll);
+      document.addEventListener('astro:before-preparation', destroySmoothScroll);
+
+      if (!hasSeenLoader()) {
+        markLoaderSeen();
+        showSiteLoader();
+        const finishFirstLoadAnimation = () => hideSiteLoader();
+        document.addEventListener('astro:page-load', finishFirstLoadAnimation, { once: true });
+        window.addEventListener('load', finishFirstLoadAnimation, { once: true });
+        window.setTimeout(finishFirstLoadAnimation, 2600);
+      } else {
+        hideSiteLoader();
+      }
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.warn('Service worker registration failed:', err);
+          });
+        });
+      }
     </script>
   </body>
 </html>

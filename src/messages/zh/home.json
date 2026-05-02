@@ -2,68 +2,138 @@
   "hero": {
     "kickerLine1": "信息与通信技术",
     "kickerLine2": "工程专业",
-    "title": "构建真正解决现实问题的技术。",
-    "subtitle": "从第一学期开始，在项目实践中学习软件开发、网络、人工智能与 IoT。",
-    "ctaPrimary": "了解培养"
+    "title": "连接。编程。创新。",
+    "subtitle": "在 ITSOEH 学习 ICT 工程。通过掌握软件开发、人工智能与物联网，将你的想法转化为真实解决方案。",
+    "ctaPrimary": "我想学习 ICT",
+    "ctaSecondary": "查看培养方案"
   },
   "philosophy": {
     "title": "不止课堂：面向真实问题的工程培养。",
     "body": "本专业融合批判性思维、技术实践与协作能力，帮助学生从早期建立工程判断力。"
   },
   "formation": {
-    "title": "以职业能力为导向的专业。",
-    "subtitle": "培养目标清晰、毕业画像贴近行业，并持续连接真实应用场景。",
+    "title": "不止课堂：以真实实践为核心的技术培养。",
+    "subtitle": "在 ITICs，你从早期开始通过项目构建、团队协作与真实场景中的技术应用来学习。",
     "realAccess": {
-      "title": "培养目标",
-      "body": "培养能够集成与管理信息技术和通信技术的工程人才，为组织创造战略价值。"
+      "title": "从起步就重实践",
+      "body": "在学术与协作项目中实践编程、网络、数据库、电子、IoT 与数字化工具。"
     },
     "building": {
-      "title": "毕业画像",
-      "body": "具备网络设计、软硬件集成与信息系统开发能力，并遵循国际标准。"
+      "title": "官方认证体系",
+      "body": "通过华为与 Cisco 官方学院强化能力，培养行业认可的技术竞争力。"
     },
     "collaboration": {
-      "title": "实践与行业连接",
-      "body": "通过实习、学术参访与培养活动，将学习过程与当前行业实践紧密衔接。"
-    }
+      "title": "技术社区",
+      "body": "参与机器人、IoT、开发与创业社团，在课堂之外持续成长。"
+    },
+    "cta": "查看 ITICs 社区"
+  },
+  "academies": {
+    "title": "与行业标准接轨的培养体系。",
+    "subtitle": "TICs ITSOEH 设有华为与 Cisco 官方学院，通过学习路径与行业认可的认证机会强化学生的技术准备。",
+    "cards": {
+      "huawei": {
+        "title": "Huawei ICT Academy",
+        "description": "涵盖信息技术、连接能力、数字基础设施与技术转型的培养。"
+      },
+      "cisco": {
+        "title": "Cisco Networking Academy",
+        "description": "涵盖网络、连接、交换、路由、安全与基础设施的培养。"
+      },
+      "certifications": {
+        "title": "认证",
+        "description": "可作为专业能力证据，补充你的学位并强化实习、驻场与就业竞争力。"
+      }
+    },
+    "cta": "查看认证"
   },
   "projects": {
-    "title": "项目与成果。",
-    "subtitle": "通过实验室、应用研究、竞赛与学术活动形成学习证据，体现真实技术成长。",
+    "title": "能够沉淀为作品集的项目。",
+    "subtitle": "在 ITICs ITSOEH，学生会开发可被记录、发布并展示为专业证据的真实解决方案。",
     "featured": {
-      "name": "专业成果集",
-      "description": "系统记录活动、项目与学习经历，呈现专业内工程实践的持续演进。"
+      "name": "Byron Gálvez 数字博物馆",
+      "description": "为文化传播与数字化保护开发的交互式 Web 体验。"
     },
     "guides": {
-      "name": "重点方向",
-      "description": "涵盖数据分析、人机交互、前沿技术、网络通信与智能系统等方向。"
+      "name": "基于 ESP32 的井字棋",
+      "description": "结合微控制器、设备间通信与交互逻辑的软硬件融合项目。"
     },
     "systems": {
-      "name": "实验室与实践",
-      "description": "在技术空间与协作流程中进行实验、迭代与验证，解决具体场景问题。"
+      "name": "VEX Robotics ITICs",
+      "description": "参与竞技机器人项目，涵盖编程、机械设计、控制与团队协作。"
     },
     "infra": {
-      "name": "持续更新",
-      "description": "专业方向定期更新，确保培养内容与当前工具和需求保持一致。"
-    }
+      "name": "ITICs GitHub",
+      "description": "用于发布社区项目、代码与技术证据的官方仓库。"
+    },
+    "cta": "在 GitHub 查看项目"
   },
   "mentors": {
-    "title": "师资团队。",
-    "subtitle": "具备技术实践经验的教师，持续指导学生在 ICT 关键领域成长。"
+    "title": "TICs 社区。",
+    "subtitle": "技术社团、教师、协调团队与学生共同推动你在课堂内外的成长。",
+    "cards": {
+      "clubs": {
+        "title": "技术社团",
+        "description": "机器人、IoT、开发者与创业。"
+      },
+      "faculty": {
+        "title": "教师与协调团队",
+        "description": "学业陪伴与专业组织支持。"
+      },
+      "students": {
+        "title": "学生领袖",
+        "description": "项目、工作坊、社区与技术协作。"
+      },
+      "credits": {
+        "title": "网站致谢",
+        "description": "致谢那些设计、开发并维护 TICs 数字形象的人。"
+      }
+    },
+    "cta": "查看社区 →"
   },
   "contact": {
     "title": "官方联系方式。",
     "subtitle": "通过学校官方渠道获取专业、招生、课程与学术活动信息。"
   },
-  "outcomes": {
-    "title": "你将具备哪些能力？",
+  "faq": {
+    "title": "入学前常见问题",
     "items": {
-      "apps": "开发应用程序。",
-      "networks": "设计与管理网络。",
-      "data": "管理数据并支持技术决策。",
-      "solutions": "针对真实问题构建技术解决方案。"
+      "programming": {
+        "question": "我需要提前会编程吗？",
+        "answer": "不需要。专业从基础开始。更重要的是愿意持续练习、解决问题并保持稳定学习。"
+      },
+      "math": {
+        "question": "数学会很多吗？",
+        "answer": "会，因为这是工程专业。但内容是循序渐进的，并会应用到编程、网络、数据、通信与决策中。"
+      },
+      "ai": {
+        "question": "AI 会取代工程师吗？",
+        "answer": "AI 不会取代会思考、会设计、会集成并能解决问题的工程师。对懂得使用并基于它构建的人来说，AI 是工具。"
+      },
+      "jobs": {
+        "question": "就业方向多吗？",
+        "answer": "是的。你可以在软件、网络、数据库、网络安全、IoT、技术支持、基础设施、数据、云、自动化和技术项目管理等方向发展。"
+      }
+    },
+    "cta": "解决更多疑问"
+  },
+  "outcomes": {
+    "title": "作为 ITICs 学生，你将能构建什么？",
+    "items": {
+      "apps": "开发 Web、移动应用与信息系统。",
+      "networks": "设计、配置并管理计算机网络。",
+      "databases": "创建并管理安全可靠的数据库。",
+      "iot": "集成设备、传感器与 IoT 系统。",
+      "security": "应用网络安全与 IT 审计实践。",
+      "uiux": "设计以用户为中心的数字界面。",
+      "projects": "管理技术项目。",
+      "entrepreneurship": "打造具有真实影响力的数字化解决方案。"
     }
   },
   "finalCta": {
-    "button": "查看完整培养路径"
+    "title": "迈出通往 TICs 工程的第一步。",
+    "subtitle": "查看 2026-2027 招生流程，了解培养方案，并通过 TICs 社区解答你的疑问。",
+    "primary": "查看 2026 招生",
+    "secondary": "联系 TICs"
   }
 }

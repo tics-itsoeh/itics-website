@@ -1,26 +1,70 @@
 {
   "hero": {
     "title": "官方联系方式。",
-    "subtitle": "用于咨询 ICT 工程专业招生、培养与学术生活的官方渠道。"
+    "subtitle": "如需咨询招生、培养方案、社区、项目与专业活动，请联系 ITICs。"
   },
   "labels": {
     "institution": "机构",
     "location": "位置",
-    "phone": "电话 / WhatsApp",
+    "phone": "电话",
+    "whatsapp": "WhatsApp",
     "email": "邮箱"
   },
   "values": {
     "institutionLine1": "墨西哥国家技术学院",
     "institutionLine2": "伊达尔戈州西部校区",
-    "location": "墨西哥-帕丘卡公路 87.5 公里",
-    "phone": "773-109-9748",
-    "email": "itics@itsoeh.edu.mx"
+    "location": "Paseo del Agrarismo 2000. Carr. Mixquiahuala-Tula, km 2.5, C.P. 42700.",
+    "phone": "772 139 7096",
+    "whatsapp": "+52 1 773 109 9748",
+    "email": "tics@itsoeh.edu.mx",
+    "instagramUrl": "https://www.instagram.com/itics.itsoeh",
+    "facebookUrl": "https://www.facebook.com/ITIC.ITSOEHmx",
+    "tiktokUrl": "https://www.tiktok.com/@ing.tics",
+    "githubUrl": "https://github.com/tics-itsoeh",
+    "whatsappUrl": "https://wa.me/5217731099748",
+    "emailUrl": "mailto:tics@itsoeh.edu.mx",
+    "phoneUrl": "tel:+527721397096"
   },
   "actions": {
     "whatsapp": "发送 WhatsApp",
-    "email": "发送邮件"
+    "email": "发送邮件",
+    "instagram": "查看 Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "github": "GitHub"
+  },
+  "guidance": {
+    "note": "快速咨询建议使用 WhatsApp；正式信息或学业跟进请使用机构邮箱。"
+  },
+  "routing": {
+    "title": "该联系哪里？",
+    "subtitle": "根据你的需求选择合适的渠道或页面。",
+    "cards": {
+      "admission": {
+        "title": "招生与申请",
+        "body": "了解 2026–2027 学年的申请条件、时间、注册与录取流程。",
+        "cta": "查看申请者"
+      },
+      "career": {
+        "title": "专业信息",
+        "body": "咨询培养方案、学习方向、毕业画像与学术活动。",
+        "cta": "发送邮件"
+      },
+      "projects": {
+        "title": "项目与社区",
+        "body": "了解社团、代码仓库、项目活动与协作空间。",
+        "cta": "查看项目"
+      }
+    }
+  },
+  "social": {
+    "title": "官方社交渠道。",
+    "subtitle": "关注 ITICs 官方渠道，获取通知、项目、活动、赛事与社区内容。"
   },
   "cta": {
-    "title": "查看完整培养路径。"
+    "title": "你在考虑报读 ITICs 吗？",
+    "subtitle": "查看招生流程与申请要求，并通过官方渠道解决你的疑问。",
+    "primary": "查看 2026 招生",
+    "secondary": "发送 WhatsApp"
   }
 }

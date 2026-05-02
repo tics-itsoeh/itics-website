@@ -1,59 +1,120 @@
 {
   "hero": {
-    "title": "ICT program structure.",
-    "subtitle": "The program develops technical capability, strategic vision, and ethical practice for real organizational environments."
+    "title": "Academic formation in ITICs.",
+    "subtitle": "Review the objective, graduate profile, competencies, and study areas that shape the Information and Communications Technologies Engineering program at ITSOEH."
   },
-  "howItWorks": {
-    "step1": {
+  "overviewCards": {
+    "objective": {
       "label": "01",
       "title": "Objective",
-      "body": "Integrate and manage information and communications technologies to improve productivity and institutional outcomes."
+      "body": "Train professionals capable of developing, integrating, and managing information and communications technologies to improve organizational productivity."
     },
-    "step2": {
+    "profile": {
       "label": "02",
       "title": "Graduate profile",
-      "body": "Network design and implementation, systems integration, and information-solution development for decision-making."
+      "body": "Competencies in networks, software, databases, security, communication systems, technology projects, and emerging technologies."
     },
-    "step3": {
+    "curriculum": {
       "label": "03",
-      "title": "Updated curriculum",
-      "body": "Specializations are periodically revised to remain technically relevant to evolving industry needs."
+      "title": "ITIC-2010-225 curriculum",
+      "body": "Semester-based study plan with training in programming, networks, telecommunications, databases, management, and research."
     },
-    "step4": {
+    "residency": {
       "label": "04",
       "title": "Professional residency",
-      "body": "Connection with companies and organizations where learning is applied in real operational scenarios."
+      "body": "Partnership with companies and institutions where students apply their competencies in real-world scenarios."
     }
   },
-  "system": {
-    "title": "Applied academic structure.",
-    "repoName": "tiics-program"
+  "identity": {
+    "title": "Academic identity.",
+    "mission": {
+      "title": "Mission",
+      "body": "Train professionals who are competent in designing, developing, and implementing innovative solutions in information and communications technologies, under international standards and certifications, to meet social and industry needs."
+    },
+    "vision": {
+      "title": "Vision",
+      "body": "Be a consolidated program recognized for educational quality, technology services, certified faculty, and certified labs, focused on cutting-edge technology to solve social and productive challenges in the region."
+    },
+    "generalObjective": {
+      "title": "General objective",
+      "body": "Train professionals capable of developing, integrating, and managing information and communications technologies that contribute to organizational productivity, with leadership, critical thinking, ethics, entrepreneurial vision, and commitment to sustainable development."
+    }
   },
-  "features": {
+  "areas": {
+    "title": "Study areas.",
+    "software": {
+      "title": "Programming and software development",
+      "body": "Programming foundations, object-oriented programming, web programming, mobile development, and software engineering."
+    },
+    "networks": {
+      "title": "Networks and telecommunications",
+      "body": "Network fundamentals, computer networks, telecommunications, emerging networks, wireless technologies, and network security."
+    },
+    "databases": {
+      "title": "Databases and systems",
+      "body": "Database fundamentals, database workshops, distributed databases, and operating systems."
+    },
+    "math": {
+      "title": "Mathematics and modeling",
+      "body": "Calculus, linear algebra, probability, discrete mathematics, decision-making, and communications."
+    },
+    "iot": {
+      "title": "Hardware, architecture, and IoT",
+      "body": "Electricity, circuits, computer architecture, connected devices, and embedded systems."
+    },
+    "management": {
+      "title": "Management, research, and business",
+      "body": "Management, projects, research, e-business, entrepreneurship, and sustainable development."
+    }
+  },
+  "competencies": {
     "title": "Core competencies.",
-    "repos": {
-      "title": "Networks and communications",
-      "body": "Design, implementation, and management of computing and connectivity infrastructure"
+    "networks": {
+      "title": "Networks and telecommunications",
+      "body": "Design, implementation, and management of computer networks, communications, and connected infrastructure."
     },
-    "challenges": {
-      "title": "Software and architecture",
-      "body": "Hardware, software, and technology-service integration for scalable solutions"
+    "software": {
+      "title": "Software and information systems",
+      "body": "Application and system development for process management, decision-making, and organizational operations."
     },
-    "codeReviews": {
-      "title": "Current technologies",
-      "body": "Use of emerging tools with technical and methodological judgement"
+    "databases": {
+      "title": "Databases",
+      "body": "Design, administration, and management of secure, available, and reliable databases."
     },
-    "systems": {
-      "title": "Consulting and auditing",
-      "body": "Technical assessment and guidance to improve IT processes"
+    "security": {
+      "title": "IT security and auditing",
+      "body": "Implementation of controls, policies, and processes to protect information and evaluate technology systems."
+    },
+    "embedded": {
+      "title": "Embedded systems and IoT",
+      "body": "Integration of hardware, software, sensors, and devices for purpose-built applications."
+    },
+    "management": {
+      "title": "Management and entrepreneurship",
+      "body": "Technology project management, innovation, consulting, and digital solution creation."
     }
   },
-  "collaboration": {
+  "curriculum": {
+    "title": "ITIC-2010-225 curriculum.",
+    "body": "The curriculum is organized across nine semesters and integrates core training, professional training, specialization, social service, complementary activities, and professional residency.",
+    "button": "Open curriculum PDF",
+    "summaryButton": "View semester summary",
+    "semester1": "1st semester: programming foundations, mathematics, and ethics.",
+    "semester2": "2nd semester: object-oriented programming, algebra, and statistics.",
+    "semester3": "3rd semester: data structures, databases, and management.",
+    "semester4": "4th semester: networks, programming II, circuits, and software engineering.",
+    "semester5": "5th semester: networks, communications, distributed databases, and projects.",
+    "semester6": "6th semester: web, telecommunications, operating systems, and wireless technologies.",
+    "semester7": "7th semester: mobile development, emerging networks, HCI, and research.",
+    "semester8": "8th semester: security, auditing, knowledge engineering, and e-business.",
+    "semester9": "9th semester: professional residency and specialization."
+  },
+  "complementary": {
     "title": "Complementary academic experience.",
-    "body": "The program includes academic, sports, and cultural activities plus industry visits to strengthen leadership, teamwork, and professional vision."
+    "body": "In addition to academic formation, ITICs includes complementary activities, projects, workshops, visits, clubs, and collaborative experiences that strengthen leadership, teamwork, communication, and professional vision. It is also reinforced through official academies, certifications, technical clubs, and community activities."
   },
   "cta": {
-    "title": "Review projects, evidence, and lines of work.",
+    "title": "See how this formation becomes real projects.",
     "button": "View projects and portfolio"
   }
 }

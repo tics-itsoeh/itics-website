@@ -1,26 +1,70 @@
 {
   "hero": {
     "title": "Official contact.",
-    "subtitle": "Direct information to answer questions about admissions, training, and academic life in ICT Engineering."
+    "subtitle": "Contact ITICs to resolve questions about admissions, academic formation, community, projects, and program activities."
   },
   "labels": {
     "institution": "Institution",
     "location": "Location",
-    "phone": "Phone / WhatsApp",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
     "email": "Email"
   },
   "values": {
     "institutionLine1": "Tecnológico Nacional de México",
     "institutionLine2": "Western Hidalgo Campus",
-    "location": "Mexico - Pachuca Highway Km. 87.5",
-    "phone": "773-109-9748",
-    "email": "itics@itsoeh.edu.mx"
+    "location": "Paseo del Agrarismo 2000. Carr. Mixquiahuala-Tula, km 2.5, C.P. 42700.",
+    "phone": "772 139 7096",
+    "whatsapp": "+52 1 773 109 9748",
+    "email": "tics@itsoeh.edu.mx",
+    "instagramUrl": "https://www.instagram.com/itics.itsoeh",
+    "facebookUrl": "https://www.facebook.com/ITIC.ITSOEHmx",
+    "tiktokUrl": "https://www.tiktok.com/@ing.tics",
+    "githubUrl": "https://github.com/tics-itsoeh",
+    "whatsappUrl": "https://wa.me/5217731099748",
+    "emailUrl": "mailto:tics@itsoeh.edu.mx",
+    "phoneUrl": "tel:+527721397096"
   },
   "actions": {
     "whatsapp": "Send WhatsApp",
-    "email": "Send email"
+    "email": "Send email",
+    "instagram": "View Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "github": "GitHub"
+  },
+  "guidance": {
+    "note": "For quick questions, use WhatsApp. For formal information or academic follow-up, use the institutional email."
+  },
+  "routing": {
+    "title": "Where should I write?",
+    "subtitle": "Choose the right channel or section based on the type of information you need.",
+    "cards": {
+      "admission": {
+        "title": "Admissions and application",
+        "body": "Check requirements, dates, registration, and admission process for the 2026–2027 cycle.",
+        "cta": "View applicants"
+      },
+      "career": {
+        "title": "Program information",
+        "body": "Resolve questions about curriculum, training areas, graduate profile, and academic activities.",
+        "cta": "Send email"
+      },
+      "projects": {
+        "title": "Projects and community",
+        "body": "Explore clubs, repositories, projects, activities, and collaboration spaces in ITICs.",
+        "cta": "View projects"
+      }
+    }
+  },
+  "social": {
+    "title": "Official networks.",
+    "subtitle": "Follow official ITICs channels for updates, projects, activities, events, and community content."
   },
   "cta": {
-    "title": "Discover the full training path."
+    "title": "Thinking about studying ITICs?",
+    "subtitle": "Review admissions, check requirements, and solve your questions through official channels.",
+    "primary": "View admission 2026",
+    "secondary": "Send WhatsApp"
   }
 }

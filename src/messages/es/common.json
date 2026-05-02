@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "Inicio",
-    "formation": "Formación",
+    "formation": "Carrera",
     "projects": "Proyectos",
-    "mentors": "Mentores",
+    "mentors": "Comunidad",
     "contact": "Contacto",
-    "join": "Unirse"
+    "join": "Aspirantes"
   },
   "footer": {
     "tagline": "Formación oficial en Ingeniería TIC orientada a problemas reales.",
@@ -15,12 +15,13 @@
     "joinAcademy": "Solicitar información",
     "exploreFormation": "Explorar formación",
     "exploreProjects": "Ver proyectos y portafolio",
-    "exploreMentors": "Ver mentores",
+    "exploreMentors": "Ver comunidad",
     "viewContact": "Ver contacto oficial",
     "viewGuides": "Ver áreas de énfasis",
     "viewRepo": "Ver evidencia",
     "useTemplate": "Ver área",
-    "openGuide": "Abrir detalle"
+    "openGuide": "Abrir detalle",
+    "admission2026": "Admisión 2026"
   },
   "badge": {
     "inDevelopment": "En desarrollo",

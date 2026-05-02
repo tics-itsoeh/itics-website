@@ -1,11 +1,235 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((language) => ({ params: { lang: language } }));
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params as { lang: UiLanguage };
-return Astro.redirect(`/${lang}/formacion`, 302);
+const t = useTranslations(lang, 'join');
+const tc = useTranslations(lang, 'common');
+
+const admissionCards = ['application', 'diagnostic', 'results', 'fee'] as const;
+const requirementCards = ['study', 'birth', 'curp', 'payment', 'gmail', 'foreign'] as const;
+const whyCards = ['build', 'certs', 'community', 'portfolio'] as const;
+const learningCards = ['programming', 'networks', 'databases', 'ai', 'iot', 'security'] as const;
+const faqItems = ['programming', 'math', 'mathFear', 'ai', 'jobs', 'laptop'] as const;
+
+const requestInfoUrl = t('links.requestInfoUrl');
+const registerUrl = t('links.registerUrl');
+const admissionPdfUrl = t('links.admissionPdfUrl');
+const iticsWhatsAppUrl = t('links.iticsWhatsAppUrl');
+const iticsEmailUrl = t('links.iticsEmailUrl');
+const iticsPhoneUrl = t('links.iticsPhoneUrl');
+const controlSchoolPhoneUrl = t('links.controlSchoolPhoneUrl');
+const controlSchoolEmailUrl = t('links.controlSchoolEmailUrl');
 ---
+
+<Layout lang={lang} title={tc('nav.join')}>
+  <main class="bg-white min-h-screen pt-32 pb-24 text-apple-text overflow-x-hidden">
+    <section class="max-w-[980px] mx-auto px-5 sm:px-8 mb-20 text-center">
+      <h1 class="text-[clamp(3rem,6vw,5rem)] font-black tracking-tight leading-[1] mb-6">{t('hero.title')}</h1>
+      <p class="text-[1.15rem] md:text-[1.35rem] text-apple-muted font-medium leading-relaxed max-w-[860px] mx-auto">
+        {t('hero.subtitle')}
+      </p>
+      <p class="mt-5 text-[0.78rem] sm:text-[0.84rem] uppercase tracking-[0.16em] font-semibold text-apple-blue/90">
+        {t('hero.support')}
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={requestInfoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-apple-blue text-white text-[1rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-all hover:scale-[1.02] shadow-[0_8px_20px_rgba(0,102,204,0.25)]"
+        >
+          {t('hero.primary')}
+        </a>
+        <a
+          href="#admision-2026"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-white border border-black/10 text-apple-text text-[1rem] font-semibold rounded-full hover:bg-black/[0.03] transition-colors"
+        >
+          {t('hero.secondary')}
+        </a>
+      </div>
+    </section>
+
+    <section id="admision-2026" class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20">
+      <div class="rounded-[2rem] border border-black/5 bg-gradient-to-b from-[#F5F5F7] to-[#EEF5FF] p-8 md:p-12">
+        <h2 class="text-[clamp(1.9rem,3.4vw,2.8rem)] font-bold tracking-tight">{t('admission.title')}</h2>
+        <p class="mt-4 text-[1.05rem] text-apple-muted font-medium leading-relaxed max-w-[900px]">{t('admission.subtitle')}</p>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          {admissionCards.map((card) => (
+            <article class="rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+              <h3 class="text-[1.05rem] font-bold leading-tight">{t(`admission.cards.${card}.title`)}</h3>
+              <p class="mt-3 text-[0.95rem] text-apple-muted font-medium leading-relaxed">{t(`admission.cards.${card}.body`)}</p>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+          <a
+            href={registerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-apple-blue text-white rounded-full text-[0.98rem] font-semibold hover:bg-apple-blue-hover transition-colors"
+          >
+            {t('admission.primary')}
+          </a>
+          <a
+            href={controlSchoolEmailUrl}
+            class="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-white border border-black/10 text-apple-text rounded-full text-[0.98rem] font-semibold hover:bg-black/[0.03] transition-colors"
+          >
+            {t('admission.secondary')}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20">
+      <div class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-8 md:p-12">
+        <h2 class="text-[clamp(1.85rem,3.2vw,2.6rem)] font-bold tracking-tight">{t('requirements.title')}</h2>
+        <p class="mt-4 text-[1.04rem] text-apple-muted font-medium leading-relaxed max-w-[860px]">{t('requirements.subtitle')}</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {requirementCards.map((card) => (
+            <article class="rounded-2xl border border-black/5 bg-white p-6">
+              <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-apple-blue/10 text-apple-blue text-[0.78rem] font-black">✓</div>
+              <h3 class="mt-4 text-[1.04rem] font-bold leading-tight">{t(`requirements.cards.${card}.title`)}</h3>
+              <p class="mt-3 text-[0.95rem] text-apple-muted font-medium leading-relaxed">{t(`requirements.cards.${card}.body`)}</p>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-10">
+          <a
+            href={admissionPdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-apple-blue text-white rounded-full text-[0.98rem] font-semibold hover:bg-apple-blue-hover transition-colors"
+          >
+            {t('requirements.button')}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20">
+      <div class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-8 md:p-12">
+        <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold tracking-tight">{t('why.title')}</h2>
+        <p class="mt-4 text-[1.04rem] text-apple-muted font-medium leading-relaxed max-w-[900px]">{t('why.subtitle')}</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {whyCards.map((card) => (
+            <article class="rounded-2xl border border-black/5 bg-white p-6">
+              <h3 class="text-[1.08rem] font-bold">{t(`why.cards.${card}.title`)}</h3>
+              <p class="mt-3 text-[0.95rem] text-apple-muted font-medium leading-relaxed">{t(`why.cards.${card}.body`)}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20">
+      <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold tracking-tight mb-8">{t('learning.title')}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        {learningCards.map((card) => (
+          <article class="rounded-2xl border border-black/5 bg-[#F5F5F7] p-6">
+            <h3 class="text-[1.06rem] font-bold">{t(`learning.cards.${card}.title`)}</h3>
+            <p class="mt-3 text-[0.95rem] text-apple-muted font-medium leading-relaxed">{t(`learning.cards.${card}.body`)}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20">
+      <div class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-8 md:p-10">
+        <h2 class="text-[clamp(1.85rem,3.2vw,2.6rem)] font-bold tracking-tight mb-8">{t('faq.title')}</h2>
+
+        <div class="divide-y divide-black/8">
+          {faqItems.map((item) => (
+            <article class="py-6 first:pt-0 last:pb-0">
+              <h3 class="text-[1.08rem] font-semibold text-apple-text mb-2">{t(`faq.items.${item}.question`)}</h3>
+              <p class="text-[0.98rem] text-apple-muted font-medium leading-relaxed">{t(`faq.items.${item}.answer`)}</p>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-10">
+          <a href={`/${lang}/contacto`} class="inline-flex items-center gap-2 font-semibold text-apple-blue hover:underline hover:underline-offset-4">
+            {t('faq.cta')} <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24 border-t border-black/5 pt-14 md:pt-20" id="contacto-aspirantes">
+      <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold tracking-tight">{t('contact.title')}</h2>
+      <p class="mt-4 text-[1.04rem] text-apple-muted font-medium leading-relaxed max-w-[920px]">{t('contact.subtitle')}</p>
+
+      <div class="mt-8 grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <article class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-7 md:p-9">
+          <h3 class="text-[1.2rem] font-bold tracking-tight">{t('contact.itics.title')}</h3>
+          <div class="mt-6 space-y-4 text-[0.98rem]">
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem]">{t('contact.itics.emailLabel')}</p>
+            <a href={iticsEmailUrl} class="block text-apple-text font-semibold hover:text-apple-blue transition-colors w-fit">{t('contact.itics.email')}</a>
+
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem] pt-1">{t('contact.itics.phoneLabel')}</p>
+            <a href={iticsPhoneUrl} class="block text-apple-text font-semibold hover:text-apple-blue transition-colors w-fit">{t('contact.itics.phone')}</a>
+
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem] pt-1">{t('contact.itics.whatsappLabel')}</p>
+            <a href={iticsWhatsAppUrl} target="_blank" rel="noopener noreferrer" class="block text-apple-text font-semibold hover:text-apple-blue transition-colors w-fit">{t('contact.itics.whatsapp')}</a>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <a href={iticsWhatsAppUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-apple-blue text-white rounded-full text-[0.95rem] font-semibold hover:bg-apple-blue-hover transition-colors">
+              {t('contact.itics.whatsappButton')}
+            </a>
+            <a href={iticsEmailUrl} class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-white border border-black/10 text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-black/[0.03] transition-colors">
+              {t('contact.itics.emailButton')}
+            </a>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-7 md:p-9">
+          <h3 class="text-[1.2rem] font-bold tracking-tight">{t('contact.control.title')}</h3>
+          <div class="mt-6 space-y-4 text-[0.98rem]">
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem]">{t('contact.control.phoneLabel')}</p>
+            <a href={controlSchoolPhoneUrl} class="block text-apple-text font-semibold hover:text-apple-blue transition-colors w-fit">{t('contact.control.phone')}</a>
+
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem] pt-1">{t('contact.control.emailLabel')}</p>
+            <a href={controlSchoolEmailUrl} class="block text-apple-text font-semibold hover:text-apple-blue transition-colors w-fit">{t('contact.control.email')}</a>
+
+            <p class="text-apple-muted font-semibold uppercase tracking-[0.14em] text-[0.72rem] pt-1">{t('contact.control.scheduleLabel')}</p>
+            <p class="text-apple-muted font-medium leading-relaxed">{t('contact.control.schedule')}</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-[840px] mx-auto px-5 sm:px-8 text-center border-t border-black/5 pt-14 md:pt-20">
+      <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-6">{t('finalCta.title')}</h2>
+      <p class="text-[1.05rem] text-apple-muted font-medium leading-relaxed max-w-[760px] mx-auto mb-10">{t('finalCta.subtitle')}</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#admision-2026"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-apple-blue text-white text-[1rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-all hover:scale-[1.02] shadow-[0_8px_20px_rgba(0,102,204,0.25)]"
+        >
+          {t('finalCta.primary')}
+        </a>
+        <a
+          href={iticsWhatsAppUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-white border border-black/10 text-apple-text text-[1rem] font-semibold rounded-full hover:bg-black/[0.03] transition-colors"
+        >
+          {t('finalCta.secondary')}
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>

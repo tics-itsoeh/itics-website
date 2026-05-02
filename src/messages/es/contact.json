@@ -1,26 +1,70 @@
 {
   "hero": {
     "title": "Contacto oficial.",
-    "subtitle": "Información directa para resolver dudas sobre admisión, formación y vida académica en Ingeniería TIC."
+    "subtitle": "Comunícate con ITICs para resolver dudas sobre admisión, formación académica, comunidad, proyectos y actividades de la carrera."
   },
   "labels": {
     "institution": "Institución",
     "location": "Ubicación",
-    "phone": "Teléfono / WhatsApp",
+    "phone": "Teléfono",
+    "whatsapp": "WhatsApp",
     "email": "Correo"
   },
   "values": {
     "institutionLine1": "Tecnológico Nacional de México",
     "institutionLine2": "Campus Occidente del Estado de Hidalgo",
-    "location": "Carretera México - Pachuca Km. 87.5",
-    "phone": "773-109-9748",
-    "email": "itics@itsoeh.edu.mx"
+    "location": "Paseo del Agrarismo 2000. Carr. Mixquiahuala-Tula, km 2.5, C.P. 42700.",
+    "phone": "772 139 7096",
+    "whatsapp": "+52 1 773 109 9748",
+    "email": "tics@itsoeh.edu.mx",
+    "instagramUrl": "https://www.instagram.com/itics.itsoeh",
+    "facebookUrl": "https://www.facebook.com/ITIC.ITSOEHmx",
+    "tiktokUrl": "https://www.tiktok.com/@ing.tics",
+    "githubUrl": "https://github.com/tics-itsoeh",
+    "whatsappUrl": "https://wa.me/5217731099748",
+    "emailUrl": "mailto:tics@itsoeh.edu.mx",
+    "phoneUrl": "tel:+527721397096"
   },
   "actions": {
     "whatsapp": "Enviar WhatsApp",
-    "email": "Enviar correo"
+    "email": "Enviar correo",
+    "instagram": "Ver Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "github": "GitHub"
+  },
+  "guidance": {
+    "note": "Para dudas rápidas, usa WhatsApp. Para información formal o seguimiento académico, utiliza el correo institucional."
+  },
+  "routing": {
+    "title": "¿A dónde escribir?",
+    "subtitle": "Elige el canal o sección adecuada según el tipo de información que necesitas.",
+    "cards": {
+      "admission": {
+        "title": "Admisión y fichas",
+        "body": "Consulta requisitos, fechas, registro y proceso de ingreso para el ciclo escolar 2026–2027.",
+        "cta": "Ver aspirantes"
+      },
+      "career": {
+        "title": "Información de la carrera",
+        "body": "Resuelve dudas sobre plan de estudios, áreas de formación, perfil de egreso y actividades académicas.",
+        "cta": "Enviar correo"
+      },
+      "projects": {
+        "title": "Proyectos y comunidad",
+        "body": "Conoce clubes, repositorios, proyectos, actividades y espacios de colaboración de ITICs.",
+        "cta": "Ver proyectos"
+      }
+    }
+  },
+  "social": {
+    "title": "Redes oficiales.",
+    "subtitle": "Sigue los canales oficiales de ITICs para conocer avisos, proyectos, actividades, eventos y contenido de la comunidad."
   },
   "cta": {
-    "title": "Conoce la formación completa."
+    "title": "¿Estás pensando estudiar ITICs?",
+    "subtitle": "Conoce el proceso de admisión, revisa los requisitos y resuelve tus dudas por los canales oficiales.",
+    "primary": "Ver admisión 2026",
+    "secondary": "Enviar WhatsApp"
   }
 }

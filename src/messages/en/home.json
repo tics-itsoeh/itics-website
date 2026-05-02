@@ -2,68 +2,138 @@
   "hero": {
     "kickerLine1": "Information and Communications",
     "kickerLine2": "Technology Engineering",
-    "title": "Build technology that solves real problems.",
-    "subtitle": "Learn software development, networking, AI, and IoT by working on projects from your first semester.",
-    "ctaPrimary": "Explore training"
+    "title": "Connect. Code. Innovate.",
+    "subtitle": "Study ICT Engineering at ITSOEH. Transform your ideas into real solutions by mastering software development, artificial intelligence, and the Internet of Things.",
+    "ctaPrimary": "I want to study ICT",
+    "ctaSecondary": "View study plan"
   },
   "philosophy": {
     "title": "More than classes: training to solve real problems.",
     "body": "The program combines critical thinking, technical practice, and collaboration so students build engineering judgement from early stages."
   },
   "formation": {
-    "title": "A professionally oriented program.",
-    "subtitle": "Clear academic objective, industry-aligned graduate profile, and continuous connection with real contexts.",
+    "title": "More than classes: technical training with real practice.",
+    "subtitle": "At ITICs, you learn by building projects, working in teams, and applying technology in real scenarios from early stages.",
     "realAccess": {
-      "title": "Program objective",
-      "body": "Train professionals capable of integrating and managing IT and communications to deliver strategic value in organizations."
+      "title": "Hands-on from day one",
+      "body": "Work with programming, networking, databases, electronics, IoT, and digital tools in academic and collaborative projects."
     },
     "building": {
-      "title": "Graduate profile",
-      "body": "Network design, hardware/software integration, and information systems development under international standards."
+      "title": "Official certifications",
+      "body": "Strengthen your profile through official Huawei and Cisco academies focused on industry-recognized technology skills."
     },
     "collaboration": {
-      "title": "Professional linkage",
-      "body": "Internships, academic visits, and formative events that connect learning with current industry practice."
-    }
+      "title": "Technical community",
+      "body": "Join robotics, IoT, development, and entrepreneurship clubs to keep learning beyond the classroom."
+    },
+    "cta": "View ITICs community"
+  },
+  "academies": {
+    "title": "Training aligned with industry standards.",
+    "subtitle": "TICs ITSOEH includes official Huawei and Cisco academies, strengthening students' technical preparation through learning pathways and industry-recognized certification opportunities.",
+    "cards": {
+      "huawei": {
+        "title": "Huawei ICT Academy",
+        "description": "Training in information technologies, connectivity, digital infrastructure, and technological transformation."
+      },
+      "cisco": {
+        "title": "Cisco Networking Academy",
+        "description": "Training in networking, connectivity, switching, routing, security, and infrastructure."
+      },
+      "certifications": {
+        "title": "Certifications",
+        "description": "Professional evidence that complements your degree and strengthens your profile for internships, residencies, and employment."
+      }
+    },
+    "cta": "View certifications"
   },
   "projects": {
-    "title": "Projects and portfolio.",
-    "subtitle": "Learning evidence from labs, applied research, competitions, and academic activities that demonstrate real technical progress.",
+    "title": "Projects that become portfolio evidence.",
+    "subtitle": "At ITICs ITSOEH, students build solutions that can be documented, published, and presented as professional evidence.",
     "featured": {
-      "name": "Institutional portfolio",
-      "description": "Activities, projects, and learning experiences documented to show how engineering practice evolves across the program."
+      "name": "Byron Gálvez Digital Museums",
+      "description": "Interactive web experiences developed for cultural outreach and digital preservation."
     },
     "guides": {
-      "name": "Focus areas",
-      "description": "Academic tracks in data, interaction, emerging technologies, networks, and intelligent systems."
+      "name": "ESP32 Tic-Tac-Toe",
+      "description": "A physical-digital project using microcontrollers, device-to-device communication, and interactive logic."
     },
     "systems": {
-      "name": "Labs and practice",
-      "description": "Technical spaces and collaborative dynamics to experiment, iterate, and validate solutions in concrete scenarios."
+      "name": "VEX Robotics ITICs",
+      "description": "Participation in competitive robotics, programming, mechanical design, control, and teamwork."
     },
     "infra": {
-      "name": "Continuous updates",
-      "description": "Specializations reviewed periodically to keep training aligned with current tools and needs."
-    }
+      "name": "ITICs GitHub",
+      "description": "Institutional repository where projects, code, and technical evidence from the community are published."
+    },
+    "cta": "View projects on GitHub"
   },
   "mentors": {
-    "title": "Faculty.",
-    "subtitle": "Professors with technical experience who guide professional growth in key ICT areas."
+    "title": "ICT Community.",
+    "subtitle": "Clubs, faculty, coordination, and students who drive your growth inside and outside the classroom.",
+    "cards": {
+      "clubs": {
+        "title": "Technical clubs",
+        "description": "Robotics, IoT, developers, and entrepreneurship."
+      },
+      "faculty": {
+        "title": "Faculty and coordination",
+        "description": "Academic guidance and program organization."
+      },
+      "students": {
+        "title": "Student leaders",
+        "description": "Projects, workshops, community, and technical collaboration."
+      },
+      "credits": {
+        "title": "Site credits",
+        "description": "Recognition for those who design, develop, and maintain the digital identity of TICs."
+      }
+    },
+    "cta": "View community →"
   },
   "contact": {
     "title": "Official contact.",
     "subtitle": "Institutional channels to resolve questions about the program, admissions, curriculum, and academic activities."
   },
-  "outcomes": {
-    "title": "What will you be able to do?",
+  "faq": {
+    "title": "Common questions before you apply",
     "items": {
-      "apps": "Develop applications.",
-      "networks": "Design and manage networks.",
-      "data": "Manage data for technical decisions.",
-      "solutions": "Build technological solutions for real problems."
+      "programming": {
+        "question": "Do I need to know programming already?",
+        "answer": "No. The degree starts from fundamentals. What matters most is your willingness to practice, solve problems, and learn consistently."
+      },
+      "math": {
+        "question": "Is there a lot of math?",
+        "answer": "Yes, because this is an engineering degree. But it is taught progressively and applied to programming, networks, data, communications, and decision-making."
+      },
+      "ai": {
+        "question": "Will AI replace engineers?",
+        "answer": "AI does not replace engineers who can think, design, integrate, and solve problems. AI becomes a tool for people who know how to use it and build with it."
+      },
+      "jobs": {
+        "question": "Are there job opportunities?",
+        "answer": "Yes. You can grow in software, networks, databases, cybersecurity, IoT, support, infrastructure, data, cloud, automation, and technology project management."
+      }
+    },
+    "cta": "Resolve more questions"
+  },
+  "outcomes": {
+    "title": "What will you be able to build as an ITICs student?",
+    "items": {
+      "apps": "Develop web and mobile applications, plus information systems.",
+      "networks": "Design, configure, and manage computer networks.",
+      "databases": "Create and manage secure, reliable databases.",
+      "iot": "Integrate devices, sensors, and IoT systems.",
+      "security": "Apply cybersecurity and IT auditing practices.",
+      "uiux": "Design user-centered digital interfaces.",
+      "projects": "Manage technology projects.",
+      "entrepreneurship": "Build digital solutions with real-world impact."
     }
   },
   "finalCta": {
-    "button": "See the full training path"
+    "title": "Take the first step toward ICT Engineering.",
+    "subtitle": "Review the 2026-2027 admission process, explore the study plan, and resolve your questions with the TICs community.",
+    "primary": "View 2026 admission",
+    "secondary": "Contact TICs"
   }
 }

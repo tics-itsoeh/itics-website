@@ -1,187 +1,262 @@
-# Diagramas del Sistema
+# Colección de Diagramas del Sistema
 
-Esta sección consolida todos los gráficos y flujos operativos que describen cómo interactúan los usuarios con la información y cómo está ensamblado el sitio a nivel de módulos. Estos diagramas son generados automáticamente en GitHub usando la tecnología **Mermaid**.
+Esta sección proporciona una representación visual integral del sitio web de ITICs ITSOEH. Todos los diagramas están construidos con [Mermaid](https://mermaid.js.org/) para asegurar su renderizado automático en GitHub, Notion y otras herramientas compatibles con Markdown.
 
 ---
 
-## 1. Diagrama de Arquitectura (Frontend a Servidor)
-Demuestra el ciclo desde que un aspirante entra al navegador hasta que nuestro sitio estático (SSG) extrae sus JSONs y sirve la vista terminada.
+## 1. Arquitectura General
+*Representa la vista de alto nivel del sistema JAMstack, desde el usuario hasta los datos subyacentes.*
 
 ```mermaid
 flowchart TD
-    User([👨‍💻 Usuario / Aspirante])
-    Browser[Navegador Web]
+    User([👨‍💻 Aspirante / Usuario])
+    Browser[Navegador]
 
-    subgraph CDN[Edge / Hosting CDN]
-        SSG[HTML/CSS Estático Generado]
-        Assets[Imágenes / Modelos 3D / PDFs]
+    subgraph EdgeCDN[Cloudflare Pages / Vercel]
+        SSG[Archivos Estáticos HTML/CSS]
+        Assets[Imágenes / PDF / Modelos 3D]
     end
 
-    subgraph Frontend[Astro Frontend]
+    subgraph AstroLayer[Capa de Presentación Astro]
+        Layouts[Layout Maestro]
         Pages(Páginas .astro)
         Components((Componentes UI))
-        Layouts[Layout Base]
     end
 
     subgraph DataLayer[Capa de Datos Estáticos]
-        i18n[(JSON Traducciones)]
+        JSON[(messages/i18n JSONs)]
         Config[(siteConfig.ts)]
     end
 
     User --> Browser
-    Browser --> CDN
-    CDN -- Sirve páginas a máx vel. --> Frontend
-    Frontend --> Layouts
+    Browser --> EdgeCDN
+    EdgeCDN -- Sirve contenido --> AstroLayer
+    AstroLayer --> Layouts
     Layouts --> Pages
     Pages --> Components
-    Components --> DataLayer
-    Pages --> DataLayer
+    Components -. Consume .-> DataLayer
+    Pages -. Consume .-> DataLayer
 ```
+**Explicación:** El sitio no posee base de datos tradicional ni servidor activo (Node/PHP). En su lugar, Astro genera archivos HTML planos estáticos durante el proceso de *build*, inyectando la información desde la capa de configuración (DataLayer).
 
 ---
 
-## 2. Sitemap del Sitio ITICs ITSOEH
-Muestra las seis ramificaciones estructurales principales a las que un aspirante o empresa tiene acceso desde el Navbar superior.
+## 2. Sitemap Estructural
+*Muestra la jerarquía de navegación y las ramificaciones principales del sitio.*
 
 ```mermaid
 mindmap
   root((ITICs ITSOEH))
     Inicio
-      Hero Interactivo 3D
-      Secciones Rápidas (CTAs)
+      Hero 3D
+      Llamados a la Acción
     Formación
-      Retícula PDF (Visualizador)
-      Competencias Profesionales
+      Competencias
       Academias Cisco/Huawei
+      Retícula Curricular
     Aspirantes
-      Perfil de Ingreso Ideal
-      Proceso de Admisión a detalle
-      Fechas Clave y FAQ
+      Perfil de Ingreso
+      Proceso de Admisión
+      Fechas Clave / FAQ
     Proyectos
-      Proyectos Destacados (Cards)
-      Repositorios GitHub / Demos
+      Proyectos Destacados
+      Enlaces a Repositorios
     Comunidad
-      Egresados Exitosos (Alumni)
+      Egresados Exitosos
       Clubes Estudiantiles
-      Profesores (Planta)
+      Profesores (Academia)
     Contacto
       Redes Sociales
-      Botones WhatsApp / Correo
-      Mapa Interactivo del Campus
+      Contacto Directo (Mail/WA)
+      Ubicación Física (Mapa)
 ```
+**Explicación:** La estructura está optimizada para guiar a los aspirantes. Mantiene la profundidad de clics al mínimo, asegurando que la información de admisión y contacto sea accesible desde cualquier nivel del árbol.
 
 ---
 
-## 3. Diagrama de Composición (Component Tree)
-Indica qué componente maestro es padre de cuáles otros sub-componentes.
+## 3. Árbol de Componentes Reutilizables
+*Mapea la relación padre-hijo entre los bloques de construcción de la interfaz gráfica.*
 
 ```mermaid
 flowchart LR
-    Layout[Layout.astro\n(SEO, Metadatos, Base CSS)] --> Nav[Navbar.astro]
+    Layout[Layout.astro\nSEO + Base CSS] --> Nav[Navbar.astro]
     Layout --> Footer[Footer.astro]
     Layout --> SiteLoader[SiteLoader.astro]
-    Layout --> PageContent((Contenido de la Página .astro))
+    Layout --> Slot((`slot`\nContenido))
 
-    PageContent --> Hero[Hero.astro\n(Homepage)]
-    PageContent --> CTAS[CTABanners]
+    Slot --> Hero[Hero.astro]
+    Slot --> CardGrid[Grid de Tarjetas]
+    Slot --> CTA[Banner Call-to-Action]
     
-    Hero --> Models[Model3DCanvas.astro\nLazy-loaded Three.js]
+    Hero --> Model[Model3DCanvas.astro]
+    CardGrid --> ProjectCard[Card Proyecto]
+    CardGrid --> MentorCard[Card Perfil]
+    CardGrid --> GenericCard[Card Genérica]
     
-    Footer -.-> |Lee Redes Sociales de| Config[siteConfig.ts]
-    Nav -.-> |Lee Rutas de| NavData[navigation.ts]
+    Footer -. Extrae Links .-> siteConfig[siteConfig.ts]
+    Nav -. Extrae Rutas .-> navigation[navigation.ts]
 ```
+**Explicación:** `Layout.astro` actúa como el *App Shell* o marco de todas las páginas, inyectando el SEO y las dependencias globales. Dentro del `<slot>`, las páginas ensamblan vistas usando componentes "tontos" y reutilizables.
 
 ---
 
 ## 4. Flujo del Usuario Aspirante (Conversión)
-El sitio tiene un objetivo de negocio: Informar de tal manera que un estudiante de prepa elija estudiar ITICs e inicie su proceso de inscripción ("Conversión Exitosa").
+*Ruta esperada que recorre un prospecto desde que entra hasta que se inscribe.*
 
 ```mermaid
 flowchart TD
-    A[👨‍🎓 Usuario entra al Home] --> B{Primer Vistazo}
+    A[Aspirante Entra] --> B{Revisa Inicio}
+    B --> |Curiosidad Académica| C[Página: Formación / Carrera]
+    B --> |Curiosidad Estudiantil| D[Página: Proyectos / Comunidad]
+    B --> |Decidido a Inscribirse| E[Click 'Admisión']
     
-    B --> |Curiosidad| C[Hace scroll en Inicio]
-    C --> |Descubre materias| D[Ve Página Formación]
-    C --> |Quiere evidencia| E[Revisa Proyectos/Egresados]
+    C --> E
+    D --> E
     
-    B --> |Decisión ya tomada| F[Click directo 'Admisión' en Navbar]
+    E --> F[Página: Aspirantes]
+    F --> G[Lee Perfil y Requisitos]
+    G --> H[Revisa Fechas Clave y FAQ]
     
-    D --> F
-    E --> F
+    H --> |Tiene Dudas| I[Página: Contacto]
+    I --> J[Envía WhatsApp / Correo]
     
-    F --> G[Página Especial de Aspirantes]
-    G --> H[Lee Perfil de Ingreso]
-    H --> I[Revisa Requisitos de Ingreso]
-    I --> J[Lee FAQ para quitar dudas]
-    
-    J --> |Aún tiene dudas técnicas| K[Navega a Página Contacto]
-    K --> L[Click en Botón WhatsApp o Manda Correo]
-    
-    J --> |Está completamente listo| M[Click en PDF Fichas o Sistema Fichas ITSOEH]
-    M --> N(((Conversión Exitosa)))
+    H --> |Cero Dudas| K[Click: Sistema de Fichas ITSOEH]
+    K --> L(((Conversión Exitosa)))
 ```
+**Explicación:** El diseño sigue una lógica de embudo (Funnel). Cada página del sitio tiene como objetivo final redirigir al estudiante hacia el flujo de admisión o resolución de dudas de contacto.
 
 ---
 
-## 5. Modelo de Datos Conceptual
-Aunque JAMstack se basa en archivos (no hay Base de Datos MySQL), el código maneja un modelo de dominio fuertemente estructurado.
+## 5. Flujo General de Mantenimiento de Contenido
+*Ciclo de vida para actualizar la información sin arriesgar la plataforma.*
+
+```mermaid
+flowchart LR
+    Dev[👨‍🔧 Mantenedor] --> A[Edita Código Local]
+    
+    A --> |Cambios Globales| B[`src/data/`]
+    A --> |Cambios Textuales| C[`src/messages/es/`]
+    A --> |Imágenes| D[`public/`]
+    
+    B & C & D --> E[Test: `npm run dev`]
+    E --> F{¿Build Exitoso?}
+    
+    F -- No --> G[Corregir Errores TS/JSON]
+    G --> E
+    
+    F -- Sí --> H[git commit & push]
+    H --> I[Vercel/Cloudflare lanza Build]
+    I --> J(((Sitio Actualizado)))
+```
+**Explicación:** Se prioriza un desarrollo defensivo. Al usar `npm run build` localmente, Astro verificará que todas las llaves JSON existan y que no haya enlaces rotos antes de impactar producción.
+
+---
+
+## 6. Modelo Conceptual de Datos
+*Estructura de las entidades de información, aunque no exista una base de datos real.*
 
 ```mermaid
 erDiagram
-    SITE_CONFIG ||--o{ SOCIAL_LINK : contains
-    SITE_CONFIG ||--|| CONTACT_INFO : contains
-    SITE_CONFIG ||--|| ADMISSION_DATA : contains
-
-    I18N_DICTIONARY ||--o{ PROJECT : stores
-    I18N_DICTIONARY ||--o{ CLUB : stores
-    I18N_DICTIONARY ||--o{ MENTOR : stores
-    I18N_DICTIONARY ||--o{ FAQ_ITEM : stores
+    SITE_CONFIG ||--o{ SOCIAL_LINK : "Define URL de"
+    SITE_CONFIG ||--|| ADMISSION_DATA : "Define Año/URL de"
+    
+    I18N_DICTIONARY ||--o{ PROJECT : "Contiene Lista de"
+    I18N_DICTIONARY ||--o{ MENTOR : "Contiene Lista de"
+    I18N_DICTIONARY ||--o{ CLUB : "Contiene Lista de"
+    I18N_DICTIONARY ||--o{ FAQ : "Contiene Lista de"
 
     PROJECT {
         string title
         string description
         string imageUrl
-        string tags
         string demoUrl
         string githubUrl
-    }
-
-    CLUB {
-        string name
-        string target
-        string url
-        string image
     }
 
     ADMISSION_DATA {
         string year
         string cycle
-        string pdfUrl
         string registerUrl
+        string pdfUrl
     }
 ```
+**Explicación:** Demuestra cómo las entidades "entran" al sistema. Mientras que los proyectos, clubes y mentores viven en diccionarios de traducciones (i18n), la configuración dura (fechas, links de registro) vive centralizada en la configuración.
 
 ---
 
-## 6. Flujo de Mantenimiento de Contenido para Desarrolladores
-Pasos que sigue el mantenedor oficial del sitio (Servicio Social / Coordinador).
+## 7. Flujo de Actualización de Proyectos
+*Protocolo estricto para agregar un nuevo proyecto estudiantil.*
+
+```mermaid
+flowchart TD
+    A[Recibir Material del Proyecto] --> B[Recortar imagen a 16:9 y optimizar a .webp]
+    B --> C[Guardar en `public/projects/`]
+    
+    C --> D[Abrir `src/messages/es/projects.json`]
+    D --> E[Duplicar un nodo dentro de `v2.featured.items`]
+    
+    E --> F[Actualizar title, description, imageUrl y links]
+    
+    F --> G{¿El sitio es multilenguaje?}
+    G -- Sí --> H[Replicar cambios en `en/projects.json` y `zh/projects.json`]
+    G -- No --> I[Build Local]
+    H --> I
+    
+    I --> J[git push -> Producción]
+```
+**Explicación:** Subraya la importancia crítica de la optimización de imágenes (WebP) y la obligación arquitectónica de replicar las llaves en los otros archivos de idiomas para evitar rupturas de Astro.
+
+---
+
+## 8. Flujo de Actualización de Admisión (Cambio de Ciclo)
+*Protocolo para el salto anual de ciclo escolar (Ej. 2026 -> 2027).*
+
+```mermaid
+flowchart TD
+    A[Nueva Convocatoria Publicada por ITSOEH] --> B[Obtener nuevo PDF oficial]
+    B --> C[Subir PDF a `public/docs/`]
+    
+    C --> D[Abrir `src/data/siteConfig.ts`]
+    D --> E[Actualizar variable `admission.year` y `admission.cycle`]
+    E --> F[Actualizar `admission.pdfUrl`]
+    
+    F --> G{¿Cambiaron los pasos o requisitos?}
+    G -- Sí --> H[Abrir `src/messages/es/join.json`]
+    H --> I[Modificar textos de pasos y timeline]
+    I --> J[Test y Push]
+    
+    G -- No --> J
+```
+**Explicación:** Desvincula la actualización de variables "duras" (año, ciclo) de los textos narrativos de la convocatoria, centralizando los links en TypeScript (`siteConfig`) y no en archivos Astro.
+
+---
+
+## 9. Relación de Simbiosis: Páginas, Secciones y Datos
+*Muestra cómo la vista web, el componente parcial y el JSON se unen en la pantalla del usuario final.*
 
 ```mermaid
 flowchart LR
-    A[🛠️ Editor ITICs] -->|Abre Repositorio| B(Localiza el archivo)
+    subgraph Pagina [Página Astro]
+        P[src/pages/.../mentores.astro]
+    end
+
+    subgraph Secciones [Componentes]
+        C1[MentorsGrid.astro]
+        C2[AlumniCarousel.astro]
+    end
+
+    subgraph Datos [Fuentes de Datos]
+        J1[mentors.json 'teachers']
+        J2[mentors.json 'alumni']
+        S1[siteConfig.ts]
+    end
+
+    P -->|Renderiza| C1
+    P -->|Renderiza| C2
     
-    B -->|Cambios Fechas/Tel| C[`siteConfig.ts`]
-    B -->|Textos Nuevos| D[`messages/es/*.json`]
-    B -->|Fotos Nuevas| E[`/public/`]
+    J1 -.->|Pasa array como props| C1
+    J2 -.->|Pasa array como props| C2
     
-    C & D & E --> F[Test Local]
-    F -.->|npm run dev| G[Navegador localhost]
-    
-    G -->|Errores| B
-    G -->|Pasa revisión visual| H[git add . / git commit]
-    H --> I[git push origin main]
-    
-    I --> J{Detectado por CI/CD Vercel/Cloudflare}
-    J --> K[Se activa npm run build]
-    K --> L(((Sitio Actualizado en Producción)))
+    S1 -.->|Pasa Configuración| P
 ```
+**Explicación:** Describe el flujo de datos unidireccional. La Página actúa como controlador: extrae la información del JSON y de SiteConfig, y la pasa "hacia abajo" a los componentes en forma de propiedades (props) para ser renderizadas.

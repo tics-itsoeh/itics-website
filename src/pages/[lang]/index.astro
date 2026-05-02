@@ -11,6 +11,7 @@
  */
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';
 import { useTranslations } from '../../i18n/utils';
@@ -196,6 +197,9 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
         </a>
       </div>
     </section>
+
+    <!-- Testimonials -->
+    <Testimonials lang={lang} />
 
     <!-- Contact -->
     <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-apple-border pt-14 md:pt-20">

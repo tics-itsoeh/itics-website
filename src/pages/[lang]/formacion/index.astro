@@ -32,6 +32,64 @@ const semesterCards = ['semester1', 'semester2', 'semester3', 'semester4', 'seme
 const curriculumPdfPath = '/docs/tics.pdf';
 import { siteUrl, institution } from '../../../data/siteConfig';
 
+const labsContent = {
+  es: {
+    title: 'Laboratorios de Alto Rendimiento',
+    subtitle: 'Espacios diseñados para llevar la teoría a la práctica. Contamos con equipamiento de nivel empresarial para que te prepares en entornos reales.',
+    networking: { title: 'Laboratorio de Redes', desc: 'Aprende infraestructura, enrutamiento y telecomunicaciones con equipos físicos Cisco.' },
+    mac: { title: 'Laboratorio de iMacs', desc: 'Desarrollo de Software, Interacción Humano-Computadora (IHC), Inteligencia Artificial, Estructura de Datos y Estadística.' },
+    windows: { title: 'Laboratorio Multipropósito', desc: 'Programación, Sistemas Operativos (Linux Debian), Arquitectura de Computadoras y Servicios en la Nube sobre equipos Windows.' },
+    stemTitle: 'Centro STEM Institucional',
+    stemSubtitle: 'Además de nuestros laboratorios propios, hacemos uso extensivo de los laboratorios STEM de la universidad para competencias e innovación tecnológica.',
+    stem_movil: { title: 'Robótica Móvil', desc: 'Equipos VEX V5 para diseño, construcción y competencias universitarias (VEXU).' },
+    stem_educativa: { title: 'Robótica Educativa', desc: 'Desarrollo de lógica e ingeniería con equipos VEX IQ enfocados a competencias.' },
+    stem_colaborativa: { title: 'Robótica Colaborativa', desc: 'Prácticas de automatización industrial con brazos robóticos Dobot.' },
+    stem_vr: { title: 'Realidad Virtual', desc: 'Desarrollo de entornos inmersivos y simuladores con cascos Pico Neo 3 Pro.' },
+    stem_iot: { title: 'Internet de las Cosas (IoT)', desc: 'Desarrollo de sistemas embebidos con maletines CrowPi y laptops Raspberry Pi.' }
+  },
+  en: {
+    title: 'High-Performance Laboratories',
+    subtitle: 'Spaces designed to put theory into practice. We have enterprise-level equipment so you can prepare in real environments.',
+    networking: { title: 'Networking Laboratory', desc: 'Learn infrastructure, routing, and telecommunications with physical Cisco equipment.' },
+    mac: { title: 'iMacs Laboratory', desc: 'Software Development, Human-Computer Interaction (HCI), Artificial Intelligence, Data Structures, and Statistics.' },
+    windows: { title: 'Multipurpose Laboratory', desc: 'Programming, Operating Systems (Linux Debian), Computer Architecture, and Cloud Services on Windows PCs.' },
+    stemTitle: 'Institutional STEM Center',
+    stemSubtitle: 'In addition to our core labs, we make extensive use of the university\'s STEM laboratories for competitions and technological innovation.',
+    stem_movil: { title: 'Mobile Robotics', desc: 'VEX V5 equipment for design, construction, and university competitions (VEXU).' },
+    stem_educativa: { title: 'Educational Robotics', desc: 'Logic and engineering development with VEX IQ equipment focused on competitions.' },
+    stem_colaborativa: { title: 'Collaborative Robotics', desc: 'Industrial automation practices with Dobot robotic arms.' },
+    stem_vr: { title: 'Virtual Reality', desc: 'Development of immersive environments and simulators with Pico Neo 3 Pro headsets.' },
+    stem_iot: { title: 'Internet of Things (IoT)', desc: 'Development of embedded systems with CrowPi kits and Raspberry Pi laptops.' }
+  },
+  zh: {
+    title: '高性能实验室',
+    subtitle: '旨在将理论付诸实践的空间。我们拥有企业级设备，让您在真实环境中做好准备。',
+    networking: { title: '网络实验室', desc: '使用物理Cisco设备学习基础设施、路由和电信技术。' },
+    mac: { title: 'iMac实验室', desc: '软件开发、人机交互 (HCI)、人工智能、数据结构和统计学。' },
+    windows: { title: '多功能实验室', desc: '在Windows PC上进行编程、操作系统 (Linux Debian)、计算机体系结构和云服务。' },
+    stemTitle: '机构 STEM 中心',
+    stemSubtitle: '除了我们自己的实验室外，我们还广泛利用大学的 STEM 实验室进行竞赛和技术创新。',
+    stem_movil: { title: '移动机器人', desc: '用于设计、制造和大学竞赛 (VEXU) 的 VEX V5 设备。' },
+    stem_educativa: { title: '教育机器人', desc: '使用 VEX IQ 设备开发逻辑和工程能力，专注于竞赛。' },
+    stem_colaborativa: { title: '协作机器人', desc: '使用 Dobot 机械臂进行工业自动化实践。' },
+    stem_vr: { title: '虚拟现实', desc: '使用 Pico Neo 3 Pro 头显开发沉浸式环境和模拟器。' },
+    stem_iot: { title: '物联网 (IoT)', desc: '使用 CrowPi 套件和 Raspberry Pi 笔记本电脑开发嵌入式系统。' }
+  }
+};
+const lContent = labsContent[lang as keyof typeof labsContent] || labsContent.es;
+const labsData = [
+  { ...lContent.networking, img: '/images/labs/lab_networking_1777732012743.png' },
+  { ...lContent.mac, img: '/images/labs/lab_software_mac_1777731999900.png' },
+  { ...lContent.windows, img: '/images/labs/lab_windows_linux_1777732314372.png' }
+];
+const stemData = [
+  { ...lContent.stem_movil, img: '/images/labs/lab_robotica_vex_1777732857633.png' },
+  { ...lContent.stem_educativa, img: '/images/labs/lab_robotica_iq_1777732919858.png' },
+  { ...lContent.stem_colaborativa, img: '/images/labs/lab_robotica_dobot_1777732877524.png' },
+  { ...lContent.stem_vr, img: '/images/labs/lab_vr_1777732892063.png' },
+  { ...lContent.stem_iot, img: '/images/labs/lab_iot_crowpi_1777732933904.png' }
+];
+
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
@@ -152,10 +210,60 @@ const courseSchema = {
       </div>
     </section>
 
+    <!-- Laboratories -->
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 mb-24" id="laboratorios">
+      <div class="mb-14 text-center md:text-left">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{lContent.title}</h2>
+        <p class="text-[1.15rem] text-apple-muted font-medium leading-relaxed max-w-[720px]">
+          {lContent.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        {labsData.map((lab) => (
+          <article class="bg-apple-surface-alt rounded-[2rem] border border-apple-border overflow-hidden group hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
+            <div class="h-48 sm:h-56 overflow-hidden bg-apple-surface relative">
+              <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10"></div>
+              <img src={lab.img} alt={lab.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div class="p-6 md:p-8 flex-1 flex flex-col">
+              <h3 class="text-[1.15rem] font-bold text-apple-text mb-3">{lab.title}</h3>
+              <p class="text-[0.98rem] text-apple-muted font-medium leading-relaxed">{lab.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mb-14 pt-10 border-t border-apple-border text-center md:text-left">
+        <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{lContent.stemTitle}</h2>
+        <p class="text-[1.15rem] text-apple-muted font-medium leading-relaxed max-w-[720px]">
+          {lContent.stemSubtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {stemData.map((lab) => (
+          <article class="bg-apple-surface-alt rounded-[2rem] border border-apple-border overflow-hidden group hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
+            <div class="h-48 sm:h-56 overflow-hidden bg-apple-surface relative">
+              <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10"></div>
+              <img src={lab.img} alt={lab.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div class="p-6 md:p-8 flex-1 flex flex-col">
+              <h3 class="text-[1.15rem] font-bold text-apple-text mb-3">{lab.title}</h3>
+              <p class="text-[0.98rem] text-apple-muted font-medium leading-relaxed">{lab.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <section class="max-w-[1000px] mx-auto px-5 sm:px-8 mb-24">
       <article class="rounded-[2rem] border border-apple-border bg-apple-surface p-8 md:p-10 shadow-sm">
         <h2 class="text-3xl font-bold tracking-tight">{t('complementary.title')}</h2>
-        <p class="mt-4 text-[1.05rem] leading-relaxed text-apple-muted">{t('complementary.body')}</p>
+        <p class="mt-4 text-[1.05rem] leading-relaxed text-apple-muted mb-8">{t('complementary.body')}</p>
+        <a href={`/${lang}/mentores#clubes`} class="inline-flex items-center gap-2 font-semibold text-apple-blue hover:underline hover:underline-offset-4">
+          Conocer los Clubes Estudiantiles <span aria-hidden="true">&rarr;</span>
+        </a>
       </article>
     </section>
 

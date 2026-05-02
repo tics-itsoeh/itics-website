@@ -33,7 +33,13 @@
         "portfolio": "Portafolio"
       },
       "primary": "Ver evidencia",
-      "secondary": "GitHub"
+      "secondary": "GitHub",
+      "cardTitle": "Proyectos, concursos y comunidad técnica",
+      "cardBody": "Evidencia académica publicada en repositorios, presentaciones, clubes y experiencias colaborativas.",
+      "repoLabel": "Repositorio",
+      "repoValue": "GitHub ITICs",
+      "areaLabel": "Área",
+      "areaValue": "Software · IoT · Robótica"
     },
     "evidence": {
       "title": "Evidencias de formación",

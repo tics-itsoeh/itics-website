@@ -1,0 +1,122 @@
+---
+/**
+ * Loader de primera visita del sitio ITICs.
+ *
+ * Muestra una animación con el logo institucional la primera vez
+ * que el usuario accede al sitio en la sesión. Se oculta tras
+ * la carga o después de un timeout de seguridad de 2.6s.
+ * Respeta `prefers-reduced-motion`.
+ */
+---
+
+<div id="site-loader" class="site-loader site-loader--hidden" aria-hidden="true">
+  <div class="site-loader__inner">
+    <img
+      src="/logos/logo.svg"
+      alt=""
+      width="999"
+      height="1002"
+      class="site-loader__logo"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <span class="site-loader__line"></span>
+  </div>
+</div>
+<noscript>
+  <style>
+    body {
+      overflow: auto !important;
+    }
+    #site-loader {
+      display: none !important;
+    }
+  </style>
+</noscript>
+
+<style is:global>
+  body.is-loading {
+    overflow: hidden;
+  }
+
+  .site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.94), rgba(245, 245, 247, 0.97) 60%),
+      #f5f5f7;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 420ms ease, visibility 420ms ease;
+  }
+
+  .site-loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .site-loader__inner {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    transform: translateY(-4%);
+  }
+
+  .site-loader__logo {
+    width: clamp(7rem, 14vw, 11rem);
+    height: auto;
+    filter: drop-shadow(0 14px 28px rgba(30, 40, 124, 0.22));
+    transform-origin: center;
+    animation: loader-pulse 1.8s ease-in-out infinite;
+  }
+
+  .site-loader__line {
+    width: clamp(8.5rem, 20vw, 11.5rem);
+    height: 2px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(29, 29, 31, 0.12);
+  }
+
+  .site-loader__line::before {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1e287c 0%, #0066cc 100%);
+    animation: loader-line 1.3s ease-in-out infinite;
+  }
+
+  @keyframes loader-pulse {
+    0%, 100% {
+      transform: scale(0.95);
+      opacity: 0.85;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes loader-line {
+    0% {
+      transform: translateX(-115%);
+    }
+    100% {
+      transform: translateX(290%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-loader__logo,
+    .site-loader__line::before {
+      animation: none;
+    }
+  }
+</style>

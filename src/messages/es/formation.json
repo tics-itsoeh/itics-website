@@ -115,6 +115,9 @@
   },
   "cta": {
     "title": "Conoce cómo esta formación se convierte en proyectos reales.",
-    "button": "Ver proyectos y portafolio"
-  }
+    "button": "Ver proyectos y portafolio",
+    "admissionTitle": "¿Listo para comenzar tu camino en ITICs?",
+    "admissionButton": "Ver admisión 2026"
+  },
+  "iframeTitle": "Retícula ITIC-2010-225"
 }

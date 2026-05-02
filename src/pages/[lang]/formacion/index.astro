@@ -18,9 +18,24 @@ const areaCards = ['software', 'networks', 'databases', 'math', 'iot', 'manageme
 const competencyCards = ['networks', 'software', 'databases', 'security', 'embedded', 'management'] as const;
 const semesterCards = ['semester1', 'semester2', 'semester3', 'semester4', 'semester5', 'semester6', 'semester7', 'semester8', 'semester9'] as const;
 const curriculumPdfPath = '/docs/tics.pdf';
+import { siteUrl, institution } from '../../../data/siteConfig';
+
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": institution.programName,
+  "description": t('hero.subtitle'),
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": institution.campusName,
+    "sameAs": siteUrl
+  }
+};
 ---
 
 <Layout lang={lang} title={tc('nav.formation')}>
+  <script type="application/ld+json" set:html={JSON.stringify(courseSchema)} slot="head" />
+
   <main class="bg-white min-h-screen pt-32 pb-24 text-apple-text overflow-x-hidden">
     <section class="max-w-[1024px] mx-auto px-5 sm:px-8 mb-20 text-center">
       <h1 class="text-[clamp(3rem,6vw,5rem)] font-black tracking-tight leading-[1] mb-6">{t('hero.title')}</h1>
@@ -96,13 +111,22 @@ const curriculumPdfPath = '/docs/tics.pdf';
       </article>
 
       <article class="mt-8 rounded-[2rem] border border-black/5 bg-white p-3 sm:p-4 md:p-5 shadow-sm">
-        <div class="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#F5F5F7]">
+        <div class="hidden sm:block overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#F5F5F7]">
           <iframe
             src={`${curriculumPdfPath}#view=FitH`}
-            title="Retícula ITIC-2010-225"
+            title={t('iframeTitle')}
             loading="lazy"
             class="w-full h-[560px] sm:h-[680px] lg:h-[760px]"
           />
+        </div>
+        <div class="sm:hidden py-12 px-6 text-center border border-black/10 rounded-[1.25rem] bg-[#F5F5F7]">
+          <svg class="w-12 h-12 mx-auto mb-4 text-apple-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <p class="text-apple-text font-medium mb-4">{t('iframeTitle')} no puede visualizarse en móviles.</p>
+          <a href={curriculumPdfPath} target="_blank" rel="noopener noreferrer" class="inline-block w-full px-6 py-3 bg-apple-blue text-white font-semibold rounded-full shadow-sm hover:bg-apple-blue-hover transition-colors">
+            {t('curriculum.button')}
+          </a>
         </div>
       </article>
 
@@ -123,10 +147,17 @@ const curriculumPdfPath = '/docs/tics.pdf';
       </article>
     </section>
 
-    <section class="max-w-[800px] mx-auto px-5 sm:px-8 text-center">
+    <section class="max-w-[800px] mx-auto px-5 sm:px-8 text-center mb-20">
       <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-tight mb-8">{t('cta.title')}</h2>
       <a href={`/${lang}/proyectos`} class="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-10 py-4 bg-apple-blue text-white text-[1.05rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-all hover:scale-[1.02] shadow-[0_8px_20px_rgba(0,102,204,0.25)]">
         {t('cta.button')}
+      </a>
+    </section>
+
+    <section class="max-w-[800px] mx-auto px-5 sm:px-8 text-center border-t border-black/5 pt-14">
+      <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-tight mb-6">{t('cta.admissionTitle')}</h2>
+      <a href={`/${lang}/unirse`} class="inline-flex w-full sm:w-auto items-center justify-center px-6 sm:px-10 py-4 bg-apple-blue text-white text-[1.05rem] font-semibold rounded-full hover:bg-apple-blue-hover transition-all hover:scale-[1.02] shadow-[0_8px_20px_rgba(0,102,204,0.25)]">
+        {t('cta.admissionButton')}
       </a>
     </section>
   </main>

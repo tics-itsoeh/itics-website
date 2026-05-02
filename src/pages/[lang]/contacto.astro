@@ -87,7 +87,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
               allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación del campus en Google Maps"
+              title={lang === 'en' ? 'Campus location on Google Maps' : lang === 'zh' ? '校园在 Google 地图上的位置' : 'Ubicación del campus en Google Maps'}
             ></iframe>
           </article>
         </div>

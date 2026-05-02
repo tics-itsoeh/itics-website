@@ -1,10 +1,135 @@
 {
-  "hero": {
-    "title": "导师团队。",
-    "subtitle": "在你的培养与技术成长中提供支持与指导的专业导师。"
+  "community": {
+    "hero": {
+      "title": "ITICs 社区。",
+      "subtitle": "了解推动信息与通信技术工程专业培养、项目与学术生活的协调、教师、社团、学生与协作者。",
+      "primary": "查看社团",
+      "secondary": "了解团队"
+    },
+    "coordination": {
+      "title": "专业协调。",
+      "subtitle": "负责学术运营支持、学生跟进、机构活动与 ICT 工程对外联络的部门。",
+      "name": "Lic. Juan Cornejo Hernández",
+      "role": "信息与通信技术工程系主任",
+      "body": "协调学术流程、专业活动、机构跟进以及与学生、教师和行政部门的联络。",
+      "email": "tics@itsoeh.edu.mx",
+      "phone": "总机 (738) 735-4000 分机 270",
+      "cta": "查看联系方式"
+    },
+    "faculty": {
+      "title": "教师团队。",
+      "subtitle": "在编程、网络、数据库、数学、电信、安全、研究与管理方面支持学生学术与技术培养的教师。",
+      "cards": {
+        "software": {
+          "name": "ITICs 教师",
+          "area": "编程与软件开发",
+          "line": "编程基础、Web 开发、应用程序与软件工程方法论。"
+        },
+        "networks": {
+          "name": "ITICs 教师",
+          "area": "网络、电信与安全",
+          "line": "连接基础设施、计算机网络、无线技术与网络安全。"
+        },
+        "data": {
+          "name": "ITICs 教师",
+          "area": "数据库、研究与管理",
+          "line": "数据建模、信息管理、技术项目与学术强化。"
+        }
+      },
+      "updatingTitle": "信息更新中",
+      "updatingBody": "完整的教师信息即将上线。"
+    },
+    "clubs": {
+      "title": "社团与技术空间。",
+      "subtitle": "在课堂之外学习的空间，通过真实项目实践、同学协作，强化技术能力。",
+      "cards": {
+        "robotics": {
+          "title": "机器人社团",
+          "description": "设计、编程、控制与参加 VEX Robotics 等机器人竞赛。",
+          "cta": "查看社团",
+          "url": "https://deepdevjose.github.io/VEXU-ITICs"
+        },
+        "iot": {
+          "title": "IoT 社团",
+          "description": "传感器、微控制器、连接、仪表盘、自动化与智能系统。",
+          "url": ""
+        },
+        "developers": {
+          "title": "开发者社团",
+          "description": "编程、GitHub、Web 开发、应用程序、现代工具与技术协作。",
+          "url": ""
+        },
+        "entrepreneurs": {
+          "title": "创业工作坊",
+          "description": "技术创意、原型、商业模式与有影响力的项目。",
+          "url": ""
+        }
+      }
+    },
+    "leadership": {
+      "title": "学生领袖。",
+      "subtitle": "推动 ITICs 社区中项目、工作坊、数字资源与技术协作的学生。",
+      "jose": {
+        "name": "José Manuel Cortés Cerón",
+        "role": "学生协作者 · 软件、AI 与 IoT",
+        "description": "支持项目开发、技术社区、数字资源、补充培训活动以及 ITICs 的 Web 形象建设。",
+        "tag1": "软件",
+        "tag2": "AI",
+        "tag3": "IoT",
+        "tag4": "社区",
+        "profile": "查看档案"
+      },
+      "growingTitle": "成长中的社区",
+      "growingBody": "更多学生领袖与学术协作者的档案即将上线。"
+    },
+    "credits": {
+      "title": "网站致谢。",
+      "body": "本网站作为强化 ITSOEH 信息与通信技术工程数字身份的倡议而开发，旨在传播其学术培养、项目、社区与招生信息。",
+      "cards": {
+        "web": {
+          "title": "网站设计与开发",
+          "value": "José Manuel Cortés Cerón"
+        },
+        "content": {
+          "title": "机构内容",
+          "value": "ICT 工程 ITSOEH"
+        },
+        "review": {
+          "title": "学术审核",
+          "value": "ICT 工程协调"
+        },
+        "identity": {
+          "title": "机构形象",
+          "value": "ITSOEH · TecNM · 教育"
+        }
+      }
+    },
+    "cta": {
+      "title": "加入一个在构建中学习的社区。",
+      "subtitle": "了解社团、项目、教师与协作空间，强化你在课堂内外的培养。",
+      "primary": "查看申请者",
+      "secondary": "查看项目"
+    }
   },
-  "jose": {
-    "role": "导师教师 · 软件、AI 与 IoT",
-    "profile": "查看档案"
+  "profile": {
+    "back": "返回社区",
+    "name": "José Manuel Cortés Cerón",
+    "role": "学生协作者 · 软件、AI 与 IoT",
+    "tag1": "软件",
+    "tag2": "AI",
+    "tag3": "IoT",
+    "tag4": "社区",
+    "bio1": "信息与通信技术工程专业学生，专注于软件开发、人工智能、IoT 系统与数字解决方案架构。曾参与学术与技术项目，致力于构建平台、自动化、交互系统以及 ITICs 社区的数字资源。",
+    "bio2": "在社区中，支持项目开发、技术文档、Web 资源、补充培训活动以及专业数字形象的建设。",
+    "academicTitle": "学术背景",
+    "degreeTitle": "信息与通信技术工程",
+    "degreeInstitution": "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
+    "researchTitle": "科研合作",
+    "researchInstitution": "西交利物浦大学",
+    "contributionsTitle": "贡献与相关项目",
+    "communityTitle": "社区贡献",
+    "communityDesc": "参与数字资源、文档、技术活动与强化机构 Web 形象。",
+    "relatedTitle": "相关项目",
+    "relatedDesc": "与软件、交互体验与社区协作相关的学术与技术倡议。"
   }
 }

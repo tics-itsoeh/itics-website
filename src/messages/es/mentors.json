@@ -51,15 +51,18 @@
         },
         "iot": {
           "title": "Club de IoT",
-          "description": "Sensores, microcontroladores, conectividad, dashboards, automatización y sistemas inteligentes."
+          "description": "Sensores, microcontroladores, conectividad, dashboards, automatización y sistemas inteligentes.",
+          "url": ""
         },
         "developers": {
           "title": "Club de Desarrolladores",
-          "description": "Programación, GitHub, desarrollo web, aplicaciones, herramientas modernas y colaboración técnica."
+          "description": "Programación, GitHub, desarrollo web, aplicaciones, herramientas modernas y colaboración técnica.",
+          "url": ""
         },
         "entrepreneurs": {
           "title": "Taller de Emprendedores",
-          "description": "Ideas tecnológicas, prototipos, modelos de negocio y proyectos con impacto."
+          "description": "Ideas tecnológicas, prototipos, modelos de negocio y proyectos con impacto.",
+          "url": ""
         }
       }
     },
@@ -75,7 +78,9 @@
         "tag3": "IoT",
         "tag4": "Comunidad",
         "profile": "Ver perfil"
-      }
+      },
+      "growingTitle": "Comunidad en crecimiento",
+      "growingBody": "Próximamente se integrarán más perfiles de estudiantes líderes y colaboradores académicos."
     },
     "credits": {
       "title": "Créditos del sitio.",

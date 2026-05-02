@@ -115,6 +115,9 @@
   },
   "cta": {
     "title": "See how this formation becomes real projects.",
-    "button": "View projects and portfolio"
-  }
+    "button": "View projects and portfolio",
+    "admissionTitle": "Ready to start your path in ITICs?",
+    "admissionButton": "View admission 2026"
+  },
+  "iframeTitle": "ITIC-2010-225 Curriculum"
 }

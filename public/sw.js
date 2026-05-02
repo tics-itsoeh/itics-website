@@ -1,15 +1,23 @@
-const STATIC_CACHE = 'itics-static-v1';
+/**
+ * Service Worker del sitio ITICs ITSOEH.
+ *
+ * Estrategia: cache-first para assets estáticos (logos, modelo 3D).
+ * Los logos ahora usan formato WebP optimizado.
+ */
+const STATIC_CACHE = 'itics-static-v3';
 
 const PRECACHE_URLS = [
-  '/logos/educacion.png',
-  '/logos/tecnm.png',
-  '/logos/itsoeh.png',
-  '/logos/tics.png',
-  '/logos/esparco.png',
-  '/logos/huawei.png',
+  '/logos/educacion.webp',
+  '/logos/tecnm.webp',
+  '/logos/itsoeh.webp',
+  '/logos/tics.webp',
+  '/logos/esparco.webp',
+  '/logos/huawei.webp',
   '/logos/cisco.webp',
-  '/model/logo.png',
+  '/logos/logo.svg',
+  '/model/logo.webp',
   '/model/model3d.glb',
+  '/favicon-32.png',
 ];
 
 self.addEventListener('install', (event) => {
@@ -42,9 +50,10 @@ self.addEventListener('fetch', (event) => {
 
   const isLogo = url.pathname.startsWith('/logos/');
   const isModelAsset =
-    url.pathname === '/model/logo.png' || url.pathname === '/model/model3d.glb';
+    url.pathname === '/model/logo.webp' || url.pathname === '/model/model3d.glb';
+  const isFavicon = url.pathname === '/favicon-32.png';
 
-  if (!isLogo && !isModelAsset) return;
+  if (!isLogo && !isModelAsset && !isFavicon) return;
 
   event.respondWith(
     caches.match(request).then((cached) => {

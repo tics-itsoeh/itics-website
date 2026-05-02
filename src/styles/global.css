@@ -3,7 +3,7 @@
 @theme {
   --color-apple-bg: #fbfbfd;
   --color-apple-text: #1d1d1f;
-  --color-apple-muted: #86868b;
+  --color-apple-muted: #6e6e73;
   --color-apple-blue: #0066cc;
   --color-apple-blue-hover: #0077ed;
   --color-apple-nav: rgba(251, 251, 253, 0.82);
@@ -16,7 +16,7 @@
 :root {
   --apple-bg: #fbfbfd;
   --apple-text: #1d1d1f;
-  --apple-muted: #86868b;
+  --apple-muted: #6e6e73;
   --apple-blue: #0066cc;
   --workspace-bg: #eef3f9;
   --workspace-border: rgba(15, 23, 42, 0.08);

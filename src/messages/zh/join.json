@@ -1,0 +1,185 @@
+{
+  "links": {
+    "requestInfoUrl": "https://wa.me/5217731099748",
+    "registerUrl": "https://fichas.itsoeh.edu.mx/",
+    "admissionPdfUrl": "https://www.itsoeh.edu.mx/front/slider-images/docs/Conv_Admisi%C3%B3n_2026-20271.pdf",
+    "iticsWhatsAppUrl": "https://wa.me/5217731099748",
+    "iticsEmailUrl": "mailto:tics@itsoeh.edu.mx",
+    "iticsPhoneUrl": "tel:+527721397096",
+    "controlSchoolPhoneUrl": "tel:+527387354000",
+    "controlSchoolEmailUrl": "mailto:fichas@itsoeh.edu.mx"
+  },
+  "hero": {
+    "title": "在 ITSOEH 学习 ICT。",
+    "subtitle": "加入信息与通信技术工程专业，学习用软件、网络、数据、人工智能与物联网构建真实解决方案。",
+    "support": "2026–2027 招生 · 全日制模式",
+    "primary": "咨询报名",
+    "secondary": "查看招生流程"
+  },
+  "admission": {
+    "title": "2026–2027 招生流程。",
+    "subtitle": "查看申请、诊断评估与结果公布的关键日期。",
+    "cards": {
+      "application": {
+        "title": "申请报名",
+        "body": "2026 年 2 月 3 日至 6 月 10 日"
+      },
+      "diagnostic": {
+        "title": "诊断评估",
+        "body": "2026 年 6 月 22 日"
+      },
+      "results": {
+        "title": "结果公布",
+        "body": "2026 年 6 月 26 日"
+      },
+      "fee": {
+        "title": "报名费用",
+        "body": "$651.00 MXN"
+      }
+    },
+    "primary": "申请报名",
+    "secondary": "联系教务处"
+  },
+  "requirements": {
+    "title": "报名所需材料。",
+    "subtitle": "请将以下文件准备为 PDF 格式以完成注册。",
+    "cards": {
+      "study": {
+        "title": "学历证明或成绩单",
+        "body": "高中在读证明、毕业证书或加盖公章的成绩单，最低平均分 7.0。"
+      },
+      "birth": {
+        "title": "出生证明",
+        "body": "PDF 格式的官方文件。"
+      },
+      "curp": {
+        "title": "CURP",
+        "body": "由 RENAPO 签发的 CURP。"
+      },
+      "payment": {
+        "title": "缴费凭证",
+        "body": "报名费 $651.00 MXN 的缴费凭证。"
+      },
+      "gmail": {
+        "title": "Gmail 邮箱",
+        "body": "需持有 Gmail 域名的电子邮箱。"
+      },
+      "foreign": {
+        "title": "国际学生",
+        "body": "需完成相应的学历认证手续。"
+      }
+    },
+    "button": "查看完整招生公告"
+  },
+  "why": {
+    "title": "为什么选择 ITICs？",
+    "subtitle": "ITICs 融合技术培养、真实项目、认证、社区与高增长职业方向。",
+    "cards": {
+      "build": {
+        "title": "在构建中学习",
+        "body": "开发软件、网络、数据库、IoT、网络安全与人工智能项目。"
+      },
+      "certs": {
+        "title": "官方认证",
+        "body": "通过华为与 Cisco 官方学院强化你的技术能力。"
+      },
+      "community": {
+        "title": "技术社区",
+        "body": "参与机器人、IoT、开发与创业社团。"
+      },
+      "portfolio": {
+        "title": "真实作品集",
+        "body": "在 GitHub 上记录并发布项目，作为你能力的证据。"
+      }
+    }
+  },
+  "learning": {
+    "title": "在专业中可以学到的内容。",
+    "cards": {
+      "programming": {
+        "title": "编程",
+        "body": "应用开发、逻辑、数据结构、Web 与移动开发。"
+      },
+      "networks": {
+        "title": "网络",
+        "body": "计算机与通信网络的设计、配置与管理。"
+      },
+      "databases": {
+        "title": "数据库",
+        "body": "面向真实系统的数据库设计与管理。"
+      },
+      "ai": {
+        "title": "人工智能与数据",
+        "body": "数据应用、新兴工具与智能系统。"
+      },
+      "iot": {
+        "title": "IoT 与硬件",
+        "body": "传感器、微控制器、嵌入式系统与连接设备。"
+      },
+      "security": {
+        "title": "网络安全",
+        "body": "信息保护、审计与网络安全管理。"
+      }
+    }
+  },
+  "faq": {
+    "title": "入学前的常见问题。",
+    "items": {
+      "programming": {
+        "question": "入学前需要会编程吗？",
+        "answer": "不需要。专业从基础开始。关键在于你是否愿意持续练习、解决问题并稳步学习。"
+      },
+      "math": {
+        "question": "数学会很多吗？",
+        "answer": "会，因为这是工程专业，但你不需要入学前就精通数学。内容是循序渐进的，并会应用到编程、网络、数据、通信与决策中。"
+      },
+      "mathFear": {
+        "question": "如果我数学不好怎么办？",
+        "answer": "可以提升。很多学生带着疑虑或恐惧入学，但通过实践、辅导、团队协作与坚持，他们不断进步。"
+      },
+      "ai": {
+        "question": "人工智能会取代工程师吗？",
+        "answer": "AI 不会取代那些会思考、设计、整合与解决问题的工程师。对于懂得使用它、基于它构建并正确应用它的人来说，AI 是一种工具。"
+      },
+      "jobs": {
+        "question": "就业方向多吗？",
+        "answer": "是的。你可以在软件、网络、数据库、网络安全、IoT、技术支持、基础设施、数据、云、自动化和技术项目管理等方向发展。"
+      },
+      "laptop": {
+        "question": "需要笔记本电脑吗？",
+        "answer": "建议有一台笔记本电脑，用于练习编程、数据库、网络、Web 设计和项目。一开始不需要太贵的，但要能运行开发工具。"
+      }
+    },
+    "cta": "解决更多疑问"
+  },
+  "contact": {
+    "title": "关于招生有疑问？",
+    "subtitle": "联系专业或教务处，获取关于申请、要求与入学流程的指导。",
+    "itics": {
+      "title": "ITICs 联系方式",
+      "emailLabel": "邮箱",
+      "email": "tics@itsoeh.edu.mx",
+      "phoneLabel": "电话",
+      "phone": "772 139 7096",
+      "whatsappLabel": "WhatsApp",
+      "whatsapp": "+52 1 773 109 9748",
+      "whatsappButton": "发送 WhatsApp",
+      "emailButton": "发送邮件"
+    },
+    "control": {
+      "title": "教务处",
+      "phoneLabel": "电话",
+      "phone": "738 735 4000 分机 631、632、633 和 634",
+      "emailLabel": "邮箱",
+      "email": "fichas@itsoeh.edu.mx",
+      "scheduleLabel": "工作时间",
+      "schedule": "周一至周五 08:30–16:30 · 周六 09:00–13:00"
+    }
+  },
+  "finalCta": {
+    "title": "你的 ITICs 之路可以从今天开始。",
+    "subtitle": "查看招生公告，准备你的材料，在申请前通过 ITICs 社区解答你的疑问。",
+    "primary": "查看 2026 招生",
+    "secondary": "联系 ITICs"
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itics.itsoeh.edu.mx/sitemap-index.xml

@@ -1,11 +1,38 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
+/**
+ * Inicializa el visor 3D del hero con Three.js.
+ *
+ * Estrategia de carga:
+ * 1. Se activa solo cuando el contenedor es visible (IntersectionObserver en Model3DCanvas)
+ * 2. Intenta cachear el .glb via Cache API para visitas subsecuentes
+ * 3. Responde a mouse follow con easing suave
+ * 4. Se destruye en navegación SPA (pagehide)
+ *
+ * @param containerId — ID del contenedor div (#hero-model3d)
+ * @param canvasId — ID del elemento canvas (#hero-canvas)
+ */
 export function initModel3d(containerId: string, canvasId: string) {
   const container = document.getElementById(containerId);
   const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
 
   if (!container || !canvas) return;
+
+  // Show fallback poster (logo) on slow connections instead of heavy 3D model
+  const nav = navigator as any;
+  if (nav.connection) {
+    const effectiveType = nav.connection.effectiveType;
+    if (effectiveType === '2g' || effectiveType === 'slow-2g') {
+      const poster = container.querySelector('img');
+      if (poster) {
+        poster.classList.remove('opacity-20');
+        poster.classList.add('opacity-80', 'scale-110', 'transition-all', 'duration-1000');
+      }
+      canvas.style.display = 'none';
+      return;
+    }
+  }
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));

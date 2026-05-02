@@ -1,10 +1,135 @@
 {
-  "hero": {
-    "title": "Mentors.",
-    "subtitle": "Professionals who guide your training and technical development."
+  "community": {
+    "hero": {
+      "title": "ITICs Community.",
+      "subtitle": "Meet the coordination, faculty, clubs, students, and collaborators who drive the formation, projects, and academic life of ICT Engineering.",
+      "primary": "View clubs",
+      "secondary": "Meet the team"
+    },
+    "coordination": {
+      "title": "Program coordination.",
+      "subtitle": "Area responsible for academic operations support, student follow-up, institutional activities, and ICT Engineering outreach.",
+      "name": "Lic. Juan Cornejo Hernández",
+      "role": "Head of Information and Communications Technology Engineering Division",
+      "body": "Coordinates academic processes, program activities, institutional follow-up, and outreach with students, faculty, and administrative areas.",
+      "email": "tics@itsoeh.edu.mx",
+      "phone": "Switchboard (738) 735-4000 ext. 270",
+      "cta": "View contact"
+    },
+    "faculty": {
+      "title": "Faculty.",
+      "subtitle": "Professors who support students' academic and technical formation in programming, networks, databases, mathematics, telecommunications, security, research, and management.",
+      "cards": {
+        "software": {
+          "name": "ITICs Faculty",
+          "area": "Programming and software development",
+          "line": "Programming fundamentals, web development, applications, and software engineering methodologies."
+        },
+        "networks": {
+          "name": "ITICs Faculty",
+          "area": "Networks, telecommunications, and security",
+          "line": "Connectivity infrastructure, computer networks, wireless technologies, and cybersecurity."
+        },
+        "data": {
+          "name": "ITICs Faculty",
+          "area": "Databases, research, and management",
+          "line": "Data modeling, information administration, technology projects, and academic strengthening."
+        }
+      },
+      "updatingTitle": "Information being updated",
+      "updatingBody": "Full faculty profiles will be added soon."
+    },
+    "clubs": {
+      "title": "Clubs and technical spaces.",
+      "subtitle": "Spaces to learn beyond the classroom, practice with real projects, collaborate with peers, and strengthen technical skills.",
+      "cards": {
+        "robotics": {
+          "title": "Robotics Club",
+          "description": "Design, programming, control, and participation in robotics competitions like VEX Robotics.",
+          "cta": "View club",
+          "url": "https://deepdevjose.github.io/VEXU-ITICs"
+        },
+        "iot": {
+          "title": "IoT Club",
+          "description": "Sensors, microcontrollers, connectivity, dashboards, automation, and smart systems.",
+          "url": ""
+        },
+        "developers": {
+          "title": "Developers Club",
+          "description": "Programming, GitHub, web development, applications, modern tools, and technical collaboration.",
+          "url": ""
+        },
+        "entrepreneurs": {
+          "title": "Entrepreneurship Workshop",
+          "description": "Technology ideas, prototypes, business models, and impactful projects.",
+          "url": ""
+        }
+      }
+    },
+    "leadership": {
+      "title": "Student leadership.",
+      "subtitle": "Students who drive projects, workshops, digital resources, and technical collaboration within the ITICs community.",
+      "jose": {
+        "name": "José Manuel Cortés Cerón",
+        "role": "Student collaborator · Software, AI, and IoT",
+        "description": "Supports project development, technical community, digital resources, complementary training activities, and web identity for ITICs.",
+        "tag1": "Software",
+        "tag2": "AI",
+        "tag3": "IoT",
+        "tag4": "Community",
+        "profile": "View profile"
+      },
+      "growingTitle": "Growing community",
+      "growingBody": "More student leader and academic collaborator profiles will be added soon."
+    },
+    "credits": {
+      "title": "Site credits.",
+      "body": "This site was developed as an initiative to strengthen the digital identity of ICT Engineering at ITSOEH, share its academic formation, projects, community, and admission process.",
+      "cards": {
+        "web": {
+          "title": "Web design and development",
+          "value": "José Manuel Cortés Cerón"
+        },
+        "content": {
+          "title": "Institutional content",
+          "value": "ICT Engineering ITSOEH"
+        },
+        "review": {
+          "title": "Academic review",
+          "value": "ICT Engineering Coordination"
+        },
+        "identity": {
+          "title": "Institutional identity",
+          "value": "ITSOEH · TecNM · Education"
+        }
+      }
+    },
+    "cta": {
+      "title": "Be part of a community that learns by building.",
+      "subtitle": "Discover clubs, projects, faculty, and collaboration spaces that strengthen your formation inside and outside the classroom.",
+      "primary": "View applicants",
+      "secondary": "View projects"
+    }
   },
-  "jose": {
-    "role": "Faculty mentor · Software, AI and IoT",
-    "profile": "View profile"
+  "profile": {
+    "back": "Back to community",
+    "name": "José Manuel Cortés Cerón",
+    "role": "Student collaborator · Software, AI, and IoT",
+    "tag1": "Software",
+    "tag2": "AI",
+    "tag3": "IoT",
+    "tag4": "Community",
+    "bio1": "Information and Communications Technology Engineering student focused on software development, artificial intelligence, IoT systems, and digital solution architecture. Has collaborated on academic and technology projects aimed at building platforms, automation, interactive systems, and digital resources for the ITICs community.",
+    "bio2": "Within the community, supports project development, technical documentation, web resources, complementary training activities, and strengthening the digital identity of the program.",
+    "academicTitle": "Academic context",
+    "degreeTitle": "Information and Communications Technology Engineering",
+    "degreeInstitution": "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
+    "researchTitle": "Research Collaboration",
+    "researchInstitution": "Xi'an Jiaotong-Liverpool University",
+    "contributionsTitle": "Contributions and related projects",
+    "communityTitle": "Community contributions",
+    "communityDesc": "Participation in digital resources, documentation, technical activities, and strengthening the institutional web presence.",
+    "relatedTitle": "Related projects",
+    "relatedDesc": "Academic and technical initiatives linked to software, interactive experiences, and community collaboration."
   }
 }

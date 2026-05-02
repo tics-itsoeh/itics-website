@@ -1,4 +1,13 @@
 ---
+/**
+ * Hero principal de la página de inicio.
+ *
+ * Renderiza el título, subtítulo con términos auto-enlazados (ITSOEH, TICs)
+ * y el canvas 3D del modelo institucional. Los términos definidos en
+ * `linkedTerms` se reemplazan por `<a>` automáticamente en el subtítulo.
+ *
+ * @prop lang — Idioma de la página para resolver traducciones
+ */
 import Model3DCanvas from './Model3DCanvas.astro';
 import type { UiLanguage } from '../i18n/config';
 import { useTranslations } from '../i18n/utils';

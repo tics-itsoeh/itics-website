@@ -1,0 +1,185 @@
+{
+  "links": {
+    "requestInfoUrl": "https://wa.me/5217731099748",
+    "registerUrl": "https://fichas.itsoeh.edu.mx/",
+    "admissionPdfUrl": "https://www.itsoeh.edu.mx/front/slider-images/docs/Conv_Admisi%C3%B3n_2026-20271.pdf",
+    "iticsWhatsAppUrl": "https://wa.me/5217731099748",
+    "iticsEmailUrl": "mailto:tics@itsoeh.edu.mx",
+    "iticsPhoneUrl": "tel:+527721397096",
+    "controlSchoolPhoneUrl": "tel:+527387354000",
+    "controlSchoolEmailUrl": "mailto:fichas@itsoeh.edu.mx"
+  },
+  "hero": {
+    "title": "Study ICT at ITSOEH.",
+    "subtitle": "Join Information and Communications Technology Engineering and learn to build real solutions with software, networks, data, artificial intelligence, and the Internet of Things.",
+    "support": "2026–2027 admission · In-person modality",
+    "primary": "Request information",
+    "secondary": "View admission process"
+  },
+  "admission": {
+    "title": "2026–2027 admission process.",
+    "subtitle": "Check key dates for application, diagnostic evaluation, and results.",
+    "cards": {
+      "application": {
+        "title": "Application",
+        "body": "February 3 to June 10, 2026"
+      },
+      "diagnostic": {
+        "title": "Diagnostic evaluation",
+        "body": "June 22, 2026"
+      },
+      "results": {
+        "title": "Results",
+        "body": "June 26, 2026"
+      },
+      "fee": {
+        "title": "Application fee",
+        "body": "$651.00 MXN"
+      }
+    },
+    "primary": "Register for application",
+    "secondary": "Contact Registrar"
+  },
+  "requirements": {
+    "title": "Application requirements.",
+    "subtitle": "Prepare your documents in PDF format for registration.",
+    "cards": {
+      "study": {
+        "title": "Academic transcript or certificate",
+        "body": "High school transcript, certificate, or signed academic record with a minimum GPA of 7.0."
+      },
+      "birth": {
+        "title": "Birth certificate",
+        "body": "Official document in PDF format."
+      },
+      "curp": {
+        "title": "CURP",
+        "body": "CURP issued by RENAPO."
+      },
+      "payment": {
+        "title": "Payment receipt",
+        "body": "Application fee payment receipt for $651.00 MXN."
+      },
+      "gmail": {
+        "title": "Gmail account",
+        "body": "You must have a Gmail email address."
+      },
+      "foreign": {
+        "title": "International students",
+        "body": "Must complete the corresponding academic equivalency process."
+      }
+    },
+    "button": "View full admission notice"
+  },
+  "why": {
+    "title": "Why study ICT?",
+    "subtitle": "ITICs combines technical training, real projects, certifications, community, and high-growth career areas.",
+    "cards": {
+      "build": {
+        "title": "Learn by building",
+        "body": "Develop projects in software, networks, databases, IoT, cybersecurity, and artificial intelligence."
+      },
+      "certs": {
+        "title": "Official certifications",
+        "body": "Access official Huawei and Cisco academies to strengthen your technical profile."
+      },
+      "community": {
+        "title": "Technical community",
+        "body": "Join robotics, IoT, development, and entrepreneurship clubs."
+      },
+      "portfolio": {
+        "title": "Real portfolio",
+        "body": "Document and publish projects on GitHub as evidence of your skills."
+      }
+    }
+  },
+  "learning": {
+    "title": "What you can learn in the program.",
+    "cards": {
+      "programming": {
+        "title": "Programming",
+        "body": "Application development, logic, data structures, web, and mobile."
+      },
+      "networks": {
+        "title": "Networks",
+        "body": "Design, configuration, and administration of computer and telecommunications networks."
+      },
+      "databases": {
+        "title": "Databases",
+        "body": "Database design and administration for real systems."
+      },
+      "ai": {
+        "title": "AI and data",
+        "body": "Data usage, emerging tools, and intelligent systems."
+      },
+      "iot": {
+        "title": "IoT and hardware",
+        "body": "Sensors, microcontrollers, embedded systems, and connected devices."
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "body": "Information protection, auditing, and network security management."
+      }
+    }
+  },
+  "faq": {
+    "title": "Common questions before applying.",
+    "items": {
+      "programming": {
+        "question": "Do I need to know programming before applying?",
+        "answer": "No. The program starts from fundamentals. What matters is your willingness to practice, solve problems, and learn consistently."
+      },
+      "math": {
+        "question": "Is there a lot of math?",
+        "answer": "Yes, because it is an engineering program, but you don't need to master math before entering. It is taught progressively and applied to programming, networks, data, communications, and decision-making."
+      },
+      "mathFear": {
+        "question": "What if I'm not good at math?",
+        "answer": "You can improve. Many students enter with doubts or fear, but advance through practice, tutoring, teamwork, and consistency."
+      },
+      "ai": {
+        "question": "Will AI replace engineers?",
+        "answer": "AI does not replace engineers who can think, design, integrate, and solve problems. It becomes a tool for those who know how to use it, build with it, and apply it correctly."
+      },
+      "jobs": {
+        "question": "Are there job opportunities?",
+        "answer": "Yes. You can grow in software, networks, databases, cybersecurity, IoT, support, infrastructure, data, cloud, automation, and technology project management."
+      },
+      "laptop": {
+        "question": "Do I need a laptop?",
+        "answer": "It is recommended to have a laptop for practicing programming, databases, networks, web design, and projects. It doesn't have to be expensive at first, but should allow you to work with development tools."
+      }
+    },
+    "cta": "Resolve more questions"
+  },
+  "contact": {
+    "title": "Questions about admission?",
+    "subtitle": "Contact the program or the Registrar's Office for guidance on application, requirements, and admission process.",
+    "itics": {
+      "title": "ITICs Contact",
+      "emailLabel": "Email",
+      "email": "tics@itsoeh.edu.mx",
+      "phoneLabel": "Phone",
+      "phone": "772 139 7096",
+      "whatsappLabel": "WhatsApp",
+      "whatsapp": "+52 1 773 109 9748",
+      "whatsappButton": "Send WhatsApp",
+      "emailButton": "Send email"
+    },
+    "control": {
+      "title": "Registrar's Office",
+      "phoneLabel": "Phone",
+      "phone": "738 735 4000 ext. 631, 632, 633, and 634",
+      "emailLabel": "Email",
+      "email": "fichas@itsoeh.edu.mx",
+      "scheduleLabel": "Hours",
+      "schedule": "Monday to Friday 08:30–16:30 · Saturday 09:00–13:00"
+    }
+  },
+  "finalCta": {
+    "title": "Your path in ITICs can start today.",
+    "subtitle": "Review the admission notice, prepare your documents, and reach out to the ITICs community to resolve your questions before applying.",
+    "primary": "View 2026 admission",
+    "secondary": "Contact ITICs"
+  }
+}

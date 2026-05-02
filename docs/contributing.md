@@ -24,6 +24,14 @@ Tipos permitidos:
 - **`refactor`**: Cambio de código que ni arregla un bug ni añade una funcionalidad, pero lo mejora.
 - **`chore`**: Tareas de mantenimiento general (ej. actualizar una librería de `package.json`).
 
+## 🎨 Reglas de Diseño y Modo Oscuro
+
+Antes de proponer cualquier cambio visual o añadir nuevos componentes, es **obligatorio** consultar el manual de diseño:
+
+1. **Lee detenidamente la [Guía Visual y de Estilos](visual-guidelines.md)**.
+2. Está estrictamente prohibido usar colores hexadecimales fijos (`#fff`, `#000`) o clases rígidas (`bg-white`, `bg-black`) en Tailwind.
+3. Debes usar nuestras variables semánticas (ej. `bg-apple-surface-alt`, `text-apple-muted`) para garantizar que tu código funcione automáticamente y sin parpadeos en el **Modo Oscuro**.
+
 ## 📥 Pasos para hacer un Pull Request (PR)
 
 1. Haz un Fork del repositorio o pide permisos de escritura para crear tu rama.

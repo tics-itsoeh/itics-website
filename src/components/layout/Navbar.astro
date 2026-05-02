@@ -2,9 +2,10 @@
 /**
  * Barra de navegación principal del sitio ITICs.
  *
- * Incluye: logo, links de navegación con pill animado,
- * selector de idioma accesible por teclado, link a GitHub,
- * CTA de admisión y menú móvil.
+ * Arquitectura:
+ * - Fija en la parte superior (`fixed top-0`) con `backdrop-blur-md` para el estilo "glassmorphism" de Apple.
+ * - Cambiador de idioma integrado: Permite evitar una página de "selector de región" y hacer SEO hreflang limpio.
+ * - El CTA de "Admisión 2026" se oculta dinámicamente (`hideJoinCta`) cuando ya estás en el embudo (página unirse).
  */
 import { Image } from 'astro:assets';
 import type { UiLanguage } from '../../i18n/config';

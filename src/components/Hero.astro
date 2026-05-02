@@ -2,9 +2,12 @@
 /**
  * Hero principal de la página de inicio.
  *
- * Renderiza el título, subtítulo con términos auto-enlazados (ITSOEH, TICs)
- * y el canvas 3D del modelo institucional. Los términos definidos en
- * `linkedTerms` se reemplazan por `<a>` automáticamente en el subtítulo.
+ * Decisiones de diseño:
+ * - Contiene el Model3DCanvas, pero su estado y texto son independientes.
+ * - Se diseñó buscando un impacto visual inmediato ("above the fold") 
+ *   para captar aspirantes sin abrumar con texto (estilo Apple-like).
+ * - Los términos clave (ej. ITSOEH, TICs) se auto-enlazan a Wikipedia para 
+ *   mejorar el SEO semántico y contextual sin necesidad de hardcodear `<a>` en los archivos JSON de traducciones.
  *
  * @prop lang — Idioma de la página para resolver traducciones
  */

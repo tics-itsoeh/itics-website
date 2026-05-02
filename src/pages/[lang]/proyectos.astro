@@ -1,4 +1,16 @@
 ---
+/**
+ * Página de Proyectos (Showcase).
+ *
+ * Arquitectura e Intención:
+ * - Diseñada para mostrar las "capacidades reales" de los alumnos.
+ * - Prioriza la evidencia visual (imágenes, capturas) sobre el código. Por
+ *   esto mismo, los enlaces a GitHub son secundarios frente al botón de "Ver proyecto".
+ * - Utiliza `v2.featured.*` en el archivo de traducción (projects.json)
+ *   lo que permite añadir nuevos proyectos sin tocar este componente, solo modificando
+ *   las traducciones (escalabilidad).
+ * - TODO: Reemplazar imágenes provisionales por evidencias reales validadas por los profesores.
+ */
 import Layout from '../../layouts/Layout.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';

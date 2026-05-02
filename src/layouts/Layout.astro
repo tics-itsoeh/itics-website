@@ -2,9 +2,13 @@
 /**
  * Layout principal del sitio ITICs ITSOEH.
  *
- * Orquesta: head con SEO completo (OG, Twitter, canonical, Schema.org),
- * SiteLoader, Navbar, contenido (<slot />), Footer, y scripts
- * de smooth scroll / service worker.
+ * Arquitectura (App Shell):
+ * Este componente envuelve todas las páginas del sitio. 
+ * Responsabilidades exclusivas:
+ * 1. Inyectar SEO dinámico (OG tags, Twitter Cards, canonical URL).
+ * 2. Cargar el Schema.org (EducationalOrganization) para rich snippets de Google.
+ * 3. Montar el SiteLoader, Navbar y Footer alrededor del slot principal.
+ * 4. Controlar dependencias globales (Lenis para smooth scroll, CSS base).
  *
  * @prop title — Título de la página (se concatena con "Ing. TICs - ")
  * @prop description — Meta description para SEO

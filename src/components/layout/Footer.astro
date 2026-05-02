@@ -2,9 +2,11 @@
 /**
  * Footer institucional del sitio ITICs ITSOEH.
  *
- * Muestra logos institucionales, navegación, enlaces rápidos,
- * datos de contacto y redes sociales. Usa datos centralizados
- * de siteConfig.ts para evitar duplicación de URLs.
+ * Decisiones de diseño:
+ * - Los logos de la SEP, TecNM e ITSOEH se colocan aquí para cumplir con
+ *   la normativa de identidad institucional gubernamental SIN saturar 
+ *   la navegación principal que busca ser minimalista (estilo Apple).
+ * - Usa `siteConfig.ts` para inyectar URLs de redes sociales dinámicamente.
  */
 import type { UiLanguage } from '../../i18n/config';
 import { useTranslations } from '../../i18n/utils';

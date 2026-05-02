@@ -4,14 +4,15 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 /**
  * Inicializa el visor 3D del hero con Three.js.
  *
- * Estrategia de carga:
- * 1. Se activa solo cuando el contenedor es visible (IntersectionObserver en Model3DCanvas)
- * 2. Intenta cachear el .glb via Cache API para visitas subsecuentes
- * 3. Responde a mouse follow con easing suave
- * 4. Se destruye en navegación SPA (pagehide)
+ * Estrategia de carga y rendimiento:
+ * 1. **Lazy Loading**: Se activa solo cuando el contenedor es visible (IntersectionObserver).
+ * 2. **Network Aware**: En conexiones lentas (`2g`, `slow-2g`), aborta la inicialización de 
+ *    Three.js y muestra la imagen de fallback para salvar datos.
+ * 3. **Caché**: Intenta guardar el `.glb` via Cache API para visitas subsecuentes.
+ * 4. **Micro-interacciones**: Responde al movimiento del mouse con un easing suave.
  *
- * @param containerId — ID del contenedor div (#hero-model3d)
- * @param canvasId — ID del elemento canvas (#hero-canvas)
+ * @param containerId — ID del contenedor div
+ * @param canvasId — ID del elemento canvas
  */
 export function initModel3d(containerId: string, canvasId: string) {
   const container = document.getElementById(containerId);

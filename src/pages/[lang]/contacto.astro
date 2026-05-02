@@ -1,4 +1,16 @@
 ---
+/**
+ * Página de Contacto.
+ *
+ * Arquitectura e Intención:
+ * - Separa las intenciones del usuario en dos bloques visuales distintos:
+ *   1. "Vías rápidas": WhatsApp y Correo (para aspirantes que buscan respuesta inmediata).
+ *   2. "Vías institucionales": Redes sociales y mapa físico.
+ * - El iframe de Google Maps tiene su atributo `title` traducido dinámicamente
+ *   para accesibilidad (WCAG).
+ * - Utiliza variables de `src/data/siteConfig.ts` para no tener que 
+ *   actualizar teléfonos en múltiples archivos.
+ */
 import Layout from '../../layouts/Layout.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';

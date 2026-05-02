@@ -1,4 +1,16 @@
 ---
+/**
+ * Página de Aspirantes (Unirse / Admisión).
+ *
+ * Arquitectura e Intención:
+ * - Es la página de "Embudo Principal" (Funnel) para conversiones (registro).
+ * - Oculta el CTA genérico del Navbar (`hideJoinCta={true}`) para evitar 
+ *   redundancia y enfocar al usuario en el contenido y los pasos de la página.
+ * - Estructura la información paso a paso (Perfil de ingreso -> Requisitos -> Fechas)
+ *   para reducir la carga cognitiva del aspirante.
+ * - TODO: Las fechas de la sección "Admisión 2026" deben actualizarse según la 
+ *   convocatoria oficial vigente en `join.json`.
+ */
 import Layout from '../../layouts/Layout.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';

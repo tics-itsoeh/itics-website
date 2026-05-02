@@ -1,4 +1,14 @@
 ---
+/**
+ * Página de Comunidad (Mentores, Egresados y Clubs).
+ *
+ * Arquitectura e Intención:
+ * - Sirve como "prueba social". Demuestra que la carrera tiene una comunidad
+ *   activa, tanto de egresados exitosos como de clubs estudiantiles.
+ * - En lugar de usar CMS, extrae los perfiles de los archivos JSON de i18n
+ *   (`mentors.json`). Esto mantiene el sitio estático, rápido y fácil de mantener.
+ * - TODO: Reemplazar perfiles base por la plantilla oficial de docentes/mentores de este semestre.
+ */
 import Layout from '../../layouts/Layout.astro';
 import type { UiLanguage } from '../../i18n/config';
 import { languages } from '../../i18n/config';

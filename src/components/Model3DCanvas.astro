@@ -1,4 +1,16 @@
 ---
+/**
+ * Contenedor y disparador del modelo 3D interactivo.
+ *
+ * Arquitectura y Rendimiento:
+ * - Se aísla del Hero principal para cargar la imagen de fallback en lo que
+ *   el hilo principal está libre.
+ * - Usa un `IntersectionObserver` para NO descargar ni ejecutar Three.js
+ *   (que es muy pesado) hasta que el canvas realmente entra en el viewport.
+ * - Tiene una imagen `logo.webp` detrás del canvas. En conexiones muy lentas (2G),
+ *   el script `model3d.ts` cancelará la inicialización de Three.js y mostrará
+ *   esta imagen como fallback definitivo.
+ */
 import { Image } from 'astro:assets';
 ---
 

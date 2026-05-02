@@ -1,4 +1,16 @@
 ---
+/**
+ * Página de Formación Académica (Retícula/Plan de Estudios).
+ *
+ * Arquitectura e Intención:
+ * - Es la página más extensa en contenido institucional.
+ * - Inyecta Schema.org de tipo `Course` para SEO, definiendo la carrera
+ *   como un curso oficial provisto por el ITSOEH.
+ * - Incluye un iframe embebido con el PDF oficial de la retícula. Dado que
+ *   los iframes de PDFs fallan en iOS/móviles, se diseñó un fallback
+ *   (`sm:hidden`) que muestra un botón de descarga directa en su lugar.
+ * - TODO: Verificar si la retícula ITIC-2010-225 cambiará el próximo ciclo escolar.
+ */
 import Layout from '../../../layouts/Layout.astro';
 import type { UiLanguage } from '../../../i18n/config';
 import { languages } from '../../../i18n/config';

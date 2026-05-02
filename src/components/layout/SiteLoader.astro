@@ -2,10 +2,12 @@
 /**
  * Loader de primera visita del sitio ITICs.
  *
- * Muestra una animación con el logo institucional la primera vez
- * que el usuario accede al sitio en la sesión. Se oculta tras
- * la carga o después de un timeout de seguridad de 2.6s.
- * Respeta `prefers-reduced-motion`.
+ * Arquitectura:
+ * - Oculta la carga inicial de fuentes, CSS y scripts pesados (Three.js) para
+ *   evitar FOUC (Flash of Unstyled Content).
+ * - Se elimina dinámicamente en el primer render para no estorbar.
+ * - Si el usuario prefiere movimiento reducido (`prefers-reduced-motion`),
+ *   las animaciones del loader se desactivan.
  */
 ---
 

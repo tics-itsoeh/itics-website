@@ -34,11 +34,11 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
   <!-- Hero -->
   <Hero lang={lang} />
 
-  <main class="bg-white text-apple-text overflow-x-hidden">
+  <main class="bg-apple-surface text-apple-text overflow-x-hidden">
 
     <!-- More Than Classes -->
-    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 py-20 md:py-32 border-t border-black/5">
-      <div class="bg-[#F5F5F7] rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-black/5">
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 py-20 md:py-32 border-t border-apple-border">
+      <div class="bg-apple-surface-alt rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-apple-border">
         <div class="max-w-[580px] mb-16">
           <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">
             {th('formation.title')}
@@ -54,7 +54,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
             { key: 'formation.building' },
             { key: 'formation.collaboration' },
           ].map(({ key }) => (
-            <div class="bg-white rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-apple-surface rounded-2xl p-7 border border-apple-border shadow-sm hover:shadow-md transition-shadow">
               <h3 class="text-lg font-bold text-apple-text mb-2">{th(`${key}.title`)}</h3>
               <p class="text-[0.95rem] text-apple-muted font-medium leading-relaxed">{th(`${key}.body`)}</p>
             </div>
@@ -74,7 +74,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
 
     <!-- Certifications & Academies -->
     <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32">
-      <div class="bg-[#F5F5F7] rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-black/5">
+      <div class="bg-apple-surface-alt rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-apple-border">
         <div class="max-w-[900px] mb-14">
           <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('academies.title')}</h2>
           <p class="text-[1.05rem] text-apple-muted font-medium leading-relaxed">{th('academies.subtitle')}</p>
@@ -86,7 +86,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
             { key: 'academies.cards.cisco', logo: '/logos/cisco.webp' },
             { key: 'academies.cards.certifications' },
           ].map(({ key, logo }) => (
-            <div class="bg-white rounded-2xl p-7 border border-black/5 shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-apple-surface rounded-2xl p-7 border border-apple-border shadow-sm hover:shadow-md transition-shadow">
               {logo ? (
                 <img src={logo} alt={th(`${key}.title`)} class="h-9 w-auto object-contain mb-5" loading="lazy" />
               ) : (
@@ -116,7 +116,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
 
     <!-- Outcomes -->
     <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32">
-      <div class="rounded-[2rem] border border-black/5 bg-white p-8 md:p-10 shadow-sm">
+      <div class="rounded-[2rem] border border-apple-border bg-apple-surface p-8 md:p-10 shadow-sm">
         <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-8">{th('outcomes.title')}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
@@ -129,7 +129,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
             { key: 'outcomes.items.projects' },
             { key: 'outcomes.items.entrepreneurship' },
           ].map(({ key }) => (
-            <div class="rounded-2xl border border-black/5 bg-[#F5F5F7] px-5 py-4 text-[0.98rem] font-semibold text-apple-text">
+            <div class="rounded-2xl border border-apple-border bg-apple-surface-alt px-5 py-4 text-[0.98rem] font-semibold text-apple-text">
               {th(key)}
             </div>
           ))}
@@ -153,7 +153,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
           { key: 'projects.systems',    icon: 'M18 20V10M12 20V4M6 20v-6' },
           { key: 'projects.infra',      icon: 'M2 3h20M2 9h20M2 15h20M2 21h20' },
         ].map(({ key, icon }) => (
-          <div class="bg-[#F5F5F7] rounded-2xl p-8 border border-black/5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300 group">
+          <div class="bg-apple-surface-alt rounded-2xl p-8 border border-apple-border hover:shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300 group">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" class="text-apple-muted mb-5 group-hover:text-apple-blue transition-colors">
               <path d={icon} />
             </svg>
@@ -171,7 +171,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
     </section>
 
     <!-- Community -->
-    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-black/5 pt-14 md:pt-20">
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-apple-border pt-14 md:pt-20">
       <div class="mb-14">
         <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('mentors.title')}</h2>
         <p class="text-[1.15rem] text-apple-muted font-medium">{th('mentors.subtitle')}</p>
@@ -183,7 +183,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
           { key: 'mentors.cards.faculty' },
           { key: 'mentors.cards.students' },
         ].map(({ key }) => (
-          <div class="bg-[#F5F5F7] rounded-2xl p-8 border border-black/5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300">
+          <div class="bg-apple-surface-alt rounded-2xl p-8 border border-apple-border hover:shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 transition-all duration-300">
             <h3 class="text-[1.05rem] font-bold text-apple-text mb-2">{th(`${key}.title`)}</h3>
             <p class="text-[0.9rem] text-apple-muted font-medium leading-relaxed">{th(`${key}.description`)}</p>
           </div>
@@ -198,14 +198,14 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
     </section>
 
     <!-- Contact -->
-    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-black/5 pt-14 md:pt-20">
-      <div class="bg-[#F5F5F7] rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-black/5">
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-apple-border pt-14 md:pt-20">
+      <div class="bg-apple-surface-alt rounded-[2.5rem] p-6 sm:p-10 md:p-16 border border-apple-border">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <div>
             <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-4">{th('contact.title')}</h2>
             <p class="text-[1.05rem] text-apple-muted font-medium leading-relaxed max-w-[760px] mb-8">{th('contact.subtitle')}</p>
 
-            <div class="rounded-2xl border border-black/5 bg-white p-6">
+            <div class="rounded-2xl border border-apple-border bg-apple-surface p-6">
               <div class="space-y-4">
                 <div>
                   <p class="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-apple-muted mb-1">{tco('labels.institution')}</p>
@@ -234,17 +234,17 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-apple-blue text-white rounded-full text-[0.95rem] font-semibold hover:bg-apple-blue-hover transition-colors">
                   {tco('actions.whatsapp')}
                 </a>
-                <a href={emailUrl} class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-white border border-black/10 text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-black/[0.03] transition-colors">
+                <a href={emailUrl} class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-apple-surface border border-apple-border-strong text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-apple-surface-hover transition-colors">
                   {tco('actions.email')}
                 </a>
-                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-white border border-black/10 text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-black/[0.03] transition-colors">
+                <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-apple-surface border border-apple-border-strong text-apple-text rounded-full text-[0.95rem] font-semibold hover:bg-apple-surface-hover transition-colors">
                   {tco('actions.instagram')}
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="rounded-2xl border border-black/5 bg-white overflow-hidden min-h-[360px]">
+          <div class="rounded-2xl border border-apple-border bg-apple-surface overflow-hidden min-h-[360px]">
             <iframe
               src={mapEmbedSrc}
               class="w-full h-full min-h-[360px]"
@@ -260,8 +260,8 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
     </section>
 
     <!-- FAQ -->
-    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-black/5 pt-14 md:pt-20">
-      <div class="rounded-[2rem] border border-black/5 bg-[#F5F5F7] p-8 md:p-10">
+    <section class="max-w-[1200px] mx-auto px-5 sm:px-8 pb-20 md:pb-32 border-t border-apple-border pt-14 md:pt-20">
+      <div class="rounded-[2rem] border border-apple-border bg-apple-surface-alt p-8 md:p-10">
         <h2 class="text-[clamp(1.9rem,3.4vw,2.6rem)] font-bold tracking-tight mb-8">{th('faq.title')}</h2>
 
         <div class="divide-y divide-black/8">
@@ -287,7 +287,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
     </section>
 
     <!-- Final CTA -->
-    <section class="max-w-[800px] mx-auto px-5 sm:px-8 text-center pb-20 md:pb-32 border-t border-black/5 pt-14 md:pt-20">
+    <section class="max-w-[800px] mx-auto px-5 sm:px-8 text-center pb-20 md:pb-32 border-t border-apple-border pt-14 md:pt-20">
       <h2 class="text-[clamp(2rem,3.5vw,2.8rem)] font-bold tracking-tight mb-8">
         {th('finalCta.title')}
       </h2>
@@ -303,7 +303,7 @@ const mapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2225.
         </a>
         <a
           href={`/${lang}/contacto`}
-          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-white border border-black/10 text-apple-text text-[1rem] font-semibold rounded-full hover:bg-black/[0.03] transition-colors"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 sm:px-8 py-4 bg-apple-surface border border-apple-border-strong text-apple-text text-[1rem] font-semibold rounded-full hover:bg-apple-surface-hover transition-colors"
         >
           {th('finalCta.secondary')}
         </a>

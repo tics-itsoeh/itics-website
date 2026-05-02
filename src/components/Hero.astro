@@ -26,6 +26,10 @@ const linkedTerms: Record<string, string> = {
   ITSOEH: 'https://es.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_Superior_del_Occidente_del_Estado_de_Hidalgo',
   TICs: 'https://es.wikipedia.org/wiki/Tecnolog%C3%ADas_de_la_informaci%C3%B3n_y_la_comunicaci%C3%B3n'
 };
+const tooltipTerms: Record<string, string> = {
+  ITSOEH: '¿Qué es ITSOEH?',
+  TICs: '¿Qué son las TICs?'
+};
 const subtitleParts = subtitle.split(/(ITSOEH|TICs)/g);
 ---
 
@@ -38,14 +42,20 @@ const subtitleParts = subtitle.split(/(ITSOEH|TICs)/g);
     <p class="text-[clamp(1.05rem,4.8vw,1.55rem)] text-apple-muted font-medium leading-[1.4] mb-9 max-w-[650px] font-sans tracking-tight">
       {subtitleParts.map((part) =>
         linkedTerms[part] ? (
-          <a
-            href={linkedTerms[part]}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-its-link"
-          >
-            {part}
-          </a>
+          <span class="relative inline-block group">
+            <a
+              href={linkedTerms[part]}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-its-link"
+            >
+              {part}
+            </a>
+            <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-3 py-1.5 bg-apple-text text-apple-bg text-xs font-semibold rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none shadow-lg z-50">
+              {tooltipTerms[part]}
+              <span class="absolute top-full left-1/2 -translate-x-1/2 border-[5px] border-transparent border-t-apple-text"></span>
+            </span>
+          </span>
         ) : (
           part
         )

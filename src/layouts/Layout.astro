@@ -58,6 +58,24 @@ const canonicalUrl = `${siteUrl}${currentPath}`;
 <!doctype html>
 <html lang={lang}>
   <head>
+    <script is:inline>
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+      const isDark = getThemePreference() === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+    
+      if (typeof localStorage !== 'undefined') {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{fullTitle}</title>
@@ -122,7 +140,7 @@ const canonicalUrl = `${siteUrl}${currentPath}`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="transition-colors duration-300">
     <SiteLoader />
     <Navbar lang={lang} currentPath={currentPath} hideJoinCta={hideJoinCta} />
     <div id="page-scroll-content">
@@ -318,15 +336,29 @@ const canonicalUrl = `${siteUrl}${currentPath}`;
         btn.setAttribute('data-lang-bound', 'true');
       }
 
+      // Theme toggle
+      function setupThemeToggle() {
+        const toggles = document.querySelectorAll('[data-theme-toggle]');
+        toggles.forEach(toggle => {
+          if (toggle.getAttribute('data-theme-bound') === 'true') return;
+          toggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+          });
+          toggle.setAttribute('data-theme-bound', 'true');
+        });
+      }
+
       // Initialize
       setupNav();
       setupMobileMenu();
       setupLangSwitcher();
       setupSmoothScroll();
+      setupThemeToggle();
       document.addEventListener('astro:page-load', setupNav);
       document.addEventListener('astro:page-load', setupMobileMenu);
       document.addEventListener('astro:page-load', setupLangSwitcher);
       document.addEventListener('astro:page-load', setupSmoothScroll);
+      document.addEventListener('astro:page-load', setupThemeToggle);
       document.addEventListener('astro:before-preparation', destroySmoothScroll);
 
       // First-visit loader

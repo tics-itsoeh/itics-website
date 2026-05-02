@@ -37,7 +37,7 @@ const menuLabel: Record<UiLanguage, string> = {
 };
 ---
 
-<nav id="site-nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-3.5 sm:py-4 bg-apple-nav backdrop-blur-md border-b border-black/5 transition-all">
+<nav id="site-nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-3.5 sm:py-4 bg-apple-nav backdrop-blur-md border-b border-apple-border transition-all">
   <a class="flex items-center gap-2 sm:gap-2.5 no-underline min-w-0" href={`/${lang}`}>
     <Image src="/icon.png" alt="Ing. TICs" width={950} height={830} loading="eager" fetchpriority="high" class="w-[2.75rem] h-[2.75rem] sm:w-[3.315rem] sm:h-[3.315rem] object-contain flex-shrink-0" />
     <span class="hidden sm:block font-sans font-bold text-[0.72rem] sm:text-sm tracking-tight text-apple-text leading-tight truncate">
@@ -48,7 +48,7 @@ const menuLabel: Record<UiLanguage, string> = {
   </a>
 
   {/* Desktop navigation with animated pill */}
-  <div class="hidden md:flex relative p-1 bg-black/[0.03] rounded-full border border-black/[0.05]" id="nav-container">
+  <div class="hidden md:flex relative p-1 bg-apple-surface-hover rounded-full border border-apple-border" id="nav-container">
     <div id="nav-pill" class="absolute top-1 bottom-1 left-0 bg-apple-blue/15 backdrop-blur-md rounded-full transition-all duration-300 ease-out z-0 opacity-0 pointer-events-none"></div>
     {navItems.map(item => {
       const isActive = currentPath === item.path || (item.path !== `/${lang}` && currentPath.startsWith(item.path));
@@ -68,7 +68,7 @@ const menuLabel: Record<UiLanguage, string> = {
     {/* Mobile menu toggle */}
     <button
       id="mobile-menu-toggle"
-      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/10 bg-white/80 text-apple-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/40"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-apple-border-strong bg-apple-surface/80 text-apple-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/40"
       aria-label={menuLabel[lang]}
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -94,7 +94,7 @@ const menuLabel: Record<UiLanguage, string> = {
 
         <div
           id="lang-switcher-menu"
-          class="absolute right-0 top-full mt-2 w-32 bg-white rounded-xl shadow-lg shadow-black/5 border border-black/5 opacity-0 invisible transition-all duration-200 transform translate-y-1 z-50 overflow-hidden"
+          class="absolute right-0 top-full mt-2 w-32 bg-apple-surface rounded-xl shadow-lg shadow-black/5 border border-apple-border opacity-0 invisible transition-all duration-200 transform translate-y-1 z-50 overflow-hidden"
           role="menu"
           aria-labelledby="lang-switcher-btn"
         >
@@ -106,7 +106,7 @@ const menuLabel: Record<UiLanguage, string> = {
                 <a
                   href={targetPath}
                   role="menuitem"
-                  class={`block px-4 py-2.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:bg-apple-blue/5 ${isActive ? 'bg-apple-blue/5 text-apple-blue' : 'text-apple-muted hover:bg-black/5 hover:text-apple-text'}`}
+                  class={`block px-4 py-2.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:bg-apple-blue/5 ${isActive ? 'bg-apple-blue/5 text-apple-blue' : 'text-apple-muted hover:bg-apple-surface-hover hover:text-apple-text'}`}
                 >
                   <div class="flex items-center justify-between">
                     <span>{name}</span>
@@ -118,6 +118,16 @@ const menuLabel: Record<UiLanguage, string> = {
           </div>
         </div>
       </div>
+
+      {/* Theme toggle */}
+      <button
+        data-theme-toggle
+        class="text-apple-muted hover:text-apple-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/40 rounded-md p-1"
+        aria-label="Toggle dark mode"
+      >
+        <svg class="w-[1.125rem] h-[1.125rem] dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+        <svg class="w-[1.125rem] h-[1.125rem] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+      </button>
 
       {/* GitHub link */}
       <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" class="text-apple-muted hover:text-apple-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/40 rounded-md" title={tc('footer.github')} aria-label={tc('footer.github')}>
@@ -134,7 +144,7 @@ const menuLabel: Record<UiLanguage, string> = {
   </div>
 
   {/* Mobile menu */}
-  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-black/5 bg-[#fbfbfd]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-apple-border bg-apple-surface/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
     <div class="px-4 sm:px-6 py-4 space-y-3">
       <div class="grid grid-cols-2 gap-2">
         {navItems.map((item) => {
@@ -142,7 +152,7 @@ const menuLabel: Record<UiLanguage, string> = {
           return (
             <a
               href={item.path}
-              class={`px-3 py-2 rounded-lg text-sm font-semibold border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-white text-apple-text border-black/10 hover:bg-black/[0.03]'}`}
+              class={`px-3 py-2 rounded-lg text-sm font-semibold border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-apple-surface text-apple-text border-apple-border-strong hover:bg-apple-surface-hover'}`}
             >
               {item.label}
             </a>
@@ -150,24 +160,24 @@ const menuLabel: Record<UiLanguage, string> = {
         })}
       </div>
 
-      <div class="grid grid-cols-3 gap-2 border-t border-black/8 pt-3">
+      <div class="grid grid-cols-3 gap-2 border-t border-apple-border-strong pt-3">
         {Object.entries(languages).map(([code, name]) => {
           const isActive = code === lang;
           const targetPath = currentPath.replace(`/${lang}`, `/${code}`);
           return (
-            <a href={targetPath} class={`px-3 py-2 rounded-lg text-xs font-semibold text-center uppercase border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-white text-apple-text border-black/10 hover:bg-black/[0.03]'}`}>
+            <a href={targetPath} class={`px-3 py-2 rounded-lg text-xs font-semibold text-center uppercase border transition-colors ${isActive ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20' : 'bg-apple-surface text-apple-text border-apple-border-strong hover:bg-apple-surface-hover'}`}>
               {name}
             </a>
           );
         })}
       </div>
 
-      <div class="flex flex-col gap-2 border-t border-black/8 pt-3">
+      <div class="flex flex-col gap-2 border-t border-apple-border-strong pt-3">
         <a
           href={socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center px-4 py-3 rounded-full border border-black/10 bg-white text-apple-text text-sm font-semibold hover:bg-black/[0.03] transition-colors"
+          class="inline-flex items-center justify-center px-4 py-3 rounded-full border border-apple-border-strong bg-apple-surface text-apple-text text-sm font-semibold hover:bg-apple-surface-hover transition-colors"
         >
           {tc('footer.github')}
         </a>

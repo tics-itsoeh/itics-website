@@ -110,7 +110,7 @@ export function initModel3d(containerId: string, canvasId: string) {
 
   const loader = new GLTFLoader();
   // Generic filename for easier maintenance and future model swaps.
-  const modelUrl = '/model/model3d.glb';
+  const modelUrl = '/model/model3d_compressed.glb';
   
   async function loadModel() {
     let urlToLoad = modelUrl;

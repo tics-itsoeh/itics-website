@@ -7,78 +7,133 @@ interface Props {
 
 const { lang } = Astro.props;
 
-// For now, providing localized dummy data directly in the component.
-// In the future, this can be moved to the i18n JSON files if required.
 const translations = {
   es: {
-    title: 'Lo que dice nuestra comunidad',
-    subtitle: 'Historias reales de estudiantes, egresados y aliados de la industria.',
-    testimonials: [
+    title: 'Testimonios ITICs',
+    subtitle: 'Así se vive la carrera desde dentro y después de egresar.',
+    communityTitle: 'Lo que dice nuestra comunidad',
+    alumniTitle: 'Lo que dicen nuestros egresados',
+    sliderPrev: 'Ver testimonio anterior',
+    sliderNext: 'Ver siguiente testimonio',
+    communityQuotes: [
+      'Aquí no solo aprendes teoría; desde temprano trabajas en proyectos reales.',
+      'Los profes sí te orientan y la comunidad te impulsa a participar.',
+      'Entré con dudas y encontré un ambiente donde te ayudan a crecer.'
+    ],
+    alumniSlides: [
       {
-        quote: 'La carrera me dio las bases fundamentales en programación, y hoy desarrollo software para miles de usuarios. La atención de los docentes es excepcional.',
-        author: 'Alejandro Martínez',
-        role: 'Egresado, Ing. de Software',
-        initial: 'A'
+        name: 'Alejandro Martínez',
+        role: 'Egresado ITICs · Desarrollo de Software',
+        quote: 'Lo que construí en la carrera fue clave para conseguir mi primer trabajo.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Imagen institucional de egresados ITICs'
       },
       {
-        quote: 'Gracias a los clubes de robótica, pude poner en práctica lo que aprendimos en clase e ir a competencias nacionales. Es una comunidad increíble.',
-        author: 'Sofía Reyes',
-        role: 'Estudiante de 6to Semestre',
-        initial: 'S'
+        name: 'Sofía Reyes',
+        role: 'Egresada ITICs · QA & Automatización',
+        quote: 'Salir con portafolio y certificaciones me abrió muchas puertas.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Imagen institucional de egresados ITICs'
       },
       {
-        quote: 'Como empresa de la región, los ingenieros egresados de ITSOEH han demostrado un gran nivel resolviendo problemas complejos de infraestructura.',
-        author: 'Carlos Gómez',
-        role: 'Aliado Industrial',
-        initial: 'C'
+        name: 'Carlos Gómez',
+        role: 'Egresado ITICs · Infraestructura y Redes',
+        quote: 'La formación práctica me dio confianza para enfrentar retos reales en la industria.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Imagen institucional de egresados ITICs'
+      },
+      {
+        name: 'Fernanda Ortiz',
+        role: 'Egresada ITICs · Datos y Analítica',
+        quote: 'Desde el servicio social ya estaba resolviendo problemas reales con tecnología.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Imagen institucional de egresados ITICs'
       }
     ]
   },
   en: {
-    title: 'What our community says',
-    subtitle: 'Real stories from students, alumni, and industry partners.',
-    testimonials: [
+    title: 'ITICs Testimonials',
+    subtitle: 'How the program is experienced during and after graduation.',
+    communityTitle: 'What our community says',
+    alumniTitle: 'What our alumni say',
+    sliderPrev: 'View previous testimonial',
+    sliderNext: 'View next testimonial',
+    communityQuotes: [
+      'You do not just learn theory; you build real projects early on.',
+      'Faculty guide you closely, and the community pushes you to get involved.',
+      'I started with doubts and found an environment that helps you grow.'
+    ],
+    alumniSlides: [
       {
-        quote: 'The program gave me the fundamental programming skills, and today I develop software for thousands of users. The faculty support is exceptional.',
-        author: 'Alejandro Martínez',
-        role: 'Alumnus, Software Eng.',
-        initial: 'A'
+        name: 'Alejandro Martínez',
+        role: 'ITICs Alumnus · Software Development',
+        quote: 'What I built during the degree was key to getting my first job.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Institutional image for ITICs alumni'
       },
       {
-        quote: 'Thanks to the robotics clubs, I could put into practice what we learned in class and go to national competitions. It is an amazing community.',
-        author: 'Sofía Reyes',
-        role: '6th Semester Student',
-        initial: 'S'
+        name: 'Sofía Reyes',
+        role: 'ITICs Alumna · QA & Automation',
+        quote: 'Graduating with a portfolio and certifications opened many doors.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Institutional image for ITICs alumni'
       },
       {
-        quote: 'As a local company, engineers graduating from ITSOEH have shown a great level in solving complex infrastructure problems.',
-        author: 'Carlos Gómez',
-        role: 'Industry Partner',
-        initial: 'C'
+        name: 'Carlos Gómez',
+        role: 'ITICs Alumnus · Infrastructure & Networking',
+        quote: 'Hands-on training gave me confidence to face real industry challenges.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Institutional image for ITICs alumni'
+      },
+      {
+        name: 'Fernanda Ortiz',
+        role: 'ITICs Alumna · Data & Analytics',
+        quote: 'Even before graduating, I was already solving real problems with technology.',
+        photo: '/logos/tics.webp',
+        photoAlt: 'Institutional image for ITICs alumni'
       }
     ]
   },
   zh: {
-    title: '我们社区的心声',
-    subtitle: '来自学生、校友和行业合作伙伴的真实故事。',
-    testimonials: [
+    title: 'ITICs 学生与校友评价',
+    subtitle: '在校阶段与毕业之后的真实体验。',
+    communityTitle: '来自我们社区的反馈',
+    alumniTitle: '来自校友的反馈',
+    sliderPrev: '查看上一条评价',
+    sliderNext: '查看下一条评价',
+    communityQuotes: [
+      '这里不只是学理论，从早期就会参与真实项目。',
+      '老师会认真指导，社区氛围也会鼓励你积极参与。',
+      '我带着疑问入学，却找到了能支持成长的环境。'
+    ],
+    alumniSlides: [
       {
-        quote: '该项目为我提供了基本的编程技能，如今我为成千上万的用户开发软件。老师们的支持非常出色。',
-        author: '亚历杭德罗 (Alejandro)',
-        role: '校友，软件工程师',
-        initial: 'A'
+        name: 'Alejandro Martínez',
+        role: 'ITICs 校友 · 软件开发',
+        quote: '在校期间完成的项目，直接帮助我拿到第一份工作。',
+        photo: '/logos/tics.webp',
+        photoAlt: 'ITICs 校友展示用机构图片'
       },
       {
-        quote: '多亏了机器人俱乐部，我才能将课堂上学到的知识付诸实践，并参加全国比赛。这是一个了不起的社区。',
-        author: '索菲亚 (Sofía)',
-        role: '第六学期学生',
-        initial: 'S'
+        name: 'Sofía Reyes',
+        role: 'ITICs 校友 · 质量与自动化',
+        quote: '带着作品集和认证毕业，让我拥有更多机会。',
+        photo: '/logos/tics.webp',
+        photoAlt: 'ITICs 校友展示用机构图片'
       },
       {
-        quote: '作为当地企业，从ITSOEH毕业的工程师在解决复杂基础设施问题方面表现出极高的水平。',
-        author: '卡洛斯 (Carlos)',
-        role: '行业合作伙伴',
-        initial: 'C'
+        name: 'Carlos Gómez',
+        role: 'ITICs 校友 · 基础设施与网络',
+        quote: '重实践的训练方式，让我更有信心面对真实行业挑战。',
+        photo: '/logos/tics.webp',
+        photoAlt: 'ITICs 校友展示用机构图片'
+      },
+      {
+        name: 'Fernanda Ortiz',
+        role: 'ITICs 校友 · 数据与分析',
+        quote: '毕业前我就已经在用技术解决真实问题。',
+        photo: '/logos/tics.webp',
+        photoAlt: 'ITICs 校友展示用机构图片'
       }
     ]
   }
@@ -95,27 +150,176 @@ const content = translations[lang] || translations['es'];
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    {content.testimonials.map((t) => (
-      <article class="bg-apple-surface-alt rounded-[2rem] p-8 border border-apple-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
-        <div>
-          <svg class="w-8 h-8 text-apple-blue opacity-50 mb-6 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-          <p class="text-[1.05rem] text-apple-text font-medium leading-relaxed mb-8">
-            "{t.quote}"
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <article class="bg-apple-surface rounded-[2rem] p-7 sm:p-8 border border-apple-border">
+      <h3 class="text-[1.1rem] font-bold text-apple-text mb-5">{content.communityTitle}</h3>
+      <div class="space-y-4">
+        {content.communityQuotes.map((quote) => (
+          <p class="rounded-xl border border-apple-border bg-apple-surface-alt px-4 py-3 text-[0.95rem] text-apple-text font-medium leading-relaxed">
+            "{quote}"
           </p>
-        </div>
-        <div class="flex items-center gap-4 border-t border-apple-border-strong pt-6">
-          <div class="w-12 h-12 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-lg shadow-inner">
-            {t.initial}
+        ))}
+      </div>
+    </article>
+
+    <article class="bg-apple-surface rounded-[2rem] p-7 sm:p-8 border border-apple-border">
+      <h3 class="text-[1.1rem] font-bold text-apple-text mb-5">{content.alumniTitle}</h3>
+      <div data-alumni-slider class="relative" tabindex="0" style="touch-action: pan-y;">
+        <div class="overflow-hidden rounded-2xl border border-apple-border bg-apple-surface-alt">
+          <div data-slider-track class="flex transition-transform duration-500 ease-out">
+            {content.alumniSlides.map((slide) => (
+              <article class="w-full shrink-0 p-5 sm:p-6">
+                <div class="relative overflow-hidden rounded-2xl border border-apple-border bg-apple-surface h-[240px] sm:h-[280px] mb-5">
+                  <img
+                    src={slide.photo}
+                    alt={slide.photoAlt}
+                    loading="lazy"
+                    class="w-full h-full object-cover"
+                  />
+                  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-4 py-4">
+                    <p class="text-white text-[1rem] font-semibold leading-tight">{slide.name}</p>
+                    <p class="text-white/85 text-[0.8rem] font-medium mt-1">{slide.role}</p>
+                  </div>
+                </div>
+                <p class="text-[0.98rem] text-apple-text font-medium leading-relaxed">
+                  "{slide.quote}"
+                </p>
+              </article>
+            ))}
           </div>
-          <div>
-            <h3 class="text-[1rem] font-bold text-apple-text leading-tight">{t.author}</h3>
-            <p class="text-[0.85rem] text-apple-muted font-semibold mt-0.5">{t.role}</p>
-          </div>
         </div>
-      </article>
-    ))}
+
+        <div class="mt-5 flex items-center justify-between gap-4">
+          <button
+            data-slider-prev
+            type="button"
+            aria-label={content.sliderPrev}
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-apple-border-strong bg-apple-surface text-apple-text hover:bg-apple-surface-hover transition-colors"
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            {content.alumniSlides.map((_, index) => (
+              <button
+                type="button"
+                data-slider-dot
+                data-index={index}
+                class="w-2.5 h-2.5 rounded-full bg-apple-border-strong transition-all"
+                aria-label={`Slide ${index + 1}`}
+              ></button>
+            ))}
+          </div>
+
+          <button
+            data-slider-next
+            type="button"
+            aria-label={content.sliderNext}
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-apple-border-strong bg-apple-surface text-apple-text hover:bg-apple-surface-hover transition-colors"
+          >
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
+
+<script>
+  function initTestimonialsSlider() {
+    const sliders = Array.from(document.querySelectorAll('[data-alumni-slider]'));
+
+    sliders.forEach((slider) => {
+      if (!(slider instanceof HTMLElement)) return;
+      if (slider.dataset.bound === '1') return;
+      slider.dataset.bound = '1';
+
+      const track = slider.querySelector('[data-slider-track]');
+      const previousButton = slider.querySelector('[data-slider-prev]');
+      const nextButton = slider.querySelector('[data-slider-next]');
+      const dots = Array.from(slider.querySelectorAll('[data-slider-dot]'));
+
+      if (!(track instanceof HTMLElement) || dots.length === 0) return;
+
+      const slidesCount = dots.length;
+      let currentIndex = 0;
+      let dragStartX = 0;
+      let isDragging = false;
+
+      const updateSlider = () => {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+          const active = index === currentIndex;
+          dot.classList.toggle('bg-apple-blue', active);
+          dot.classList.toggle('scale-110', active);
+          dot.classList.toggle('bg-apple-border-strong', !active);
+          dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+      };
+
+      const goTo = (index: number) => {
+        currentIndex = (index + slidesCount) % slidesCount;
+        updateSlider();
+      };
+
+      const handleDragEnd = (endX: number) => {
+        const delta = endX - dragStartX;
+        if (Math.abs(delta) < 40) return;
+        goTo(currentIndex + (delta < 0 ? 1 : -1));
+      };
+
+      previousButton?.addEventListener('click', () => goTo(currentIndex - 1));
+      nextButton?.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach((dot) => {
+        if (!(dot instanceof HTMLButtonElement)) return;
+        dot.addEventListener('click', () => {
+          const target = Number(dot.dataset.index || '0');
+          goTo(target);
+        });
+      });
+
+      slider.addEventListener('keydown', (event: KeyboardEvent) => {
+        if (event.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (event.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      slider.addEventListener('touchstart', (event: TouchEvent) => {
+        dragStartX = event.changedTouches[0]?.clientX ?? 0;
+        isDragging = true;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', (event: TouchEvent) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const endX = event.changedTouches[0]?.clientX ?? dragStartX;
+        handleDragEnd(endX);
+      }, { passive: true });
+
+      slider.addEventListener('pointerdown', (event: PointerEvent) => {
+        dragStartX = event.clientX;
+        isDragging = true;
+      });
+
+      slider.addEventListener('pointerup', (event: PointerEvent) => {
+        if (!isDragging) return;
+        isDragging = false;
+        handleDragEnd(event.clientX);
+      });
+
+      slider.addEventListener('pointercancel', () => {
+        isDragging = false;
+      });
+
+      updateSlider();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTestimonialsSlider, { once: true });
+  } else {
+    initTestimonialsSlider();
+  }
+
+  document.addEventListener('astro:page-load', initTestimonialsSlider);
+</script>

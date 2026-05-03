@@ -70,7 +70,7 @@
       "title": "Liderazgo estudiantil.",
       "subtitle": "Estudiantes que impulsan proyectos, talleres, recursos digitales y colaboración técnica dentro de la comunidad ITICs.",
       "jose": {
-        "name": "José Manuel Cortés Cerón",
+        "name": "José Manuel Cortes Cerón",
         "role": "Colaborador estudiantil · Software, IA e IoT",
         "description": "Apoya en el desarrollo de proyectos, comunidad técnica, recursos digitales, actividades de formación complementaria e identidad web de ITICs.",
         "tag1": "Software",
@@ -85,10 +85,11 @@
     "credits": {
       "title": "Créditos del sitio.",
       "body": "Este sitio fue desarrollado como una iniciativa para fortalecer la identidad digital de Ingeniería en TICs del ITSOEH, difundir su formación académica, proyectos, comunidad y proceso de admisión.",
+      "aboutCta": "Ver página Acerca de y créditos completos",
       "cards": {
         "web": {
           "title": "Diseño y desarrollo web",
-          "value": "José Manuel Cortés Cerón"
+          "value": "José Manuel Cortes Cerón"
         },
         "content": {
           "title": "Contenido institucional",
@@ -113,7 +114,7 @@
   },
   "profile": {
     "back": "Volver a comunidad",
-    "name": "José Manuel Cortés Cerón",
+    "name": "José Manuel Cortes Cerón",
     "role": "Colaborador estudiantil · Software, IA e IoT",
     "tag1": "Software",
     "tag2": "IA",
@@ -124,7 +125,7 @@
     "academicTitle": "Contexto académico",
     "degreeTitle": "Ingeniería en Tecnologías de la Información y Comunicaciones",
     "degreeInstitution": "Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
-    "researchTitle": "Research Collaboration",
+    "researchTitle": "Colaboración de investigación",
     "researchInstitution": "Xi’an Jiaotong-Liverpool University",
     "contributionsTitle": "Contribuciones y proyectos relacionados",
     "communityTitle": "Contribuciones dentro de la comunidad ITICs",

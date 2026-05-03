@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "About ITICs Web.",
+    "subtitle": "A dedicated space for digital identity, development credits, and recognition of the people who build and maintain the web presence of ICT Engineering."
+  },
+  "creator": {
+    "title": "Primary development credit",
+    "name": "José Manuel Cortes Cerón",
+    "role": "Systems Engineer · AI & IoT",
+    "tag1": "Software",
+    "tag2": "IoT",
+    "tag3": "AI",
+    "meta": "ITICs Web Development",
+    "github": "deepdevjose",
+    "profileCta": "View profile"
+  },
+  "credits": {
+    "title": "Site credits",
+    "subtitle": "This site was created as an initiative to strengthen the digital identity of ICT Engineering at ITSOEH and communicate formation, projects, community, and admissions.",
+    "cards": {
+      "web": {
+        "title": "Web design and development",
+        "value": "José Manuel Cortes Cerón"
+      },
+      "content": {
+        "title": "Institutional content",
+        "value": "ICT Engineering ITSOEH"
+      },
+      "review": {
+        "title": "Academic review",
+        "value": "ICT Engineering Coordination"
+      },
+      "identity": {
+        "title": "Institutional identity",
+        "value": "ITSOEH · TecNM · Education"
+      }
+    }
+  },
+  "updating": {
+    "title": "Information being updated",
+    "body": "More profiles and contributions from the academic and technical community will be added soon."
+  }
+}

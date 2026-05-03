@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "About ITICs Web.",
+    "subtitle": "用于展示数字身份、开发致谢，以及认可参与建设和维护 ICT 工程网站形象成员的专属页面。"
+  },
+  "creator": {
+    "title": "主要开发致谢",
+    "name": "José Manuel Cortes Cerón",
+    "role": "Systems Engineer · AI & IoT",
+    "tag1": "软件",
+    "tag2": "IoT",
+    "tag3": "AI",
+    "meta": "ITICs 网站开发",
+    "github": "deepdevjose",
+    "profileCta": "查看档案"
+  },
+  "credits": {
+    "title": "网站致谢",
+    "subtitle": "本网站旨在强化 ITSOEH 信息与通信技术工程的数字身份，并传播其培养体系、项目、社区与招生信息。",
+    "cards": {
+      "web": {
+        "title": "网站设计与开发",
+        "value": "José Manuel Cortes Cerón"
+      },
+      "content": {
+        "title": "机构内容",
+        "value": "ICT 工程 ITSOEH"
+      },
+      "review": {
+        "title": "学术审核",
+        "value": "ICT 工程协调"
+      },
+      "identity": {
+        "title": "机构形象",
+        "value": "ITSOEH · TecNM · 教育"
+      }
+    }
+  },
+  "updating": {
+    "title": "信息更新中",
+    "body": "后续将补充更多学术与技术社区成员的档案与贡献。"
+  }
+}

@@ -29,6 +29,7 @@ export const navItems: NavItem[] = [
   { pathSuffix: '/unirse',    labelKey: 'nav.join' },
   { pathSuffix: '/proyectos', labelKey: 'nav.projects' },
   { pathSuffix: '/mentores',  labelKey: 'nav.mentors' },
+  { pathSuffix: '/about',     labelKey: 'nav.about' },
   { pathSuffix: '/contacto',  labelKey: 'nav.contact' },
 ];
 
@@ -45,4 +46,3 @@ export function resolveNavItems(lang: UiLanguage, tc: (key: string) => string) {
     label: tc(item.labelKey),
   }));
 }
-

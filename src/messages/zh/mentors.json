@@ -70,7 +70,7 @@
       "title": "学生领袖。",
       "subtitle": "推动 ITICs 社区中项目、工作坊、数字资源与技术协作的学生。",
       "jose": {
-        "name": "José Manuel Cortés Cerón",
+        "name": "José Manuel Cortes Cerón",
         "role": "学生协作者 · 软件、AI 与 IoT",
         "description": "支持项目开发、技术社区、数字资源、补充培训活动以及 ITICs 的 Web 形象建设。",
         "tag1": "软件",
@@ -85,10 +85,11 @@
     "credits": {
       "title": "网站致谢。",
       "body": "本网站作为强化 ITSOEH 信息与通信技术工程数字身份的倡议而开发，旨在传播其学术培养、项目、社区与招生信息。",
+      "aboutCta": "查看 About 页面与完整致谢",
       "cards": {
         "web": {
           "title": "网站设计与开发",
-          "value": "José Manuel Cortés Cerón"
+          "value": "José Manuel Cortes Cerón"
         },
         "content": {
           "title": "机构内容",
@@ -113,7 +114,7 @@
   },
   "profile": {
     "back": "返回社区",
-    "name": "José Manuel Cortés Cerón",
+    "name": "José Manuel Cortes Cerón",
     "role": "学生协作者 · 软件、AI 与 IoT",
     "tag1": "软件",
     "tag2": "AI",

@@ -1,0 +1,222 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import type { UiLanguage } from '../../../i18n/config';
+import { languages } from '../../../i18n/config';
+import { useTranslations } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: UiLanguage };
+const t = useTranslations(lang, 'mentors');
+const tc = useTranslations(lang, 'common');
+
+const profileByLang = {
+  es: {
+    name: 'Dr. Francisco Javier Cuadros Romero',
+    role: 'Profesor e investigador · IoT, IA y analítica de datos',
+    tags: ['IoT', 'Machine Learning', 'SQL', 'Networking'],
+    email: 'cuadros.jav@gmail.com',
+    linkedinLabel: 'LinkedIn',
+    linkedinHandle: 'fcojcr',
+    bio1: 'Profesor de ITSOEH con enfoque en investigación aplicada en machine learning e internet de las cosas. Imparte asignaturas como probabilidad y estadística, álgebra lineal, ingeniería de datos y fundamentos de SQL.',
+    bio2: 'Participa en proyectos tecnológicos con instituciones de educación superior y consultoría para empresas, desarrollando soluciones IoT, analítica de datos e inteligencia artificial para mejorar competitividad y desempeño operativo.',
+    focusTitle: 'Líneas de trabajo',
+    focus1Title: 'Docencia y formación técnica',
+    focus1Body: 'Acompañamiento en contenidos de datos, programación, análisis cuantitativo y aplicación práctica en contextos reales.',
+    focus2Title: 'Investigación y desarrollo',
+    focus2Body: 'Implementación de soluciones de IoT, IA y automatización industrial con énfasis en eficiencia y toma de decisiones.',
+    experienceTitle: 'Experiencia destacada',
+    experience1Title: 'Profesor de posgrado en IoT · UAEH',
+    experience1Body: 'Desde 2022: asesoría de materias, diseño instruccional, desarrollo de contenido y seguimiento enseñanza-aprendizaje.',
+    experience2Title: 'Profesor ITICs · ITSOEH',
+    experience2Body: 'Desde 2017: docencia en machine learning, internet de las cosas y desarrollo de software.',
+    experience3Title: 'Consultor IoT, Data & AI',
+    experience3Body: '2019-2022: implementación de soluciones para sectores energético e industrial, integrando IoT, analítica e IA.',
+    educationTitle: 'Formación académica',
+    education1Title: 'PhD en Information Science · JAIST',
+    education1Body: '2013-2017',
+    education2Title: 'MSc en Ingeniería en Microelectrónica · IPN',
+    education2Body: '2010-2013',
+    education3Title: 'Ing. en Electrónica y Telecomunicaciones · UAEH',
+    education3Body: '2004-2009',
+  },
+  en: {
+    name: 'Dr. Francisco Javier Cuadros Romero',
+    role: 'Professor and researcher · IoT, AI, and data analytics',
+    tags: ['IoT', 'Machine Learning', 'SQL', 'Networking'],
+    email: 'cuadros.jav@gmail.com',
+    linkedinLabel: 'LinkedIn',
+    linkedinHandle: 'fcojcr',
+    bio1: 'ITSOEH professor focused on applied research in machine learning and internet of things. He teaches probability and statistics, linear algebra, data engineering, and SQL fundamentals.',
+    bio2: 'He collaborates on technology projects with higher education institutions and industry, delivering IoT, data analytics, and AI solutions that improve competitiveness and operational performance.',
+    focusTitle: 'Focus areas',
+    focus1Title: 'Teaching and technical formation',
+    focus1Body: 'Mentoring in data, programming, quantitative analysis, and real-world applied problem solving.',
+    focus2Title: 'Research and development',
+    focus2Body: 'Implementation of IoT, AI, and industrial automation solutions with an efficiency-driven approach.',
+    experienceTitle: 'Highlighted experience',
+    experience1Title: 'Graduate IoT Professor · UAEH',
+    experience1Body: 'Since 2022: subject advising, instructional design, content development, and teaching-learning monitoring.',
+    experience2Title: 'ITICs Professor · ITSOEH',
+    experience2Body: 'Since 2017: lecturing in machine learning, internet of things, and software development.',
+    experience3Title: 'IoT, Data & AI Consultant',
+    experience3Body: '2019-2022: implementation of solutions for energy and industrial sectors, integrating IoT, analytics, and AI.',
+    educationTitle: 'Academic background',
+    education1Title: 'PhD in Information Science · JAIST',
+    education1Body: '2013-2017',
+    education2Title: 'MSc in Microelectronics Engineering · IPN',
+    education2Body: '2010-2013',
+    education3Title: 'BEng in Electronics and Telecommunications · UAEH',
+    education3Body: '2004-2009',
+  },
+  zh: {
+    name: 'Dr. Francisco Javier Cuadros Romero',
+    role: '教师与研究者 · IoT、AI 与数据分析',
+    tags: ['IoT', '机器学习', 'SQL', '网络'],
+    email: 'cuadros.jav@gmail.com',
+    linkedinLabel: 'LinkedIn',
+    linkedinHandle: 'fcojcr',
+    bio1: 'ITSOEH 教师，研究方向为机器学习与物联网应用。授课内容包括概率统计、线性代数、数据工程与 SQL 基础。',
+    bio2: '他参与高校协作与产业项目，推动 IoT、数据分析与 AI 方案落地，以提升组织竞争力和运营效率。',
+    focusTitle: '工作方向',
+    focus1Title: '教学与技术培养',
+    focus1Body: '围绕数据、编程、定量分析与真实问题应用开展教学支持。',
+    focus2Title: '研究与开发',
+    focus2Body: '面向效率提升的 IoT、AI 与工业自动化解决方案实施。',
+    experienceTitle: '代表性经历',
+    experience1Title: '物联网研究生教师 · UAEH',
+    experience1Body: '自 2022 年起：课程指导、教学设计、内容开发与教学跟进。',
+    experience2Title: 'ITICs 教师 · ITSOEH',
+    experience2Body: '自 2017 年起：教授机器学习、物联网与软件开发。',
+    experience3Title: 'IoT、数据与 AI 顾问',
+    experience3Body: '2019-2022：为能源与工业领域实施 IoT、分析与 AI 解决方案。',
+    educationTitle: '学术背景',
+    education1Title: '信息科学博士 · JAIST',
+    education1Body: '2013-2017',
+    education2Title: '微电子工程硕士 · IPN',
+    education2Body: '2010-2013',
+    education3Title: '电子与电信工程学士 · UAEH',
+    education3Body: '2004-2009',
+  },
+} as const;
+
+const profile = profileByLang[lang] ?? profileByLang.es;
+---
+
+<Layout lang={lang} title={`${tc('nav.mentors')} · ${profile.name}`}>
+  <main class="bg-apple-bg pt-32 pb-24 min-h-screen">
+    <div class="max-w-[1040px] mx-auto px-5 sm:px-8">
+      <a
+        href={`/${lang}/mentores`}
+        class="inline-flex items-center gap-2 text-sm font-medium text-apple-muted hover:text-apple-text transition-colors mb-12"
+      >
+        <span aria-hidden="true">&larr;</span>
+        {t('profile.back')}
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-14 items-start">
+        <aside>
+          <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl bg-[#f5f5f7] mb-6 relative shadow-sm">
+            <img
+              src="/mentors/teachers/javiercuadros.webp"
+              alt={profile.name}
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-3xl pointer-events-none"></div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <a
+              href={`mailto:${profile.email}`}
+              class="flex items-center justify-between px-4 py-3 bg-apple-surface rounded-xl border border-apple-border hover:border-apple-blue/50 transition-all"
+            >
+              <span class="text-[0.85rem] font-semibold text-apple-text">Email</span>
+              <span class="text-[0.78rem] font-semibold text-apple-muted">{profile.email}</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fcojcr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between px-4 py-3 bg-apple-surface rounded-xl border border-apple-border hover:border-apple-blue/50 transition-all"
+            >
+              <span class="text-[0.85rem] font-semibold text-apple-text">{profile.linkedinLabel}</span>
+              <span class="text-[0.78rem] font-semibold text-apple-muted">{profile.linkedinHandle}</span>
+            </a>
+          </div>
+        </aside>
+
+        <section>
+          <h1 class="text-4xl lg:text-5xl font-black tracking-tight text-apple-text mb-4">{profile.name}</h1>
+          <p class="text-xl font-medium text-apple-muted mb-8">{profile.role}</p>
+
+          <div class="flex flex-wrap gap-2 mb-10">
+            {profile.tags.map((tag) => (
+              <span class="text-sm font-semibold px-4 py-1.5 bg-apple-surface-hover text-apple-text rounded-md tracking-wide">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div class="prose prose-lg prose-apple max-w-none text-apple-text leading-relaxed mb-14">
+            <p class="mb-4">{profile.bio1}</p>
+            <p>{profile.bio2}</p>
+          </div>
+
+          <div class="mb-14 border-t border-apple-border pt-8">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-apple-muted mb-5">{profile.focusTitle}</h2>
+            <div class="flex flex-col gap-4">
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.focus1Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.focus1Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.focus2Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.focus2Body}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-14 border-t border-apple-border pt-8">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-apple-muted mb-5">{profile.experienceTitle}</h2>
+            <div class="flex flex-col gap-4">
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.experience1Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.experience1Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.experience2Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.experience2Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.experience3Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.experience3Body}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-apple-border pt-8">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-apple-muted mb-5">{profile.educationTitle}</h2>
+            <div class="flex flex-col gap-4">
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.education1Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.education1Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.education2Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.education2Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.education3Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.education3Body}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>

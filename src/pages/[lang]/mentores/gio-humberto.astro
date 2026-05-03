@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import type { UiLanguage } from '../../../i18n/config';
+import { languages } from '../../../i18n/config';
+import { useTranslations } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: UiLanguage };
+const t = useTranslations(lang, 'mentors');
+const tc = useTranslations(lang, 'common');
+
+const profileByLang = {
+  es: {
+    name: 'Gio Humberto',
+    role: 'Docente ITICs · Programación y desarrollo de software',
+    tags: ['Software', 'Aplicaciones', 'Arquitectura', 'Docencia'],
+    bio1: 'Docente de ITICs enfocado en fundamentos de programación, desarrollo de aplicaciones y metodologías para construir soluciones digitales con enfoque académico y práctico.',
+    bio2: 'Su acompañamiento fortalece la lógica de ingeniería, el trabajo por proyectos y la calidad técnica en productos de software desarrollados por estudiantes.',
+    focusTitle: 'Líneas de trabajo',
+    focus1Title: 'Programación y arquitectura',
+    focus1Body: 'Diseño de soluciones, estructura de aplicaciones y buenas prácticas de implementación.',
+    focus2Title: 'Proyectos y calidad técnica',
+    focus2Body: 'Planeación, documentación y mejora continua de entregables de software en contexto académico.',
+    updatingTitle: 'Información en actualización',
+    updatingBody: 'Próximamente se integrará información curricular ampliada, experiencia profesional y proyectos académicos.',
+  },
+  en: {
+    name: 'Gio Humberto',
+    role: 'ITICs Faculty · Programming and software development',
+    tags: ['Software', 'Applications', 'Architecture', 'Teaching'],
+    bio1: 'ITICs faculty member focused on programming fundamentals, application development, and methodologies to build digital solutions with academic and practical impact.',
+    bio2: 'This profile strengthens engineering logic, project-based learning, and technical quality in student software products.',
+    focusTitle: 'Focus areas',
+    focus1Title: 'Programming and architecture',
+    focus1Body: 'Solution design, application structure, and implementation best practices.',
+    focus2Title: 'Projects and technical quality',
+    focus2Body: 'Planning, documentation, and continuous improvement of software deliverables in academic settings.',
+    updatingTitle: 'Information being updated',
+    updatingBody: 'Expanded curriculum details, professional background, and academic projects will be added soon.',
+  },
+  zh: {
+    name: 'Gio Humberto',
+    role: 'ITICs 教师 · 编程与软件开发',
+    tags: ['软件', '应用', '架构', '教学'],
+    bio1: 'ITICs 教师，专注于编程基础、应用开发以及用于构建数字化解决方案的方法论，兼顾学术与实践。',
+    bio2: '该档案强调工程逻辑、项目式学习，以及学生软件成果的技术质量提升。',
+    focusTitle: '工作方向',
+    focus1Title: '编程与架构',
+    focus1Body: '解决方案设计、应用结构与实现最佳实践。',
+    focus2Title: '项目与技术质量',
+    focus2Body: '在学术场景中进行软件交付的规划、文档化与持续改进。',
+    updatingTitle: '信息更新中',
+    updatingBody: '完整履历、专业经验与学术项目信息将很快补充。',
+  },
+} as const;
+
+const profile = profileByLang[lang] ?? profileByLang.es;
+---
+
+<Layout lang={lang} title={`${tc('nav.mentors')} · ${profile.name}`}>
+  <main class="bg-apple-bg pt-32 pb-24 min-h-screen">
+    <div class="max-w-[1040px] mx-auto px-5 sm:px-8">
+      <a
+        href={`/${lang}/mentores`}
+        class="inline-flex items-center gap-2 text-sm font-medium text-apple-muted hover:text-apple-text transition-colors mb-12"
+      >
+        <span aria-hidden="true">&larr;</span>
+        {t('profile.back')}
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-14 items-start">
+        <aside>
+          <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl bg-[#f5f5f7] mb-6 relative shadow-sm">
+            <img
+              src="/mentors/teachers/giohumberto.webp"
+              alt={profile.name}
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-3xl pointer-events-none"></div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <a
+              href="mailto:tics@itsoeh.edu.mx"
+              class="flex items-center justify-between px-4 py-3 bg-apple-surface rounded-xl border border-apple-border hover:border-apple-blue/50 transition-all"
+            >
+              <span class="text-[0.85rem] font-semibold text-apple-text">Email</span>
+              <span class="text-[0.78rem] font-semibold text-apple-muted">tics@itsoeh.edu.mx</span>
+            </a>
+            <a
+              href={`/${lang}/contacto`}
+              class="flex items-center justify-between px-4 py-3 bg-apple-surface rounded-xl border border-apple-border hover:border-apple-blue/50 transition-all"
+            >
+              <span class="text-[0.85rem] font-semibold text-apple-text">{t('community.coordination.cta')}</span>
+              <span class="text-[0.78rem] font-semibold text-apple-muted">ITSOEH</span>
+            </a>
+          </div>
+        </aside>
+
+        <section>
+          <h1 class="text-4xl lg:text-5xl font-black tracking-tight text-apple-text mb-4">{profile.name}</h1>
+          <p class="text-xl font-medium text-apple-muted mb-8">{profile.role}</p>
+
+          <div class="flex flex-wrap gap-2 mb-10">
+            {profile.tags.map((tag) => (
+              <span class="text-sm font-semibold px-4 py-1.5 bg-apple-surface-hover text-apple-text rounded-md tracking-wide">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div class="prose prose-lg prose-apple max-w-none text-apple-text leading-relaxed mb-14">
+            <p class="mb-4">{profile.bio1}</p>
+            <p>{profile.bio2}</p>
+          </div>
+
+          <div class="mb-14 border-t border-apple-border pt-8">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-apple-muted mb-5">{profile.focusTitle}</h2>
+            <div class="flex flex-col gap-4">
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.focus1Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.focus1Body}</p>
+              </div>
+              <div class="rounded-2xl border border-apple-border bg-apple-surface p-5">
+                <p class="text-[0.94rem] font-bold text-apple-text leading-tight mb-1">{profile.focus2Title}</p>
+                <p class="text-[0.84rem] font-medium text-apple-muted">{profile.focus2Body}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-dashed border-black/15 bg-apple-surface p-6">
+            <h2 class="text-[1rem] font-bold tracking-tight">{profile.updatingTitle}</h2>
+            <p class="mt-2 text-[0.95rem] text-apple-muted font-medium leading-relaxed">{profile.updatingBody}</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>

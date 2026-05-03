@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Acerca del sitio ITICs.",
+    "subtitle": "Conoce el propósito de esta plataforma, sus créditos de desarrollo y el trabajo de quienes fortalecen la presencia digital de Ingeniería en TICs."
+  },
+  "creator": {
+    "title": "Desarrollo principal",
+    "name": "José Manuel Cortes Cerón",
+    "role": "Colaborador estudiantil · Software, IA e IoT",
+    "tag1": "Software",
+    "tag2": "IoT",
+    "tag3": "IA",
+    "meta": "Desarrollo web ITICs",
+    "github": "deepdevjose",
+    "profileCta": "Ver perfil"
+  },
+  "credits": {
+    "title": "Créditos del sitio",
+    "subtitle": "Este sitio fue desarrollado para fortalecer la identidad digital de Ingeniería en TICs del ITSOEH y comunicar su formación académica, proyectos, comunidad y proceso de admisión.",
+    "cards": {
+      "web": {
+        "title": "Diseño y desarrollo web",
+        "value": "José Manuel Cortes Cerón"
+      },
+      "content": {
+        "title": "Contenido institucional",
+        "value": "Ingeniería en TICs ITSOEH"
+      },
+      "review": {
+        "title": "Revisión académica",
+        "value": "Coordinación de Ingeniería en TICs"
+      },
+      "identity": {
+        "title": "Identidad institucional",
+        "value": "ITSOEH · TecNM · Educación"
+      }
+    }
+  },
+  "updating": {
+    "title": "Contenido en actualización",
+    "body": "Próximamente se integrarán más perfiles y contribuciones de la comunidad académica y técnica."
+  }
+}

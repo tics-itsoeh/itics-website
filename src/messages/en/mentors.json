@@ -70,7 +70,7 @@
       "title": "Student leadership.",
       "subtitle": "Students who drive projects, workshops, digital resources, and technical collaboration within the ITICs community.",
       "jose": {
-        "name": "José Manuel Cortés Cerón",
+        "name": "José Manuel Cortes Cerón",
         "role": "Student collaborator · Software, AI, and IoT",
         "description": "Supports project development, technical community, digital resources, complementary training activities, and web identity for ITICs.",
         "tag1": "Software",
@@ -85,10 +85,11 @@
     "credits": {
       "title": "Site credits.",
       "body": "This site was developed as an initiative to strengthen the digital identity of ICT Engineering at ITSOEH, share its academic formation, projects, community, and admission process.",
+      "aboutCta": "View About page and full credits",
       "cards": {
         "web": {
           "title": "Web design and development",
-          "value": "José Manuel Cortés Cerón"
+          "value": "José Manuel Cortes Cerón"
         },
         "content": {
           "title": "Institutional content",
@@ -113,7 +114,7 @@
   },
   "profile": {
     "back": "Back to community",
-    "name": "José Manuel Cortés Cerón",
+    "name": "José Manuel Cortes Cerón",
     "role": "Student collaborator · Software, AI, and IoT",
     "tag1": "Software",
     "tag2": "AI",

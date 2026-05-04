@@ -29,8 +29,8 @@ export const navItems: NavItem[] = [
   { pathSuffix: '/unirse',    labelKey: 'nav.join' },
   { pathSuffix: '/proyectos', labelKey: 'nav.projects' },
   { pathSuffix: '/mentores',  labelKey: 'nav.mentors' },
-  { pathSuffix: '/about',     labelKey: 'nav.about' },
   { pathSuffix: '/contacto',  labelKey: 'nav.contact' },
+  { pathSuffix: '/about',     labelKey: 'nav.about' },
 ];
 
 /** 

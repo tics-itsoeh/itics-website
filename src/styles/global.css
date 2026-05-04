@@ -78,6 +78,8 @@ html, body {
 }
 
 html {
+  /* Escala global (~10% menor) para que 100% del navegador se perciba como antes en 90%. */
+  font-size: 90%;
   scroll-behavior: auto;
 }
 
